@@ -6,12 +6,12 @@
 
     <!--<div class="flex flex-wrap gap-2">
         <button onclick="window.navigation.navigateToSection('add-personnel', 'Add New Personnel')" 
-        class="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700">
+        class="px-4 py-2 bg-green-600 text-white rounded-md hover:bg-green-700">
         Add New Personnel
         </button>
 
         <button onclick="window.navigation.navigateToSection('current-personnel', 'Current Personnel')" 
-        class="px-4 py-2 bg-green-600 text-white rounded-md hover:bg-green-700">
+        class="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700">
         View Current Personnel
         </button>
     </div>-->
@@ -21,7 +21,7 @@
   <div class="mb-6 flex flex-wrap justify-between">
     <div class="flex-1">
       <input type="text" id="old-personnel-search" placeholder="Search by name, PersonnelNo. or Phone..." 
-        class="w-2/3 px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500">
+        class="w-2/3 px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-green-500">
     </div>
     <div class="flex flex-end gap-2">
       <select id="rank-filter" class="px-3 py-2 border border-gray-300 rounded-md">
@@ -83,7 +83,7 @@
   <!-- Success Popup -->
   <div id="actionPopup" class="fixed inset-0 bg-black/50 flex items-center justify-center hidden z-50">
     <div class="bg-white p-6 rounded-2xl shadow-xl text-center w-64">
-      <div id="popupIcon" class="mx-auto h-12 w-12 rounded-full border-4 border-blue-500 border-t-transparent animate-spin"></div>
+      <div id="popupIcon" class="mx-auto h-12 w-12 rounded-full border-4 border-green-500 border-t-transparent animate-spin"></div>
       <p id="popupText" class="mt-4 text-lg font-semibold text-gray-700">Processing...</p>
     </div>
   </div>
@@ -432,7 +432,7 @@ class PersonnelManager {
         <tr>
           <td colspan="5" class="text-center py-8">
             <div class="flex flex-col items-center gap-2">
-              <div class="animate-spin h-8 w-8 border-4 border-blue-500 border-t-transparent rounded-full"></div>
+              <div class="animate-spin h-8 w-8 border-4 border-green-500 border-t-transparent rounded-full"></div>
               <span class="text-gray-500">Loading personnel data...</span>
             </div>
           </td>
@@ -452,7 +452,7 @@ class PersonnelManager {
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
               </svg>
               <p class="font-medium">${message}</p>
-              <button onclick="personnelManager.refresh()" class="mt-2 px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700">
+              <button onclick="personnelManager.refresh()" class="mt-2 px-4 py-2 bg-green-600 text-white rounded hover:bg-green-700">
                 Retry
               </button>
             </div>
@@ -653,7 +653,7 @@ class PersonnelManager {
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 13V6a2 2 0 00-2-2H6a2 2 0 00-2 2v7m16 0v5a2 2 0 01-2 2H6a2 2 0 01-2-2v-5m16 0h-2.586a1 1 0 00-.707.293l-2.414 2.414a1 1 0 01-.707.293h-3.172a1 1 0 01-.707-.293l-2.414-2.414A1 1 0 006.586 13H4"></path>
               </svg>
               <p class="font-medium">No personnel found</p>
-              ${hasFilters ? '<p class="text-sm mt-1">Try adjusting your filters or <button onclick="personnelManager.clearFilters()" class="text-blue-600 underline">clear filters</button></p>' : ''}
+              ${hasFilters ? '<p class="text-sm mt-1">Try adjusting your filters or <button onclick="personnelManager.clearFilters()" class="text-green-600 underline">clear filters</button></p>' : ''}
             </td>
           </tr>
         `;
@@ -674,9 +674,9 @@ class PersonnelManager {
           <td class="border border-gray-300 px-4 py-2 text-center">
             <div class="flex gap-1 justify-center">
               <button onclick="personnelManager.viewEmployee('${person.Empl_ID}')" 
-                      class="px-2 py-1 bg-blue-600 text-white rounded text-xs hover:bg-blue-700 transition-colors">View</button>
+                      class="px-2 py-1 bg-green-600 text-white rounded text-xs hover:bg-green-700 transition-colors">View</button>
               <button onclick="personnelManager.editEmployee('${person.Empl_ID}')" 
-                      class="px-2 py-1 bg-green-600 text-white rounded text-xs hover:bg-green-700 transition-colors">Edit</button>
+                      class="px-2 py-1 bg-blue-600 text-white rounded text-xs hover:bg-blue-700 transition-colors">Edit</button>
               <button onclick="personnelManager.deleteEmployee('${person.Empl_ID}')" 
                       class="px-2 py-1 bg-red-600 text-white rounded text-xs hover:bg-red-700 transition-colors">Delete</button>
             </div>
@@ -694,7 +694,7 @@ class PersonnelManager {
   
   getStatusClass(status) {
     const s = status?.toUpperCase();
-    if (s === 'ACTIVE' || s === '1') return 'bg-green-100 text-green-800';
+    if (s === 'ACTIVE' || s === '1') return 'bg-blue-100 text-blue-800';
     if (s === 'INACTIVE' || s === '0') return 'bg-red-100 text-red-800';
     return 'bg-yellow-100 text-yellow-800';
   }
@@ -746,12 +746,12 @@ class PersonnelManager {
 
     if (!popup || !icon || !text) return;
 
-    icon.className = "mx-auto h-12 w-12 rounded-full border-4 border-blue-500 border-t-transparent animate-spin";
+    icon.className = "mx-auto h-12 w-12 rounded-full border-4 border-green-500 border-t-transparent animate-spin";
     text.textContent = message;
     popup.classList.remove('hidden');
 
     setTimeout(() => {
-      icon.className = "mx-auto h-12 w-12 flex items-center justify-center rounded-full bg-green-500 text-white";
+      icon.className = "mx-auto h-12 w-12 flex items-center justify-center rounded-full bg-blue-500 text-white";
       icon.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7" />
                         </svg>`;

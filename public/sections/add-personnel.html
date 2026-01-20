@@ -3,15 +3,15 @@
   <div class="p-6">
     <div class="flex flex-wrap justify-between bg-white/50 rounded-xl border border-amber-50 shadow-sm p-2 gap-2">
       <div class="flex flex-wrap justify-start gap-2">
-        <button type="button" id="tab-batch" class="px-4 py-2 rounded-md bg-yellow-400 text-grey hover:bg-blue-600">
+        <button type="button" id="tab-batch" class="px-4 py-2 rounded-md bg-yellow-400 text-grey hover:bg-green-600">
           Batch Upload
         </button>
       </div>
       <div class="flex flex-wrap justify-end gap-2">
-        <button id="tab-personnel" class="px-4 py-2 rounded-md bg-blue-600 text-white hover:bg-blue-600">Personnel</button>
-        <button id="tab-nok" class="px-4 py-2 rounded-md bg-yellow-400 text-gray-900 hover:bg-blue-600">NOK</button>
-        <button id="tab-spouse" class="px-4 py-2 rounded-md bg-yellow-400 text-gray-900 hover:bg-blue-600">Spouse</button>
-        <button id="tab-children" class="px-4 py-2 rounded-md bg-yellow-400 text-gray-900 hover:bg-blue-600">Children</button>
+        <button id="tab-personnel" class="px-4 py-2 rounded-md bg-green-600 text-white hover:bg-green-600">Personnel</button>
+        <button id="tab-nok" class="px-4 py-2 rounded-md bg-yellow-400 text-gray-900 hover:bg-green-600">NOK</button>
+        <button id="tab-spouse" class="px-4 py-2 rounded-md bg-yellow-400 text-gray-900 hover:bg-green-600">Spouse</button>
+        <button id="tab-children" class="px-4 py-2 rounded-md bg-yellow-400 text-gray-900 hover:bg-green-600">Children</button>
       </div>
     </div>
   </div>
@@ -19,11 +19,11 @@
   <!-- BATCH UPLOAD SECTION -->
   <div id="section-batch" class="px-6 py-4 flex justify-center">
     <div class="w-full max-w-lg rounded-2xl">
-      <h3 class="text-2xl font-bold text-blue-800 mb-4">Batch Upload</h3>
+      <h3 class="text-2xl font-bold text-green-800 mb-4">Batch Upload</h3>
 
       <!-- Notes -->
       <div class="mb-6">
-        <h4 class="font-semibold text-blue-700 mb-2">Please Note:</h4>
+        <h4 class="font-semibold text-green-700 mb-2">Please Note:</h4>
         <ul class="list-disc list-inside text-gray-700 text-sm space-y-1">
           <li>Ensure your file is properly formatted before uploading.</li>
           <li>If you encounter any issues, please contact support.</li>
@@ -36,10 +36,10 @@
         <div>
           <label class="block text-sm font-medium text-gray-700 mb-2">Upload File</label>
           <input type="file" id="batchFile" 
-                class="mt-1 block w-full border border-blue-500 bg-white rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-yellow-500" />
+                class="mt-1 block w-full border border-green-500 bg-white rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-yellow-500" />
           <p class="text-xs text-gray-500 mt-2">
             Only .xlsx or .csv files allowed. 
-            <button type="button" id="downloadSampleBtn" class="text-blue-600 hover:underline ml-2 bg-none border-none cursor-pointer">
+            <button type="button" id="downloadSampleBtn" class="text-green-600 hover:underline ml-2 bg-none border-none cursor-pointer">
               Download Sample Template
             </button>
           </p>
@@ -50,7 +50,7 @@
           <button type="button" id="cancelBatchBtn"
             class="px-6 py-2 bg-gray-400 hover:bg-gray-500 rounded-lg text-white">Cancel</button>
           <button type="button" id="uploadBatchBtn"
-            class="px-6 py-2 bg-blue-600 hover:bg-blue-700 rounded-lg text-white">Upload</button>
+            class="px-6 py-2 bg-green-600 hover:bg-green-700 rounded-lg text-white">Upload</button>
         </div>
       </form>
     </div>
@@ -59,24 +59,24 @@
   <!-- PERSONNEL SECTION -->
   <div id="section-personnel" class="px-6 mb-4">
     <!-- Title -->
-    <h3 id="formTitle" class="hidden text-2xl font-bold text-blue-800 mb-4"></h3>
+    <h3 id="formTitle" class="hidden text-2xl font-bold text-green-800 mb-4"></h3>
 
     <!-- Step Buttons + Current Personnel -->
     <div class="flex flex-wrap items-center gap-2 justify-between mb-4">
       <div class=" flex flex-wrap gap-2 items-center">
-        <button id="btnStep1" class="relative px-4 text-sm lg:text-lg py-2 rounded-md bg-blue-600 hover:bg-blue-600 text-white transition-all overflow-hidden group">
+        <button id="btnStep1" class="relative px-4 text-sm lg:text-lg py-2 rounded-md bg-green-600 hover:bg-green-600 text-white transition-all overflow-hidden group">
           <span class="relative z-10">Step 1: Basic Details</span>
         </button>
-        <button id="btnStep2" class="relative px-4 text-sm lg:text-lg py-2 rounded-md bg-yellow-400 text-gray-900 hover:bg-blue-600 transition-all overflow-hidden group">
+        <button id="btnStep2" class="relative px-4 text-sm lg:text-lg py-2 rounded-md bg-yellow-400 text-gray-900 hover:bg-green-600 transition-all overflow-hidden group">
           <span class="relative z-10">Step 2: Official Info</span>
         </button>
-        <button id="btnStep3" class="relative px-4 text-sm lg:text-lg py-2 rounded-md bg-yellow-400 text-gray-900 hover:bg-blue-600 transition-all overflow-hidden group">
+        <button id="btnStep3" class="relative px-4 text-sm lg:text-lg py-2 rounded-md bg-yellow-400 text-gray-900 hover:bg-green-600 transition-all overflow-hidden group">
           <span class="relative z-10">Step 3: Additional Info</span>
         </button>
       </div>
 
       <button onclick="window.navigation?.navigateToSection ? window.navigation.navigateToSection('current-personnel','Current Personnel') : showAlert('Hook your navigation here.')" id="currentPersonnelBtn"
-        class="px-4 text-sm lg:text-lg py-2 bg-green-600 text-white rounded-md hover:bg-green-700">
+        class="px-4 text-sm lg:text-lg py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700">
         Current Personnel
       </button>
     </div>
@@ -90,31 +90,31 @@
       <div id="step2" class="hidden grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
         <div>
           <label class="block text-sm font-medium text-gray-700">Date Joined</label>
-          <input type="date" name="DateEmpl" id="DateEmpl" class="w-full border border-blue-500 bg-transparent rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-yellow-500" />
+          <input type="date" name="DateEmpl" id="DateEmpl" class="w-full border border-green-500 bg-transparent rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-yellow-500" />
         </div>
         <div>
           <label class="block text-sm font-medium text-gray-700">Date Commissioned</label>
-          <input type="date" name="dateconfirmed" id="dateconfirmed" class="w-full border border-blue-500 bg-transparent rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-yellow-500" />
+          <input type="date" name="dateconfirmed" id="dateconfirmed" class="w-full border border-green-500 bg-transparent rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-yellow-500" />
         </div>
         <div>
           <label class="block text-sm font-medium text-gray-700">Entry Mode</label>
-          <select name="entry_mode" id="entry_mode" placeholder="Entry Mode" class="w-full border border-blue-500 bg-transparent rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-yellow-500">
+          <select name="entry_mode" id="entry_mode" placeholder="Entry Mode" class="w-full border border-green-500 bg-transparent rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-yellow-500">
             <option value=""></option>
           </select>
         </div>
         <div>
           <label class="block text-sm font-medium text-gray-700">Date Left</label>
-          <input type="date" name="DateLeft" id="DateLeft" class="w-full border border-blue-500 bg-transparent rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-yellow-500" />
+          <input type="date" name="DateLeft" id="DateLeft" class="w-full border border-green-500 bg-transparent rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-yellow-500" />
         </div>
         <div>
           <label class="block text-sm font-medium text-gray-700">Exit Mode</label>
-          <select id="exittype" name="exittype" class="w-full border border-blue-500 bg-transparent rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-yellow-500">
+          <select id="exittype" name="exittype" class="w-full border border-green-500 bg-transparent rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-yellow-500">
             <option>Select Exit Mode</option>
           </select>
         </div>
         <div>
           <label class="block text-sm font-medium text-gray-700">Taxed ?</label>
-          <select name="taxed" id="taxed" class="w-full border border-blue-500 bg-transparent rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-yellow-500">
+          <select name="taxed" id="taxed" class="w-full border border-green-500 bg-transparent rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-yellow-500">
             <option>Select</option>
             <option value="Yes">YES</option>
             <option value="No">NO</option>
@@ -122,49 +122,49 @@
         </div>
         <div>
           <label class="block text-sm font-medium text-gray-700">TaxID No(TIN)</label>
-          <input type="text" name="TaxCode" id="TaxCode" placeholder="TaxID N0" class="w-full border border-blue-500 bg-transparent rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-yellow-500" />
+          <input type="text" name="TaxCode" id="TaxCode" placeholder="TaxID N0" class="w-full border border-green-500 bg-transparent rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-yellow-500" />
         </div>
         <div>
           <label class="block text-sm font-medium text-gray-700">Tax State</label>
-          <select id="state" name="state" class="w-full border border-blue-500 bg-transparent rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-yellow-500">
+          <select id="state" name="state" class="w-full border border-green-500 bg-transparent rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-yellow-500">
             <option>Select Tax State</option>
           </select>
         </div>
         <div>
           <label class="block text-sm font-medium text-gray-700">RSA(Pension) Code</label>
-          <input type="text" name="NSITFcode" id="NSITFcode" placeholder="RSA(Pension) Code" class="w-full border border-blue-500 bg-transparent rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-yellow-500" />
+          <input type="text" name="NSITFcode" id="NSITFcode" placeholder="RSA(Pension) Code" class="w-full border border-green-500 bg-transparent rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-yellow-500" />
         </div>
         <div>
           <label class="block text-sm font-medium text-gray-700">Pension Fund Administrator</label>
-          <select id="pfa" name="pfacode" class="w-full border border-blue-500 bg-transparent rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-yellow-500">
+          <select id="pfa" name="pfacode" class="w-full border border-green-500 bg-transparent rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-yellow-500">
             <option>Select Administrator</option>
           </select>
         </div>
         <div>
           <label class="block text-sm font-medium text-gray-700">Salary Group</label>
-          <select id="salarygroup" name="gradetype" class="w-full border border-blue-500 bg-transparent rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-yellow-500">
+          <select id="salarygroup" name="gradetype" class="w-full border border-green-500 bg-transparent rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-yellow-500">
             <option>Select Salary Group</option>
           </select>
         </div>
         <div>
           <label class="block text-sm font-medium text-gray-700">Salary Grade</label>
-          <input type="text" id="salarygrade" name="gradelevel" maxlength="4" class="w-full border border-blue-500 bg-transparent rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-yellow-500"/>
+          <input type="text" id="salarygrade" name="gradelevel" maxlength="4" class="w-full border border-green-500 bg-transparent rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-yellow-500"/>
         </div>
         <div>
           <label class="block text-sm font-medium text-gray-700">Bank Code</label>
-          <select id="bankcode" name="Bankcode" class="w-full border border-blue-500 bg-transparent rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-yellow-500">
+          <select id="bankcode" name="Bankcode" class="w-full border border-green-500 bg-transparent rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-yellow-500">
             <option>Select Bank Code</option>
           </select>
         </div>
         <div>
           <label class="block text-sm font-medium text-gray-700">Bank Branch</label>
-          <select id="bankbranch" name="bankbranch" class="w-full border border-blue-500 bg-transparent rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-yellow-500">
+          <select id="bankbranch" name="bankbranch" class="w-full border border-green-500 bg-transparent rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-yellow-500">
             <option>Select Bank Branch</option>
           </select>
         </div>
         <div>
           <label class="block text-sm font-medium text-gray-700">Account Number</label>
-          <input type="text" name="BankACNumber" id="BankACNumber" placeholder="Account Number" maxlength="10" class="w-full border border-blue-500 bg-transparent rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-yellow-500"/>
+          <input type="text" name="BankACNumber" id="BankACNumber" placeholder="Account Number" maxlength="10" class="w-full border border-green-500 bg-transparent rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-yellow-500"/>
         </div>
       </div>
 
@@ -172,43 +172,43 @@
       <div id="step3" class="hidden grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
         <div>
           <label class="block text-sm font-medium text-gray-700">Seniority Date</label>
-          <input type="date" name="datepmted" id="datepmted" class="w-full border border-blue-500 bg-transparent rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-yellow-500" />
+          <input type="date" name="datepmted" id="datepmted" class="w-full border border-green-500 bg-transparent rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-yellow-500" />
         </div>
         <div>
           <label class="block text-sm font-medium text-gray-700">Ship/Establishment</label>
-          <select name="Location" id="step3-ship" class="w-full border border-blue-500 bg-transparent rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-yellow-500">
+          <select name="Location" id="step3-ship" class="w-full border border-green-500 bg-transparent rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-yellow-500">
             <option>select</option>
           </select>
         </div>
         <div>
           <label class="block text-sm font-medium text-gray-700">Branch</label>
-          <select id="branch" name="Factory" class="w-full border border-blue-500 bg-transparent rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-yellow-500">
+          <select id="branch" name="Factory" class="w-full border border-green-500 bg-transparent rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-yellow-500">
             <option>Select Branch</option>
           </select>
         </div>
         <div>
           <label class="block text-sm font-medium text-gray-700">Command</label>
-          <select id="command" name="command" class="w-full border border-blue-500 bg-transparent rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-yellow-500">
+          <select id="command" name="command" class="w-full border border-green-500 bg-transparent rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-yellow-500">
             <option>Select Command</option>
           </select>
         </div>
         <div>
           <label class="block text-sm font-medium text-gray-700">Specialisation</label>
-          <select id="specialisation" name="specialisation" class="w-full border border-blue-500 bg-transparent rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-yellow-500">
+          <select id="specialisation" name="specialisation" class="w-full border border-green-500 bg-transparent rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-yellow-500">
             <option>Select Specialisation</option>
           </select>
         </div>
         <div>
           <label class="block text-sm font-medium text-gray-700">Present Appointment</label>
-          <input type="text" name="Jobtitle" id="Jobtitle" placeholder="Present Appointment" class="w-full border border-blue-500 bg-transparent rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-yellow-500" />
+          <input type="text" name="Jobtitle" id="Jobtitle" placeholder="Present Appointment" class="w-full border border-green-500 bg-transparent rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-yellow-500" />
         </div>
         <div>
           <label class="block text-sm font-medium text-gray-700">Award/Decoration</label>
-          <input type="text" name="award" id="award" placeholder="Award/Decoration" class="w-full border border-blue-500 bg-transparent rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-yellow-500" />
+          <input type="text" name="award" id="award" placeholder="Award/Decoration" class="w-full border border-green-500 bg-transparent rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-yellow-500" />
         </div>
         <div>
           <label class="block text-sm font-medium text-gray-700">Emolument Form Received?</label>
-          <select name="emolumentform" id="emolumentform" class="w-full border border-blue-500 bg-transparent rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-yellow-500">
+          <select name="emolumentform" id="emolumentform" class="w-full border border-green-500 bg-transparent rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-yellow-500">
             <option>Select</option>
             <option value="Yes">YES</option>
             <option value="No">NO</option>
@@ -216,33 +216,33 @@
         </div>
         <div>
           <label class="block text-sm font-medium text-gray-700">NHF Code</label>
-          <input type="text" name="NHFcode" id="NHFcode" placeholder="NHF Code" class="w-full border border-blue-500 bg-transparent rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-yellow-500" />
+          <input type="text" name="NHFcode" id="NHFcode" placeholder="NHF Code" class="w-full border border-green-500 bg-transparent rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-yellow-500" />
         </div>
         <!--<div>
           <label class="block text-sm font-medium text-gray-700">Payroll Process Category</label>
-          <select id="payrollProcess" name="payrollclass" class="w-full border border-blue-500 bg-transparent rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-yellow-500">
+          <select id="payrollProcess" name="payrollclass" class="w-full border border-green-500 bg-transparent rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-yellow-500">
             <option>Select Payroll Process</option>
           </select>
         </div>-->
         <div>
           <label class="block text-sm font-medium text-gray-700">IPPIS NO</label>
-          <input type="text" name="InternalACNo" id="InternalACNo" placeholder="IPPIS NO" class="w-full border border-blue-500 bg-transparent rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-yellow-500" />
+          <input type="text" name="InternalACNo" id="InternalACNo" placeholder="IPPIS NO" class="w-full border border-green-500 bg-transparent rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-yellow-500" />
         </div>
         <div>
           <label class="block text-sm font-medium text-gray-700">Country</label>
-          <select id="country" name="Country" class="w-full border border-blue-500 bg-transparent rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-yellow-500">
+          <select id="country" name="Country" class="w-full border border-green-500 bg-transparent rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-yellow-500">
             <option>Select Country</option>
           </select>
         </div>
         <div>
           <label class="block text-sm font-medium text-gray-700">Accommodation Type</label>
-          <select name="accomm_type" id="accomm_type" class="w-full border border-blue-500 bg-transparent rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-yellow-500">
+          <select name="accomm_type" id="accomm_type" class="w-full border border-green-500 bg-transparent rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-yellow-500">
             <option>Select Accommodation Type</option>
           </select>
         </div>
         <div>
           <label class="block text-sm font-medium text-gray-700">Rent Subsidy</label>
-          <select name="rent_subsidy" id="rent_subsidy" class="w-full border border-blue-500 bg-transparent rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-yellow-500">
+          <select name="rent_subsidy" id="rent_subsidy" class="w-full border border-green-500 bg-transparent rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-yellow-500">
             <option>Select</option>
             <option value="Yes">YES</option>
             <option value="No">NO</option>
@@ -253,7 +253,7 @@
       <!-- Actions -->
       <div class="col-span-full flex justify-end space-x-4 pt-4">
         <button type="button" id="cancelBtn" class="px-6 py-2 bg-gray-400 hover:bg-gray-500 rounded-lg text-white">Cancel</button>
-        <button type="button" class="px-6 py-2 bg-blue-600 hover:bg-blue-700 rounded-lg text-white">Submit</button>
+        <button type="button" class="px-6 py-2 bg-green-600 hover:bg-green-700 rounded-lg text-white">Submit</button>
       </div>
     </form>
   </div>
@@ -261,8 +261,8 @@
   <!-- NOK SECTION -->
   <div id="section-nok" class="hidden p-6">
     <div class="flex items-center justify-between mb-4">
-      <h3 class="text-2xl font-bold text-blue-800">Next of Kin</h3>
-      <button id="nokToggleBtn" class="px-4 py-2 rounded-md bg-blue-600 text-white hover:bg-blue-700">+ Add</button>
+      <h3 class="text-2xl font-bold text-green-800">Next of Kin</h3>
+      <button id="nokToggleBtn" class="px-4 py-2 rounded-md bg-green-600 text-white hover:bg-green-700">+ Add</button>
     </div>
 
     <!-- Form -->
@@ -270,60 +270,60 @@
       <form id="nokForm" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mb-4">
         <div>
           <label class="block text-sm font-medium text-gray-700">First Name <span class="text-red-500">*</span></label>
-          <input id="nokFirst" required type="text" class="w-full border border-blue-500 rounded-md px-3 py-2 bg-transparent focus:outline-none focus:ring-2 focus:ring-yellow-500" />
+          <input id="nokFirst" required type="text" class="w-full border border-green-500 rounded-md px-3 py-2 bg-transparent focus:outline-none focus:ring-2 focus:ring-yellow-500" />
         </div>
         <div>
           <label class="block text-sm font-medium text-gray-700">Last Name <span class="text-red-500">*</span></label>
-          <input id="nokLast" required type="text" class="w-full border border-blue-500 rounded-md px-3 py-2 bg-transparent focus:outline-none focus:ring-2 focus:ring-yellow-500" />
+          <input id="nokLast" required type="text" class="w-full border border-green-500 rounded-md px-3 py-2 bg-transparent focus:outline-none focus:ring-2 focus:ring-yellow-500" />
         </div>
         <div>
           <label class="block text-sm font-medium text-gray-700">Date of Birth</label>
-          <input id="nokDob" type="date" class="w-full border border-blue-500 rounded-md px-3 py-2 bg-transparent focus:outline-none focus:ring-2 focus:ring-yellow-500" />
+          <input id="nokDob" type="date" class="w-full border border-green-500 rounded-md px-3 py-2 bg-transparent focus:outline-none focus:ring-2 focus:ring-yellow-500" />
         </div>
         <div>
           <label class="block text-sm font-medium text-gray-700">Full Address <span class="text-red-500">*</span></label>
-          <input id="nokAddress" required type="text" class="w-full border border-blue-500 rounded-md px-3 py-2 bg-transparent focus:outline-none focus:ring-2 focus:ring-yellow-500" />
+          <input id="nokAddress" required type="text" class="w-full border border-green-500 rounded-md px-3 py-2 bg-transparent focus:outline-none focus:ring-2 focus:ring-yellow-500" />
         </div>
         <div>
           <label class="block text-sm font-medium text-gray-700">Relationship <span class="text-red-500">*</span></label>
-          <select id="nokRelationship" required class="w-full border border-blue-500 rounded-md px-3 py-2 bg-transparent focus:outline-none focus:ring-2 focus:ring-yellow-500">
+          <select id="nokRelationship" required class="w-full border border-green-500 rounded-md px-3 py-2 bg-transparent focus:outline-none focus:ring-2 focus:ring-yellow-500">
             <option value="">Select</option>
 
           </select>
         </div>
         <div>
           <label class="block text-sm font-medium text-gray-700">Mobile Number <span class="text-red-500">*</span></label>
-          <input id="nokMobile" required type="tel" class="w-full border border-blue-500 rounded-md px-3 py-2 bg-transparent focus:outline-none focus:ring-2 focus:ring-yellow-500" />
+          <input id="nokMobile" required type="tel" class="w-full border border-green-500 rounded-md px-3 py-2 bg-transparent focus:outline-none focus:ring-2 focus:ring-yellow-500" />
         </div>
         <div>
           <label class="block text-sm font-medium text-gray-700">Home Number</label>
-          <input id="nokHome" type="tel" class="w-full border border-blue-500 rounded-md px-3 py-2 bg-transparent focus:outline-none focus:ring-2 focus:ring-yellow-500" />
+          <input id="nokHome" type="tel" class="w-full border border-green-500 rounded-md px-3 py-2 bg-transparent focus:outline-none focus:ring-2 focus:ring-yellow-500" />
         </div>
         <div>
           <label class="block text-sm font-medium text-gray-700">Email Address <span class="text-red-500">*</span></label>
-          <input id="nokEmail" required type="email" class="w-full border border-blue-500 rounded-md px-3 py-2 bg-transparent focus:outline-none focus:ring-2 focus:ring-yellow-500" />
+          <input id="nokEmail" required type="email" class="w-full border border-green-500 rounded-md px-3 py-2 bg-transparent focus:outline-none focus:ring-2 focus:ring-yellow-500" />
         </div>
         <div>
           <label class="block text-sm font-medium text-gray-700">Place Of Work</label>
-          <input id="nokWork" type="text" class="w-full border border-blue-500 rounded-md px-3 py-2 bg-transparent focus:outline-none focus:ring-2 focus:ring-yellow-500" />
+          <input id="nokWork" type="text" class="w-full border border-green-500 rounded-md px-3 py-2 bg-transparent focus:outline-none focus:ring-2 focus:ring-yellow-500" />
         </div>
         <div>
           <label class="block text-sm font-medium text-gray-700">Next Of Kin Type</label>
-          <select id="nokType" class="w-full border border-blue-500 rounded-md px-3 py-2 bg-transparent focus:outline-none focus:ring-2 focus:ring-yellow-500">
+          <select id="nokType" class="w-full border border-green-500 rounded-md px-3 py-2 bg-transparent focus:outline-none focus:ring-2 focus:ring-yellow-500">
             <option>Main</option><option>Alternate</option>
           </select>
         </div>
       </form>
       <div class="flex justify-end gap-3 mb-6">
         <button id="nokCancel" class="px-4 py-2 rounded bg-gray-300 hover:bg-gray-400">Cancel</button>
-        <button id="nokSave" class="px-4 py-2 rounded bg-blue-600 text-white hover:bg-blue-700">Save</button>
+        <button id="nokSave" class="px-4 py-2 rounded bg-green-600 text-white hover:bg-green-700">Save</button>
       </div>
     </div>
 
     <!-- List -->
     <div class="overflow-x-auto">
       <table class="min-w-full border border-gray-200 rounded-lg text-sm">
-        <thead class="bg-blue-100 text-blue-900">
+        <thead class="bg-green-100 text-green-900">
           <tr>
             <th class="py-2 px-3 border">Name</th>
             <th class="py-2 px-3 border">Relationship</th>
@@ -342,68 +342,68 @@
   <!-- SPOUSE SECTION -->
   <div id="section-spouse" class="hidden p-6">
     <div class="flex items-center justify-between mb-4">
-      <h3 class="text-2xl font-bold text-blue-800">Spouse</h3>
-      <button id="spouseToggleBtn" class="px-4 py-2 rounded-md bg-blue-600 text-white hover:bg-blue-700">+ Add</button>
+      <h3 class="text-2xl font-bold text-green-800">Spouse</h3>
+      <button id="spouseToggleBtn" class="px-4 py-2 rounded-md bg-green-600 text-white hover:bg-green-700">+ Add</button>
     </div>
 
     <div id="spouseFormWrap" class="hidden">
       <form id="spouseForm" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mb-4">
         <div>
           <label class="block text-sm font-medium text-gray-700">Full Name <span class="text-red-500">*</span></label>
-          <input id="spouseName" required type="text" class="w-full border border-blue-500 rounded-md px-3 py-2 bg-transparent focus:ring-2 focus:ring-yellow-500 focus:outline-none" />
+          <input id="spouseName" required type="text" class="w-full border border-green-500 rounded-md px-3 py-2 bg-transparent focus:ring-2 focus:ring-yellow-500 focus:outline-none" />
         </div>
         <div>
           <label class="block text-sm font-medium text-gray-700">Date Of Birth</label>
-          <input id="spouseDob" type="date" class="w-full border border-blue-500 rounded-md px-3 py-2 bg-transparent focus:ring-2 focus:ring-yellow-500 focus:outline-none" />
+          <input id="spouseDob" type="date" class="w-full border border-green-500 rounded-md px-3 py-2 bg-transparent focus:ring-2 focus:ring-yellow-500 focus:outline-none" />
         </div>
         <div>
           <label class="block text-sm font-medium text-gray-700">Date of Married</label>
-          <input id="spouseDom" type="date" class="w-full border border-blue-500 rounded-md px-3 py-2 bg-transparent focus:ring-2 focus:ring-yellow-500 focus:outline-none" />
+          <input id="spouseDom" type="date" class="w-full border border-green-500 rounded-md px-3 py-2 bg-transparent focus:ring-2 focus:ring-yellow-500 focus:outline-none" />
         </div>
         <div>
           <label class="block text-sm font-medium text-gray-700">Street</label>
-          <input id="spouseStreet" type="text" class="w-full border border-blue-500 rounded-md px-3 py-2 bg-transparent focus:ring-2 focus:ring-yellow-500 focus:outline-none" />
+          <input id="spouseStreet" type="text" class="w-full border border-green-500 rounded-md px-3 py-2 bg-transparent focus:ring-2 focus:ring-yellow-500 focus:outline-none" />
         </div>
         <div>
           <label class="block text-sm font-medium text-gray-700">Town</label>
-          <input id="spouseTown" type="text" class="w-full border border-blue-500 rounded-md px-3 py-2 bg-transparent focus:ring-2 focus:ring-yellow-500 focus:outline-none" />
+          <input id="spouseTown" type="text" class="w-full border border-green-500 rounded-md px-3 py-2 bg-transparent focus:ring-2 focus:ring-yellow-500 focus:outline-none" />
         </div>
         <div>
           <label class="block text-sm font-medium text-gray-700">State</label>
-          <select id="spouseState" class="w-full border border-blue-500 rounded-md px-3 py-2 bg-transparent focus:ring-2 focus:ring-yellow-500 focus:outline-none">
+          <select id="spouseState" class="w-full border border-green-500 rounded-md px-3 py-2 bg-transparent focus:ring-2 focus:ring-yellow-500 focus:outline-none">
             <option value="">Select State</option>
             <!--options would be populated dynamically-->
           </select>
         </div>
         <div>
           <label class="block text-sm font-medium text-gray-700">Local Government</label>
-          <select id="spouseLga" class="w-full border border-blue-500 rounded-md px-3 py-2 bg-transparent focus:ring-2 focus:ring-yellow-500 focus:outline-none">
+          <select id="spouseLga" class="w-full border border-green-500 rounded-md px-3 py-2 bg-transparent focus:ring-2 focus:ring-yellow-500 focus:outline-none">
             <option value="">Select LGA</option>
             <!--options would be populated dynamically-->
           </select>
         </div>
         <div>
           <label class="block text-sm font-medium text-gray-700">Phone</label>
-          <input id="spousePhone" type="tel" class="w-full border border-blue-500 rounded-md px-3 py-2 bg-transparent focus:ring-2 focus:ring-yellow-500 focus:outline-none" />
+          <input id="spousePhone" type="tel" class="w-full border border-green-500 rounded-md px-3 py-2 bg-transparent focus:ring-2 focus:ring-yellow-500 focus:outline-none" />
         </div>
         <div>
           <label class="block text-sm font-medium text-gray-700">Email</label>
-          <input id="spouseEmail" type="email" class="w-full border border-blue-500 rounded-md px-3 py-2 bg-transparent focus:ring-2 focus:ring-yellow-500 focus:outline-none" />
+          <input id="spouseEmail" type="email" class="w-full border border-green-500 rounded-md px-3 py-2 bg-transparent focus:ring-2 focus:ring-yellow-500 focus:outline-none" />
         </div>
         <div>
           <label class="block text-sm font-medium text-gray-700">P.O Box</label>
-          <input id="spousePoBox" type="text" class="w-full border border-blue-500 rounded-md px-3 py-2 bg-transparent focus:ring-2 focus:ring-yellow-500 focus:outline-none" />
+          <input id="spousePoBox" type="text" class="w-full border border-green-500 rounded-md px-3 py-2 bg-transparent focus:ring-2 focus:ring-yellow-500 focus:outline-none" />
         </div>
       </form>
       <div class="flex justify-end gap-3 mb-6">
         <button id="spouseCancel" class="px-4 py-2 rounded bg-gray-300 hover:bg-gray-400">Cancel</button>
-        <button id="spouseSave" class="px-4 py-2 rounded bg-blue-600 text-white hover:bg-blue-700">Save</button>
+        <button id="spouseSave" class="px-4 py-2 rounded bg-green-600 text-white hover:bg-green-700">Save</button>
       </div>
     </div>
 
     <div class="overflow-x-auto">
       <table class="min-w-full border border-gray-200 rounded-lg text-sm">
-        <thead class="bg-blue-100 text-blue-900">
+        <thead class="bg-green-100 text-green-900">
           <tr>
             <th class="py-2 px-3 border">Full Name</th>
             <th class="py-2 px-3 border">Phone</th>
@@ -421,82 +421,82 @@
   <!-- CHILDREN SECTION -->
   <div id="section-children" class="hidden p-6">
     <div class="flex items-center justify-between mb-4">
-      <h3 class="text-2xl font-bold text-blue-800">Children</h3>
-      <button id="childToggleBtn" class="px-4 py-2 rounded-md bg-blue-600 text-white hover:bg-blue-700">+ Add</button>
+      <h3 class="text-2xl font-bold text-green-800">Children</h3>
+      <button id="childToggleBtn" class="px-4 py-2 rounded-md bg-green-600 text-white hover:bg-green-700">+ Add</button>
     </div>
 
     <div id="childFormWrap" class="hidden">
       <form id="childForm" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mb-4">
         <div>
           <label class="block text-sm font-medium text-gray-700">Full Name <span class="text-red-500">*</span></label>
-          <input id="childName" required type="text" class="w-full border border-blue-500 rounded-md px-3 py-2 bg-transparent focus:ring-2 focus:ring-yellow-500 focus:outline-none" />
+          <input id="childName" required type="text" class="w-full border border-green-500 rounded-md px-3 py-2 bg-transparent focus:ring-2 focus:ring-yellow-500 focus:outline-none" />
         </div>
         <div>
           <label class="block text-sm font-medium text-gray-700">Street</label>
-          <input id="childStreet" type="text" class="w-full border border-blue-500 rounded-md px-3 py-2 bg-transparent focus:ring-2 focus:ring-yellow-500 focus:outline-none" />
+          <input id="childStreet" type="text" class="w-full border border-green-500 rounded-md px-3 py-2 bg-transparent focus:ring-2 focus:ring-yellow-500 focus:outline-none" />
         </div>
         <div>
           <label class="block text-sm font-medium text-gray-700">Town</label>
-          <input id="childTown" type="text" class="w-full border border-blue-500 rounded-md px-3 py-2 bg-transparent focus:ring-2 focus:ring-yellow-500 focus:outline-none" />
+          <input id="childTown" type="text" class="w-full border border-green-500 rounded-md px-3 py-2 bg-transparent focus:ring-2 focus:ring-yellow-500 focus:outline-none" />
         </div>
         <div>
           <label class="block text-sm font-medium text-gray-700">State</label>
-          <select id="childState" class="w-full border border-blue-500 rounded-md px-3 py-2 bg-transparent focus:ring-2 focus:ring-yellow-500 focus:outline-none">
+          <select id="childState" class="w-full border border-green-500 rounded-md px-3 py-2 bg-transparent focus:ring-2 focus:ring-yellow-500 focus:outline-none">
             <option value="">Select State</option>
             <!--options would be populated dynamically-->
           </select>
         </div>
         <div>
           <label class="block text-sm font-medium text-gray-700">Local Government</label>
-          <select id="childLga" class="w-full border border-blue-500 rounded-md px-3 py-2 bg-transparent focus:ring-2 focus:ring-yellow-500 focus:outline-none">
+          <select id="childLga" class="w-full border border-green-500 rounded-md px-3 py-2 bg-transparent focus:ring-2 focus:ring-yellow-500 focus:outline-none">
             <option value="">Select LGA</option>
             <!--options would be populated dynamically-->
           </select>
         </div>
         <div>
           <label class="block text-sm font-medium text-gray-700">Phone</label>
-          <input id="childPhone" type="tel" class="w-full border border-blue-500 rounded-md px-3 py-2 bg-transparent focus:ring-2 focus:ring-yellow-500 focus:outline-none" />
+          <input id="childPhone" type="tel" class="w-full border border-green-500 rounded-md px-3 py-2 bg-transparent focus:ring-2 focus:ring-yellow-500 focus:outline-none" />
         </div>
         <div>
           <label class="block text-sm font-medium text-gray-700">Email</label>
-          <input id="childEmail" type="email" class="w-full border border-blue-500 rounded-md px-3 py-2 bg-transparent focus:ring-2 focus:ring-yellow-500 focus:outline-none" />
+          <input id="childEmail" type="email" class="w-full border border-green-500 rounded-md px-3 py-2 bg-transparent focus:ring-2 focus:ring-yellow-500 focus:outline-none" />
         </div>
         <div>
           <label class="block text-sm font-medium text-gray-700">P.O Box</label>
-          <input id="childPoBox" type="text" class="w-full border border-blue-500 rounded-md px-3 py-2 bg-transparent focus:ring-2 focus:ring-yellow-500 focus:outline-none" />
+          <input id="childPoBox" type="text" class="w-full border border-green-500 rounded-md px-3 py-2 bg-transparent focus:ring-2 focus:ring-yellow-500 focus:outline-none" />
         </div>
         <div>
           <label class="block text-sm font-medium text-gray-700">Sex</label>
-          <select id="childSex" class="w-full border border-blue-500 rounded-md px-3 py-2 bg-transparent focus:ring-2 focus:ring-yellow-500 focus:outline-none">
+          <select id="childSex" class="w-full border border-green-500 rounded-md px-3 py-2 bg-transparent focus:ring-2 focus:ring-yellow-500 focus:outline-none">
             <option value="">Select</option><option>Male</option><option>Female</option><option>Other</option>
           </select>
         </div>
         <div>
           <label class="block text-sm font-medium text-gray-700">Date of Birth</label>
-          <input id="childDob" type="date" class="w-full border border-blue-500 rounded-md px-3 py-2 bg-transparent focus:ring-2 focus:ring-yellow-500 focus:outline-none" />
+          <input id="childDob" type="date" class="w-full border border-green-500 rounded-md px-3 py-2 bg-transparent focus:ring-2 focus:ring-yellow-500 focus:outline-none" />
         </div>
         <div>
           <label class="block text-sm font-medium text-gray-700">School</label>
-          <input id="childSchool" type="text" class="w-full border border-blue-500 rounded-md px-3 py-2 bg-transparent focus:ring-2 focus:ring-yellow-500 focus:outline-none" />
+          <input id="childSchool" type="text" class="w-full border border-green-500 rounded-md px-3 py-2 bg-transparent focus:ring-2 focus:ring-yellow-500 focus:outline-none" />
         </div>
         <div>
           <label class="block text-sm font-medium text-gray-700">Office Address</label>
-          <input id="childOffice" type="text" class="w-full border border-blue-500 rounded-md px-3 py-2 bg-transparent focus:ring-2 focus:ring-yellow-500 focus:outline-none" />
+          <input id="childOffice" type="text" class="w-full border border-green-500 rounded-md px-3 py-2 bg-transparent focus:ring-2 focus:ring-yellow-500 focus:outline-none" />
         </div>
         <div >
           <label class="block text-sm font-medium text-gray-700">Occupation</label>
-          <input id="childOccupation" type="text" class="w-full border border-blue-500 rounded-md px-3 py-2 bg-transparent focus:ring-2 focus:ring-yellow-500 focus:outline-none" />
+          <input id="childOccupation" type="text" class="w-full border border-green-500 rounded-md px-3 py-2 bg-transparent focus:ring-2 focus:ring-yellow-500 focus:outline-none" />
         </div>
       </form>
       <div class="flex justify-end gap-3 mb-6">
         <button id="childCancel" class="px-4 py-2 rounded bg-gray-300 hover:bg-gray-400">Cancel</button>
-        <button id="childSave" class="px-4 py-2 rounded bg-blue-600 text-white hover:bg-blue-700">Save</button>
+        <button id="childSave" class="px-4 py-2 rounded bg-green-600 text-white hover:bg-green-700">Save</button>
       </div>
     </div>
 
     <div class="overflow-x-auto">
       <table class="min-w-full border border-gray-200 rounded-lg text-sm">
-        <thead class="bg-blue-100 text-blue-900">
+        <thead class="bg-green-100 text-green-900">
           <tr>
             <th class="py-2 px-3 border">Full Name</th>
             <th class="py-2 px-3 border">Sex</th>
@@ -516,17 +516,17 @@
 <!-- SUCCESS POPUP -->
 <div id="uploadSuccessPopup" class="hidden fixed inset-0 flex items-center justify-center bg-black bg-opacity-40 z-50">
   <div class="bg-white rounded-2xl shadow-lg p-6 w-96 text-center">
-    <h4 class="text-xl font-semibold text-green-600 mb-2">Upload Successful!</h4>
+    <h4 class="text-xl font-semibold text-blue-600 mb-2">Upload Successful!</h4>
     <p class="text-gray-600 mb-4">Your batch file has been uploaded successfully.</p>
     <button id="closePopupBtn" 
-      class="px-6 py-2 bg-green-600 hover:bg-green-700 text-white rounded-lg">Close</button>
+      class="px-6 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg">Close</button>
   </div>
 </div>
 
 <!-- Action Popup -->
 <div id="actionPopup" class="fixed inset-0 bg-black/50 flex items-center justify-center hidden z-50">
   <div class="bg-white p-6 rounded-2xl shadow-xl text-center w-64">
-    <div id="popupIcon" class="mx-auto h-12 w-12 rounded-full border-4 border-blue-500 border-t-transparent animate-spin"></div>
+    <div id="popupIcon" class="mx-auto h-12 w-12 rounded-full border-4 border-green-500 border-t-transparent animate-spin"></div>
     <p id="popupText" class="mt-4 text-lg font-semibold text-gray-700">Processing...</p>
   </div>
 </div>
@@ -538,7 +538,7 @@
     <h3 id="alertTitle" class="text-lg font-semibold text-gray-800 mb-2">Alert!</h3>
     <p id="alertMessage" class="text-gray-600 mb-4"></p>
     <button id="alertOkBtn" 
-      class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">
+      class="bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700">
       OK
     </button>
   </div>
@@ -979,12 +979,12 @@ function showPopup(message, callback) {
   const icon = document.getElementById('popupIcon');
   const text = document.getElementById('popupText');
 
-  icon.className = "mx-auto h-12 w-12 rounded-full border-4 border-blue-500 border-t-transparent animate-spin";
+  icon.className = "mx-auto h-12 w-12 rounded-full border-4 border-green-500 border-t-transparent animate-spin";
   text.textContent = message;
   popup.classList.remove('hidden');
 
   setTimeout(() => {
-    icon.className = "mx-auto h-12 w-12 flex items-center justify-center rounded-full bg-green-500 text-white";
+    icon.className = "mx-auto h-12 w-12 flex items-center justify-center rounded-full bg-blue-500 text-white";
     icon.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7" />
                       </svg>`;
@@ -1157,7 +1157,7 @@ function showTab(name) {
     const section = document.getElementById('section-' + t);
     
     if (tabBtn && section) {
-      tabBtn.classList.remove('bg-blue-600', 'text-white');
+      tabBtn.classList.remove('bg-green-600', 'text-white');
       tabBtn.classList.add('bg-yellow-400', 'text-gray-900');
       section.classList.add('hidden');
     }
@@ -1167,7 +1167,7 @@ function showTab(name) {
   const activeSection = document.getElementById('section-' + name);
   
   if (activeTab && activeSection) {
-    activeTab.classList.add('bg-blue-600', 'text-white');
+    activeTab.classList.add('bg-green-600', 'text-white');
     activeTab.classList.remove('bg-yellow-400', 'text-gray-900');
     activeSection.classList.remove('hidden');
   }
@@ -1187,13 +1187,13 @@ if (localStorage.getItem('isEditMode') === 'true') {
   if (batchButton) {
     batchButton.disabled = true;
     batchButton.classList.add('opacity-50', 'cursor-none');
-    batchButton.classList.remove('hover:bg-blue-600', 'cursor-not-allowed');
+    batchButton.classList.remove('hover:bg-green-600', 'cursor-not-allowed');
   }
 
   if (currentPersonnelButton) {
     currentPersonnelButton.disabled = true;
     currentPersonnelButton.classList.add('opacity-50', 'cursor-none');
-    currentPersonnelButton.classList.remove('hover:bg-green-700', 'cursor-not-allowed');
+    currentPersonnelButton.classList.remove('hover:bg-blue-700', 'cursor-not-allowed');
   }
 }
 
@@ -1225,20 +1225,20 @@ function renderStep1() {
     
     if (["Rank", "Religion", "State Of Origin", "Local Government", "Sex", "Marital Status"].includes(field)) {
       return controlWrap(field,
-        `<select id="${fieldId}" name="${field}" class="w-full border border-blue-500 bg-transparent rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-yellow-500">
+        `<select id="${fieldId}" name="${field}" class="w-full border border-green-500 bg-transparent rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-yellow-500">
            <option value="">Select ${field}</option>
          </select>`);
     }
     if (field === "Passport Photograph") {
       return controlWrap(field,
-        `<input id="${fieldId}" name="${field}" type="file" class="w-full border border-blue-500 bg-transparent rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-yellow-500"/>`);
+        `<input id="${fieldId}" name="${field}" type="file" class="w-full border border-green-500 bg-transparent rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-yellow-500"/>`);
     }
     if (field === "Date of Birth") {
       return controlWrap(field,
-        `<input id="${fieldId}" name="${field}" type="date" class="w-full border border-blue-500 bg-transparent rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-yellow-500"/>`);
+        `<input id="${fieldId}" name="${field}" type="date" class="w-full border border-green-500 bg-transparent rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-yellow-500"/>`);
     }
     return controlWrap(field,
-      `<input id="${fieldId}" name="${field}" type="text" placeholder="${field}" class="w-full border border-blue-500 bg-transparent rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-yellow-500"/>`);
+      `<input id="${fieldId}" name="${field}" type="text" placeholder="${field}" class="w-full border border-green-500 bg-transparent rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-yellow-500"/>`);
   }).join("");
 }
 
@@ -1255,11 +1255,11 @@ function toggleStep(step) {
   buttons.forEach((button, i) => {
     if (button) {
       if (i === step - 1) {
-        button.classList.add("bg-blue-600", "text-white");
+        button.classList.add("bg-green-600", "text-white");
         button.classList.remove("bg-yellow-400", "text-gray-900");
       } else {
         button.classList.add("bg-yellow-400", "text-gray-900");
-        button.classList.remove("bg-blue-600", "text-white");
+        button.classList.remove("bg-green-600", "text-white");
       }
     }
   });
@@ -1292,8 +1292,8 @@ submitBtn?.addEventListener('click', submitPersonnelFormWithValidation);
 function actionBtns(type, id) {
   // Add quotes around the id to handle string IDs like 'fallback-nok-1'
   return `
-    <button onclick="viewFamilyRecord('${type}', '${id}')" class="px-2 text-blue-600 hover:underline">View</button>
-    <button onclick="editRow('${type}', '${id}')" class="px-2 text-green-600 hover:underline">Edit</button>
+    <button onclick="viewFamilyRecord('${type}', '${id}')" class="px-2 text-green-600 hover:underline">View</button>
+    <button onclick="editRow('${type}', '${id}')" class="px-2 text-blue-600 hover:underline">Edit</button>
     <button onclick="deleteRow(this, '${type}', '${id}')" class="px-2 text-red-600 hover:underline">Delete</button>
   `;
 }
@@ -1354,10 +1354,10 @@ window.viewFamilyRecord = async function(type, id) {
   modal.className = 'fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50';
   modal.innerHTML = `
     <div class="bg-white p-6 rounded-lg shadow-xl w-full max-w-2xl mx-4 max-h-screen overflow-y-auto">
-      <h3 class="text-lg font-semibold text-blue-600">${type} Details</h3>
+      <h3 class="text-lg font-semibold text-green-600">${type} Details</h3>
       ${content}
       <button onclick="this.closest('.fixed').remove()" 
-              class="mt-4 px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 w-full">
+              class="mt-4 px-4 py-2 bg-green-600 text-white rounded hover:bg-green-700 w-full">
         Close
       </button>
     </div>
@@ -2367,17 +2367,17 @@ function convertPassportInputToAvatar(fileInput, base64Data) {
   const avatarContainer = document.createElement('div');
   avatarContainer.className = 'passport-avatar-container';
   avatarContainer.innerHTML = `
-    <div class="flex items-center gap-4 p-3 border border-blue-500 rounded-md bg-blue-50">
+    <div class="flex items-center gap-4 p-3 border border-green-500 rounded-md bg-green-50">
       <img src="data:image/jpeg;base64,${base64Data}" 
            alt="Passport" 
-           class="w-20 h-20 object-cover rounded-full border-2 border-blue-600 shadow-md"
+           class="w-20 h-20 object-cover rounded-full border-2 border-green-600 shadow-md"
            id="passport-avatar-preview"/>
       <div class="flex flex-col gap-2">
         <span class="text-sm font-semibold text-gray-700" id="passport-status-text">Current Passport Photo</span>
         <div class="flex gap-2">
           <button type="button" 
                   onclick="changePassportPhoto()" 
-                  class="px-3 py-1 text-sm bg-blue-600 text-white rounded hover:bg-blue-700 transition">
+                  class="px-3 py-1 text-sm bg-green-600 text-white rounded hover:bg-green-700 transition">
             Change
           </button>
           <button type="button" 
@@ -2424,18 +2424,18 @@ window.changePassportPhoto = function() {
         const statusText = document.getElementById('passport-status-text');
         if (statusText) {
           statusText.textContent = 'New Passport Photo Selected';
-          statusText.className = 'text-sm font-semibold text-green-600'; // Change color to green
+          statusText.className = 'text-sm font-semibold text-blue-600'; // Change color to green
         }
         
         // Update the border color to indicate change
         const container = avatarContainer.querySelector('div');
         if (container) {
-          container.className = 'flex items-center gap-4 p-3 border border-green-500 rounded-md bg-green-50';
+          container.className = 'flex items-center gap-4 p-3 border border-blue-500 rounded-md bg-blue-50';
         }
         
         // Update avatar border to green
         if (avatarImg) {
-          avatarImg.className = 'w-20 h-20 object-cover rounded-full border-2 border-green-600 shadow-md';
+          avatarImg.className = 'w-20 h-20 object-cover rounded-full border-2 border-blue-600 shadow-md';
         }
         
         // Update the stored data

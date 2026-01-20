@@ -16,7 +16,7 @@
       <h1 class="text-2xl font-bold text-gray-800">DEFENCE INTELLIGENCE AGENCY</h1>
       <p class="text-gray-500">System File Information</p>
     </div>
-    <button id="toggleEdit" class="ml-auto px-4 py-2 bg-blue-600 text-white rounded-lg shadow hover:bg-blue-700">
+    <button id="toggleEdit" class="ml-auto px-4 py-2 bg-green-600 text-white rounded-lg shadow hover:bg-green-700">
       Edit
     </button>
   </div>
@@ -197,7 +197,7 @@
       Cancel
     </button>
     <button type="submit" form="systemForm"
-            class="px-4 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700">
+            class="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700">
       Save
     </button>
   </div>
@@ -206,7 +206,7 @@
 <!-- Success Modal -->
 <div id="successModal" class="hidden fixed inset-0 flex items-center justify-center bg-black bg-opacity-40 z-50">
   <div class="bg-white rounded-lg shadow-lg p-6 flex flex-col items-center">
-    <div class="w-16 h-16 border-4 border-blue-500 border-t-transparent rounded-full animate-spin"></div>
+    <div class="w-16 h-16 border-4 border-green-500 border-t-transparent rounded-full animate-spin"></div>
     <p class="mt-4 text-gray-700">Saving changes...</p>
   </div>
 </div>
@@ -373,7 +373,7 @@
 
       // Show success notification
       const notification = document.createElement('div');
-      notification.className = 'fixed top-4 right-4 bg-green-500 text-white px-6 py-3 rounded-lg shadow-lg z-50';
+      notification.className = 'fixed top-4 right-4 bg-blue-500 text-white px-6 py-3 rounded-lg shadow-lg z-50';
       notification.textContent = 'Logo updated successfully!';
       document.body.appendChild(notification);
 
@@ -608,10 +608,10 @@
       setTimeout(() => {
         successModal.innerHTML = `
           <div class="bg-white rounded-lg shadow-lg p-6 flex flex-col items-center">
-            <svg class="w-16 h-16 text-green-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <svg class="w-16 h-16 text-blue-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
             </svg>
-            <p class="mt-4 text-green-600 font-semibold">Changes Saved!</p>
+            <p class="mt-4 text-blue-600 font-semibold">Changes Saved!</p>
           </div>`;
 
         // Update display fields
@@ -632,7 +632,7 @@
           successModal.classList.add("hidden");
           successModal.innerHTML = `
             <div class="bg-white rounded-lg shadow-lg p-6 flex flex-col items-center">
-              <div class="w-16 h-16 border-4 border-blue-500 border-t-transparent rounded-full animate-spin"></div>
+              <div class="w-16 h-16 border-4 border-green-500 border-t-transparent rounded-full animate-spin"></div>
               <p class="mt-4 text-gray-700">Saving changes...</p>
             </div>`;
           toggleEditBtn.textContent = "Edit";
@@ -658,7 +658,7 @@
         successModal.classList.add("hidden");
         successModal.innerHTML = `
           <div class="bg-white rounded-lg shadow-lg p-6 flex flex-col items-center">
-            <div class="w-16 h-16 border-4 border-blue-500 border-t-transparent rounded-full animate-spin"></div>
+            <div class="w-16 h-16 border-4 border-green-500 border-t-transparent rounded-full animate-spin"></div>
             <p class="mt-4 text-gray-700">Saving changes...</p>
           </div>`;
       }, 3000);

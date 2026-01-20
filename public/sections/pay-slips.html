@@ -1,6 +1,6 @@
 <!-- Payslip Section -->
 <section class="items border rounded-lg m-6 max-w-lg mr-auto p-6 mx-auto">
-  <h2 class="text-xl text-center border-b font-bold text-blue-600 mb-4">Generate and Print Payslips</h2>
+  <h2 class="text-xl text-center border-b font-bold text-green-600 mb-4">Generate and Print Payslips</h2>
 
   <form id="payslipForm" class="space-y-4">
     <!-- Radio selection -->
@@ -27,13 +27,13 @@
       <div>
         <label for="startNo" class="block text-sm font-medium mb-1">Start Service No</label>
         <input type="text" id="startNo" name="startNo"
-          class="w-full border rounded px-3 py-2 focus:ring focus:ring-blue-300" disabled />
+          class="w-full border rounded px-3 py-2 focus:ring focus:ring-green-300" disabled />
       </div>
 
       <div>
         <label for="endNo" class="block text-sm font-medium mb-1">End Service No</label>
         <input type="text" id="endNo" name="endNo"
-          class="w-full border rounded px-3 py-2 focus:ring focus:ring-blue-300" disabled />
+          class="w-full border rounded px-3 py-2 focus:ring focus:ring-green-300" disabled />
       </div>
     </div>
 
@@ -41,7 +41,7 @@
     <div>
       <label for="payrollClass" class="block text-sm font-medium mb-1">Payroll Class</label>
       <select id="payrollClass" name="payrollClass"
-        class="w-full bg-transparent border border-blue-500 rounded px-3 py-2 focus:ring-2 focus:ring-blue-500 focus:border-transparent" disabled>
+        class="w-full bg-transparent border border-green-500 rounded px-3 py-2 focus:ring-2 focus:ring-green-500 focus:border-transparent" disabled>
       </select>
     </div>
 
@@ -67,7 +67,7 @@
         Clear
       </button>
       <button type="button" id="generateBtn"
-        class="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700">
+        class="px-4 py-2 bg-green-600 text-white rounded hover:bg-green-700">
         Generate
       </button>
     </div>
@@ -78,7 +78,7 @@
 <!-- Loading Indicator -->
 <div id="loadingIndicator" class="hidden fixed inset-0 bg-black/50 flex items-center justify-center z-50">
   <div class="bg-white rounded-lg shadow-lg w-80 p-6 text-center">
-    <div class="animate-spin h-10 w-10 border-4 border-blue-600 border-t-transparent rounded-full mx-auto mb-4"></div>
+    <div class="animate-spin h-10 w-10 border-4 border-green-600 border-t-transparent rounded-full mx-auto mb-4"></div>
   <span class="text-gray-700">Generating payslips...</span>
   </div>
 </div>
@@ -95,7 +95,7 @@
         Cancel
       </button>
       <button id="continueBtn"
-        class="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700">
+        class="px-4 py-2 bg-green-600 text-white rounded hover:bg-green-700">
         Continue
       </button>
     </div>
@@ -105,10 +105,10 @@
 <!-- Success Modal -->
 <div id="successModal" class="hidden fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
   <div class="bg-white rounded-lg shadow-lg w-96 p-6 text-center">
-    <h3 class="text-lg font-semibold text-green-600 mb-4">Success</h3>
+    <h3 class="text-lg font-semibold text-blue-600 mb-4">Success</h3>
     <p class="mb-6 text-gray-700" id="successMessage">Payslips generated successfully!</p>
     <button id="successOkBtn"
-      class="px-4 py-2 bg-green-600 text-white rounded hover:bg-green-700">
+      class="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700">
       OK
     </button>
   </div>
@@ -142,7 +142,7 @@
       <button id="cancelPreviewBtn" class="px-4 py-2 bg-gray-400 text-white rounded hover:bg-gray-500">
         Cancel
       </button>
-      <button id="downloadPreviewBtn" class="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700">
+      <button id="downloadPreviewBtn" class="px-4 py-2 bg-green-600 text-white rounded hover:bg-green-700">
         Download PDF
       </button>
     </div>

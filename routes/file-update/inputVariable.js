@@ -19,3 +19,4 @@ const { exportInputVariablesExcel } = require('../../controllers/file-update/inp
 router.get('/export/excel', verifyToken, exportInputVariablesExcel);
 
 module.exports = router;
+

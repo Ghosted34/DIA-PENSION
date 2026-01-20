@@ -1,7 +1,7 @@
 <div class="p-6">
   <div class="flex justify-end mb-4 gap-2">
     <input type="text" id="searchElement" placeholder="Search type or description" class="border rounded px-3 py-2">
-    <button id="showFormBtn" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">+ Add New</button>
+    <button id="showFormBtn" class="bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700">+ Add New</button>
     <button id="generateReportBtn" class="bg-yellow-600 text-white px-4 py-2 rounded hover:bg-yellow-700">
       <i class="fas fa-file-alt mr-2"></i>Generate Report
     </button>
@@ -11,17 +11,17 @@
   <form id="payElementsForm" class="hidden grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mb-6 p-4 rounded border">
     <div>
       <label class="block text-sm font-medium text-gray-700">Payment Type *</label>
-      <input type="text" id="payElements" maxlength="6" class="w-full border border-blue-500 rounded-md px-3 py-2 bg-transparent" required>
+      <input type="text" id="payElements" maxlength="6" class="w-full border border-green-500 rounded-md px-3 py-2 bg-transparent" required>
     </div>
 
     <div>
       <label class="block text-sm font-medium text-gray-700">Description *</label>
-      <input type="text" id="description" maxlength="35" class="w-full border border-blue-500 rounded-md px-3 py-2 bg-transparent">
+      <input type="text" id="description" maxlength="35" class="w-full border border-green-500 rounded-md px-3 py-2 bg-transparent">
     </div>
 
     <div>
       <label class="block text-sm font-medium text-gray-700">Status</label>
-      <select id="status" class="w-full border border-blue-500 rounded-md px-3 py-2 bg-transparent">
+      <select id="status" class="w-full border border-green-500 rounded-md px-3 py-2 bg-transparent">
         <option value="">Select Status</option>
         <option value="Active">Active</option>
         <option value="Inactive">Inactive</option>
@@ -31,24 +31,24 @@
 
     <div>
       <label class="block text-sm font-medium text-gray-700">Function Type *</label>
-      <select id="percentage" class="w-full border border-blue-500 rounded-md px-3 py-2 bg-transparent">
+      <select id="percentage" class="w-full border border-green-500 rounded-md px-3 py-2 bg-transparent">
        <option value="">Select Function Type</option>
       </select>
     </div>
 
     <div>
       <label class="block text-sm font-medium text-gray-700">Standard Amount</label>
-      <input type="number" step="1,000" id="standardAmount" class="w-full border border-blue-500 rounded-md px-3 py-2 bg-transparent">
+      <input type="number" step="1,000" id="standardAmount" class="w-full border border-green-500 rounded-md px-3 py-2 bg-transparent">
     </div>
 
     <div>
       <label class="block text-sm font-medium text-gray-700">Maximum Amount</label>
-      <input type="number" id="maxAmount" class="w-full border border-blue-500 rounded-md px-3 py-2 bg-transparent">
+      <input type="number" id="maxAmount" class="w-full border border-green-500 rounded-md px-3 py-2 bg-transparent">
     </div>
 
     <div>
       <label class="block text-sm font-medium text-gray-700">Dependence</label>
-      <select id="dependence" placeholder="Payment code" class="w-full border border-blue-500 rounded-md px-3 py-2 bg-transparent">
+      <select id="dependence" placeholder="Payment code" class="w-full border border-green-500 rounded-md px-3 py-2 bg-transparent">
         <option value="">Select Dependance</option>
         <option value="None">None</option>
       </select>
@@ -56,14 +56,14 @@
 
     <div>
       <label class="block text-sm font-medium text-gray-700">Payment Frequency</label>
-      <select id="paymentFrequency" class="w-full border border-blue-500 rounded-md px-3 py-2 bg-transparent">
+      <select id="paymentFrequency" class="w-full border border-green-500 rounded-md px-3 py-2 bg-transparent">
         <option value="">Select Payment Frequency</option>
       </select>
     </div>
 
     <div>
       <label class="block text-sm font-medium text-gray-700">Starting Month</label>
-      <select id="startingMonth" class="w-full border border-blue-500 rounded-md px-3 py-2 bg-transparent">
+      <select id="startingMonth" class="w-full border border-green-500 rounded-md px-3 py-2 bg-transparent">
           <option value="">Select Month</option>
           <option value="01">01 - January</option>
           <option value="02">02 - February</option>
@@ -82,12 +82,12 @@
 
     <div>
       <label class="block text-sm font-medium text-gray-700">Tax Free Amount</label>
-      <input type="number" step="0.01" id="taxAllowance" class="w-full border border-blue-500 rounded-md px-3 py-2 bg-transparent">
+      <input type="number" step="0.01" id="taxAllowance" class="w-full border border-green-500 rounded-md px-3 py-2 bg-transparent">
     </div>
 
     <div>
       <label class="block text-sm font-medium text-gray-700">Required For All</label>
-      <select id="bPay" class="w-full border border-blue-500 rounded-md px-3 py-2 bg-transparent" required>
+      <select id="bPay" class="w-full border border-green-500 rounded-md px-3 py-2 bg-transparent" required>
         <option value="">Select</option>
         <option value="Yes">Yes</option>
         <option value="N0">No</option>
@@ -97,7 +97,7 @@
 
     <div>
       <label class="block text-sm font-medium text-gray-700">Year End Clearance </label>
-      <select id="yearEndClearance" class="w-full border border-blue-500 rounded-md px-3 py-2 bg-transparent" required>
+      <select id="yearEndClearance" class="w-full border border-green-500 rounded-md px-3 py-2 bg-transparent" required>
         <option value="">Select</option>
         <option value="Yes">Yes</option>
         <option value="No">No</option>
@@ -106,7 +106,7 @@
 
     <div>
       <label class="block text-sm font-medium text-gray-700">Ledger Code</label>
-      <select id="accountLedger" maxlength="15" class="w-full border border-blue-500 rounded-md px-3 py-2 bg-transparent">
+      <select id="accountLedger" maxlength="15" class="w-full border border-green-500 rounded-md px-3 py-2 bg-transparent">
         <option value="">Select Ledger Code</option>
 
       </select>
@@ -114,7 +114,7 @@
 
     <div>
       <label class="block text-sm font-medium text-gray-700">Required By IPPIS?</label>
-      <select id="requiredByIPPIS" class="w-full border border-blue-500 rounded-md px-3 py-2 bg-transparent">
+      <select id="requiredByIPPIS" class="w-full border border-green-500 rounded-md px-3 py-2 bg-transparent">
         <option value="">Select</option>
         <option value="Yes">Yes</option>
         <option value="No">No</option>
@@ -122,7 +122,7 @@
     </div>
 
     <div class="col-span-1 flex justify-end gap-2 md:col-span-2 lg:col-span-3">
-      <button type="button" id="saveBtn" class="bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700">Save</button>
+      <button type="button" id="saveBtn" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Save</button>
       <button type="button" id="cancelBtn" class="bg-gray-400 text-white px-4 py-2 rounded hover:bg-gray-500">Cancel</button>
     </div>
   </form>
@@ -130,7 +130,7 @@
   <!-- Table -->
   <div class="overflow-x-auto rounded-lg ">
     <table class="min-w-full border border-gray-200 rounded-lg text-sm">
-      <thead class="bg-blue-50 text-blue-900">
+      <thead class="bg-green-50 text-green-900">
         <tr>
           <th class="border px-2 py-3 text-left">Payment Type</th>
           <th class="border px-2 py-3 text-left">Description</th>
@@ -174,9 +174,9 @@
 <!-- Success Modal -->
 <div id="successModal" class="hidden fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50">
   <div class="bg-white p-6 rounded-lg shadow-xl max-w-md w-full mx-4">
-    <h3 class="text-lg font-semibold mb-2 text-green-600">Success!</h3>
+    <h3 class="text-lg font-semibold mb-2 text-blue-600">Success!</h3>
     <p id="successMessage" class="mb-4 text-gray-700">Your changes have been saved successfully!</p>
-    <button id="closeSuccessModal" class="bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700">OK</button>
+    <button id="closeSuccessModal" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">OK</button>
   </div>
 </div>
 
@@ -193,7 +193,7 @@
 <div id="viewModal" class="hidden fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50">
   <div class="bg-white p-6 rounded-lg shadow-xl w-full max-w-2xl mx-4 max-h-screen overflow-y-auto">
     <div class="flex justify-between items-center mb-4">
-      <h3 class="text-lg font-semibold text-blue-600">Pay Element Details</h3>
+      <h3 class="text-lg font-semibold text-green-600">Pay Element Details</h3>
       <button id="closeViewModal" class="text-gray-400 hover:text-gray-600">
         <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
@@ -528,13 +528,13 @@
         <td class="border px-2 py-2 text-left">${resolveName(item.perc, 'functiontype')}</td>
         <td class="border px-2 py-2 text-left">${resolveName(item.dependence, 'elementtype')} (${item.dependence})</td>
         <td class="border px-2 py-2 text-left">
-          <span class="px-2 py-1 rounded text-xs ${item.Status === 'Active' ? 'bg-green-100 text-green-800' : 'bg-red-100 text-red-800'}">
+          <span class="px-2 py-1 rounded text-xs ${item.Status === 'Active' ? 'bg-blue-100 text-blue-800' : 'bg-red-100 text-red-800'}">
             ${item.Status || 'Active'}
           </span>
         </td>
         <td class="border px-2 py-2 text-center">
-          <button onclick="viewRow('${item.PaymentType}')" class="text-blue-600 hover:text-blue-800 mr-2 px-2 py-1 rounded hover:bg-blue-50">View</button>
-          <button onclick="editRow('${item.PaymentType}')" class="text-green-600 hover:text-green-800 mr-2 px-2 py-1 rounded hover:bg-green-50">Edit</button>
+          <button onclick="viewRow('${item.PaymentType}')" class="text-green-600 hover:text-green-800 mr-2 px-2 py-1 rounded hover:bg-green-50">View</button>
+          <button onclick="editRow('${item.PaymentType}')" class="text-blue-600 hover:text-blue-800 mr-2 px-2 py-1 rounded hover:bg-blue-50">Edit</button>
           <button onclick="deleteRow('${item.PaymentType}')" class="text-red-600 hover:text-red-800 px-2 py-1 rounded hover:bg-red-50">Delete</button>
         </td>
       </tr>

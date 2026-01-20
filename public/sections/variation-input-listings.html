@@ -2,28 +2,28 @@
 
   <!-- Report Title -->
   <div class="hidden mb-6 text-center">
-    <h2 class="text-2xl font-bold text-blue-700">Variation Input Listings</h2>
+    <h2 class="text-2xl font-bold text-green-700">Variation Input Listings</h2>
     <p class="text-sm text-gray-600 mt-1">Generate pay period variation reports with customizable filters</p>
   </div>
 
   <!-- Radio Selection -->
   <div class="mb-2 pb-2 border-b border-gray-500">
-    <span class="text-blue-600 font-semibold text-lg block mb-3">Select Report Scope:</span>
+    <span class="text-green-600 font-semibold text-lg block mb-3">Select Report Scope:</span>
     <div class="flex flex-wrap gap-6">
       <label class="flex items-center cursor-pointer">
-        <input type="radio" name="variationScope" value="all" class="text-blue-600 w-4 h-4" checked>
+        <input type="radio" name="variationScope" value="all" class="text-green-600 w-4 h-4" checked>
         <span class="ml-2 font-medium">All Records</span>
       </label>
       <label class="flex items-center cursor-pointer">
-        <input type="radio" name="variationScope" value="payelements" class="text-blue-600 w-4 h-4">
+        <input type="radio" name="variationScope" value="payelements" class="text-green-600 w-4 h-4">
         <span class="ml-2 font-medium">By Pay Elements</span>
       </label>
       <label class="flex items-center cursor-pointer">
-        <input type="radio" name="variationScope" value="payee" class="text-blue-600 w-4 h-4">
+        <input type="radio" name="variationScope" value="payee" class="text-green-600 w-4 h-4">
         <span class="ml-2 font-medium">By Employee</span>
       </label>
       <label class="flex items-center cursor-pointer">
-        <input type="radio" name="variationScope" value="username" class="text-blue-600 w-4 h-4">
+        <input type="radio" name="variationScope" value="username" class="text-green-600 w-4 h-4">
         <span class="ml-2 font-medium">By Operator</span>
       </label>
     </div>
@@ -45,11 +45,11 @@
             placeholder="YYYY" 
             min="2020" 
             max="2099"
-            class="w-full bg-transparent border border-blue-500 rounded-lg px-3 py-2 focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+            class="w-full bg-transparent border border-green-500 rounded-lg px-3 py-2 focus:ring-2 focus:ring-green-500 focus:border-transparent">
         </div>
         <div>
           <label class="block text-sm font-medium text-gray-900 mb-1">Start Month</label>
-          <select id="startMonth" class="w-full bg-transparent border border-blue-500 rounded-lg px-3 py-2 focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+          <select id="startMonth" class="w-full bg-transparent border border-green-500 rounded-lg px-3 py-2 focus:ring-2 focus:ring-green-500 focus:border-transparent">
             <option value="">-- Select Month --</option>
             <option value="01">January</option>
             <option value="02">February</option>
@@ -77,11 +77,11 @@
             placeholder="YYYY" 
             min="2020" 
             max="2099"
-            class="w-full bg-transparent border border-blue-500 rounded-lg px-3 py-2 focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+            class="w-full bg-transparent border border-green-500 rounded-lg px-3 py-2 focus:ring-2 focus:ring-green-500 focus:border-transparent">
         </div>
         <div>
           <label class="block text-sm font-medium text-gray-900 mb-1">End Month</label>
-          <select id="endMonth" class="w-full bg-transparent border border-blue-500 rounded-lg px-3 py-2 focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+          <select id="endMonth" class="w-full bg-transparent border border-green-500 rounded-lg px-3 py-2 focus:ring-2 focus:ring-green-500 focus:border-transparent">
             <option value="">-- Select Month --</option>
             <option value="01">January</option>
             <option value="02">February</option>
@@ -101,20 +101,20 @@
     </div>
 
     <!-- Conditional Filters -->
-    <div id="payelementsWrapper" class="hidden bg-blue-50 p-4 rounded-lg">
+    <div id="payelementsWrapper" class="hidden bg-green-50 p-4 rounded-lg">
       <label class="block text-sm font-medium text-gray-900 mb-2">
-        <i class="fas fa-money-bill-wave text-blue-600 mr-2"></i>Select Pay Element
+        <i class="fas fa-money-bill-wave text-green-600 mr-2"></i>Select Pay Element
       </label>
-      <select id="payelementSelect" class="w-full border border-blue-500 rounded-lg px-3 py-2 focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+      <select id="payelementSelect" class="w-full border border-green-500 rounded-lg px-3 py-2 focus:ring-2 focus:ring-green-500 focus:border-transparent">
         <option value="">-- Choose Pay Element --</option>
       </select>
     </div>
 
-    <div id="payeeWrapper" class="hidden bg-green-50 p-4 rounded-lg">
+    <div id="payeeWrapper" class="hidden bg-blue-50 p-4 rounded-lg">
       <label class="block text-sm font-medium text-gray-900 mb-2">
-        <i class="fas fa-user text-green-600 mr-2"></i>Select Employee
+        <i class="fas fa-user text-blue-600 mr-2"></i>Select Employee
       </label>
-      <select id="payeeSelect" class="w-full border border-slate-600 rounded-lg px-3 py-2 focus:ring-2 focus:ring-green-500 focus:border-green-500">
+      <select id="payeeSelect" class="w-full border border-slate-600 rounded-lg px-3 py-2 focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
         <option value="">-- Choose Employee --</option>
       </select>
       <div id="payeeLoading" class="hidden mt-2 text-sm text-gray-600">
@@ -138,15 +138,15 @@
       </label>
       <div class="flex gap-4">
         <label class="flex items-center cursor-pointer">
-          <input type="radio" name="exportFormat" value="pdf" class="text-blue-600 w-4 h-4" checked>
+          <input type="radio" name="exportFormat" value="pdf" class="text-green-600 w-4 h-4" checked>
           <span class="ml-2">PDF</span>
         </label>
         <label class="flex items-center cursor-pointer">
-          <input type="radio" name="exportFormat" value="excel" class="text-blue-600 w-4 h-4">
+          <input type="radio" name="exportFormat" value="excel" class="text-green-600 w-4 h-4">
           <span class="ml-2">Excel (.xlsx)</span>
         </label>
         <label class="hidden flex items-center cursor-pointer">
-          <input type="radio" name="exportFormat" value="json" class="text-blue-600 w-4 h-4">
+          <input type="radio" name="exportFormat" value="json" class="text-green-600 w-4 h-4">
           <span class="ml-2">JSON</span>
         </label>
       </div>
@@ -158,7 +158,7 @@
         <i class="fas fa-times mr-2"></i>Clear
       </button>
 
-      <button id="generateVariation" class="bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-6 rounded-lg transition-colors shadow-lg hover:shadow-xl">
+      <button id="generateVariation" class="bg-green-600 hover:bg-green-700 text-white font-medium py-2 px-6 rounded-lg transition-colors shadow-lg hover:shadow-xl">
         <i class="fas fa-file-alt mr-2"></i>Generate Report
       </button>
     </div>
@@ -169,7 +169,7 @@
 <div id="loadingModal" class="hidden fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
   <div class="bg-white rounded-lg shadow-lg p-8 text-center">
     <div class="mb-4">
-      <i class="fas fa-spinner fa-spin text-4xl text-blue-600"></i>
+      <i class="fas fa-spinner fa-spin text-4xl text-green-600"></i>
     </div>
     <h3 class="text-lg font-semibold mb-2">Generating Report...</h3>
     <p class="text-gray-600">Please wait while we prepare your variation report.</p>
@@ -187,7 +187,7 @@
       </div>
     </div>
     <div class="flex justify-end">
-      <button id="variationModalCloseBtn" class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg">OK</button>
+      <button id="variationModalCloseBtn" class="bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-lg">OK</button>
     </div>
   </div>
 </div>
@@ -306,7 +306,7 @@
     variationModalMessage.textContent = message;
     variationModalIcon.innerHTML = isError 
       ? '<i class="fas fa-exclamation-circle text-red-500"></i>'
-      : '<i class="fas fa-check-circle text-green-500"></i>';
+      : '<i class="fas fa-check-circle text-blue-500"></i>';
     variationModal.classList.remove("hidden");
   }
 

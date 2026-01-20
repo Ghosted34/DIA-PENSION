@@ -26,7 +26,7 @@
         <div>
             <label for="yearly-year" class="block text-sm font-medium text-gray-700 mb-2">Year</label>
             <input id="yearly-year" type="number" min="2020" max="2030" placeholder="Loading..." 
-            class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 bg-gray-50" 
+            class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:ring-2 focus:ring-green-500 focus:border-green-500 bg-gray-50" 
             readonly required />
             <p class="hidden text-xs text-gray-500 mt-1">Year is automatically set from current payroll period</p>
         </div>
@@ -60,7 +60,7 @@
             <button 
                 type="submit" 
                 id="processButton"
-                class="px-6 py-3 bg-green-600 text-white rounded-lg font-semibold hover:bg-green-700 transition-colors disabled:bg-gray-400 disabled:cursor-not-allowed"
+                class="px-6 py-3 bg-blue-600 text-white rounded-lg font-semibold hover:bg-blue-700 transition-colors disabled:bg-gray-400 disabled:cursor-not-allowed"
             >
                 Process Year-End
             </button>
@@ -71,9 +71,9 @@
 <!-- Processing Modal -->
 <div id="processingModal" class="hidden fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
   <div class="bg-white rounded-lg shadow-2xl w-full max-w-2xl max-h-[90vh] overflow-hidden">
-      <div class="bg-green-600 text-white px-6 py-4">
+      <div class="bg-blue-600 text-white px-6 py-4">
           <h2 class="text-xl font-bold">Processing Year-End</h2>
-          <p class="text-sm text-green-100 mt-1" id="processingSubtitle">Please wait while we process annual data...</p>
+          <p class="text-sm text-blue-100 mt-1" id="processingSubtitle">Please wait while we process annual data...</p>
       </div>
 
       <div class="p-6 overflow-y-auto max-h-[calc(90vh-200px)]">
@@ -84,7 +84,7 @@
                   <span id="overallProgress">0%</span>
               </div>
               <div class="w-full bg-gray-200 rounded-full h-3">
-                  <div id="overallProgressBar" class="bg-green-600 h-3 rounded-full transition-all duration-300" style="width: 0%"></div>
+                  <div id="overallProgressBar" class="bg-blue-600 h-3 rounded-full transition-all duration-300" style="width: 0%"></div>
               </div>
           </div>
 
@@ -112,7 +112,7 @@
       </div>
 
       <div class="border-t border-gray-200 px-6 py-4 bg-gray-50 flex justify-center">
-          <button id="closeProcessing" class="hidden px-6 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700 transition">
+          <button id="closeProcessing" class="hidden px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition">
               Close
           </button>
       </div>
@@ -122,12 +122,12 @@
 <!-- Confirmation Modal -->
 <div id="confirmModal" class="hidden fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
   <div class="bg-white rounded-lg shadow-2xl w-full max-w-md overflow-hidden">
-    <div class="bg-green-600 px-6 py-4">
+    <div class="bg-blue-600 px-6 py-4">
       <h2 class="text-xl font-bold text-white">Confirm Year-End</h2>
     </div>
     <div class="p-6">
-      <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
-        <svg class="w-10 h-10 text-green-600" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+      <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+        <svg class="w-10 h-10 text-blue-600" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
         </svg>
       </div>
@@ -138,7 +138,7 @@
       <button onclick="closeConfirmModal(false)" class="px-6 py-2 bg-gray-300 text-gray-700 rounded-lg hover:bg-gray-400 transition font-medium">
         Cancel
       </button>
-      <button onclick="closeConfirmModal(true)" class="px-6 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700 transition font-medium">
+      <button onclick="closeConfirmModal(true)" class="px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition font-medium">
         Confirm
       </button>
     </div>
@@ -210,9 +210,9 @@
                 
                 const currentMonthDisplay = `${getMonthName(result.month)} ${result.year}`;
                 
-                banner.className = 'mb-4 p-4 rounded-lg border bg-green-100 text-green-700 border-green-200';
-                statusIcon.innerHTML = '<svg class="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>';
-                statusText.innerHTML = `Ready to process year-end for ${result.year}<br><span class="text-xs text-green-600">Current: ${currentMonthDisplay} | Previous: ${prevMonthDisplay}</span>`;
+                banner.className = 'mb-4 p-4 rounded-lg border bg-blue-100 text-blue-700 border-blue-200';
+                statusIcon.innerHTML = '<svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>';
+                statusText.innerHTML = `Ready to process year-end for ${result.year}<br><span class="text-xs text-blue-600">Current: ${currentMonthDisplay} | Previous: ${prevMonthDisplay}</span>`;
                 processButton.disabled = false;
                 blockMessage.classList.add('hidden');
                 console.log('✅ Year-end processing is allowed');
@@ -330,7 +330,7 @@
           });
 
           document.getElementById('processingSubtitle').textContent = '✅ Year-end processing completed!';
-          document.getElementById('processingSubtitle').classList.add('text-green-200');
+          document.getElementById('processingSubtitle').classList.add('text-blue-200');
           document.getElementById('closeProcessing').classList.remove('hidden');
 
       } catch (error) {
@@ -342,7 +342,7 @@
           document.getElementById('processingSubtitle').textContent = '❌ Processing failed';
           document.getElementById('processingSubtitle').classList.add('text-red-200');
           document.getElementById('closeProcessing').classList.remove('hidden');
-          document.getElementById('closeProcessing').classList.remove('bg-green-600', 'hover:bg-green-700');
+          document.getElementById('closeProcessing').classList.remove('bg-blue-600', 'hover:bg-blue-700');
           document.getElementById('closeProcessing').classList.add('bg-red-600', 'hover:bg-red-700');
       }
   });
@@ -356,7 +356,7 @@
       document.getElementById('processingSummary').classList.add('hidden');
       document.getElementById('closeProcessing').classList.add('hidden');
       document.getElementById('processingSubtitle').textContent = 'Please wait while we process annual data...';
-      document.getElementById('processingSubtitle').classList.remove('text-green-200', 'text-red-200');
+      document.getElementById('processingSubtitle').classList.remove('text-blue-200', 'text-red-200');
   }
 
   function addProcessingStep(title, status = 'pending') {
@@ -365,15 +365,15 @@
       
       const icons = {
           pending: '<div class="w-6 h-6 border-2 border-gray-300 rounded-full"></div>',
-          processing: '<div class="w-6 h-6 border-2 border-green-600 border-t-transparent rounded-full animate-spin"></div>',
-          success: '<div class="w-6 h-6 bg-green-100 rounded-full flex items-center justify-center"><svg class="w-4 h-4 text-green-600" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg></div>',
+          processing: '<div class="w-6 h-6 border-2 border-blue-600 border-t-transparent rounded-full animate-spin"></div>',
+          success: '<div class="w-6 h-6 bg-blue-100 rounded-full flex items-center justify-center"><svg class="w-4 h-4 text-blue-600" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg></div>',
           error: '<div class="w-6 h-6 bg-red-100 rounded-full flex items-center justify-center"><svg class="w-4 h-4 text-red-600" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/></svg></div>'
       };
       
       const colors = {
           pending: 'border-gray-200 bg-white',
-          processing: 'border-green-200 bg-green-50',
-          success: 'border-green-200 bg-green-50',
+          processing: 'border-blue-200 bg-blue-50',
+          success: 'border-blue-200 bg-blue-50',
           error: 'border-red-200 bg-red-50'
       };
       
@@ -396,12 +396,12 @@
       const step = steps[stepIndex];
       
       const icons = {
-          success: '<div class="w-6 h-6 bg-green-100 rounded-full flex items-center justify-center"><svg class="w-4 h-4 text-green-600" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg></div>',
+          success: '<div class="w-6 h-6 bg-blue-100 rounded-full flex items-center justify-center"><svg class="w-4 h-4 text-blue-600" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg></div>',
           error: '<div class="w-6 h-6 bg-red-100 rounded-full flex items-center justify-center"><svg class="w-4 h-4 text-red-600" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/></svg></div>'
       };
       
       const colors = {
-          success: 'border-green-200 bg-green-50',
+          success: 'border-blue-200 bg-blue-50',
           error: 'border-red-200 bg-red-50'
       };
       
@@ -431,7 +431,7 @@
   document.getElementById('closeProcessing').addEventListener('click', () => {
       document.getElementById('processingModal').classList.add('hidden');
       document.getElementById('closeProcessing').classList.remove('bg-red-600', 'hover:bg-red-700');
-      document.getElementById('closeProcessing').classList.add('bg-green-600', 'hover:bg-green-700');
+      document.getElementById('closeProcessing').classList.add('bg-blue-600', 'hover:bg-blue-700');
       loadYearEndStatus(); // Reload status after processing
   });
 

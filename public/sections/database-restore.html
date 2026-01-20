@@ -5,14 +5,14 @@
             <div class="flex items-center flex-wrap gap-2 justify-between">
                 <div class="flex items-center">
                     <div id="statusIndicator" class="w-3 h-3 rounded-full bg-yellow-500 mr-3"></div>
-                    <span id="statusText" class="text-blue-600 font-bold">Connecting to server...</span>
+                    <span id="statusText" class="text-green-600 font-bold">Connecting to server...</span>
                 </div>
                 <div class="flex gap-2 items-center">
                   <button onclick="window.navigation.navigateToSection('database-backup', 'Database Backup')"  class="bg-yellow-600 hover:bg-yellow-700 px-4 py-2 rounded text-white transition-colors">
                     <i class="fas fa-database text-white mr-2"></i> DB Backup
                   </button>
 
-                  <button id="refreshConnection" class="bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded text-white transition-colors">
+                  <button id="refreshConnection" class="bg-green-600 hover:bg-green-700 px-4 py-2 rounded text-white transition-colors">
                     <i class="fas fa-sync-alt mr-2"></i>Refresh
                   </button>
                 </div>
@@ -24,7 +24,7 @@
         <!-- Restore Configuration -->
         <div class="rounded-lg border border-slate-700">
             <div class="p-6 border-b border-slate-700">
-                <h2 class="text-xl text-blue-600 font-semibold flex items-center">
+                <h2 class="text-xl text-green-600 font-semibold flex items-center">
                     <i class="fas fa-cog mr-2 text-black"></i>
                     Restore Configuration
                 </h2>
@@ -49,7 +49,7 @@
                 <!-- Restore Mode -->
                 <div>
                     <label class="block text-sm font-medium text-gray-900 mb-2">Restore Mode</label>
-                    <select id="restoreMode" class="w-full bg-transparent border border-slate-600 rounded-lg px-3 py-2 focus:ring-2 focus:ring-green-500 focus:border-transparent">
+                    <select id="restoreMode" class="w-full bg-transparent border border-slate-600 rounded-lg px-3 py-2 focus:ring-2 focus:ring-blue-500 focus:border-transparent">
                         <option value="overwrite">Overwrite Existing Data</option>
                         <option value="merge">Merge with Existing Data</option>
                     </select>
@@ -57,7 +57,7 @@
 
                 <!-- Action Buttons -->
                 <div class="flex space-x-3 pt-4">
-                    <button id="startRestore" class="flex-1 bg-green-600 hover:bg-green-700 text-white font-medium py-2 px-4 rounded-lg transition-colors">
+                    <button id="startRestore" class="flex-1 bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-4 rounded-lg transition-colors">
                         <i class="fas fa-upload mr-2"></i>Start Restore
                     </button>
                     <button id="cancelRestore" class="flex-1 bg-amber-100/25 hover:bg-amber-50 text-red-600 font-medium py-2 px-4 rounded-lg transition-colors">
@@ -70,7 +70,7 @@
         <!-- Restore History -->
         <div class="rounded-lg border border-slate-700">
             <div class="p-6 border-b border-slate-700">
-                <h2 class="text-xl font-semibold text-blue-600 flex items-center">
+                <h2 class="text-xl font-semibold text-green-600 flex items-center">
                     <i class="fas fa-history mr-2 text-yellow-500"></i>
                     Restore History
                 </h2>
@@ -89,7 +89,7 @@
             <h3 class="text-lg font-semibold text-white mb-4">Restore in Progress</h3>
             <div class="space-y-4">
                 <div class="bg-slate-700 rounded-full h-2">
-                    <div id="restoreProgressBar" class="bg-green-600 h-2 rounded-full transition-all duration-300" style="width: 0%"></div>
+                    <div id="restoreProgressBar" class="bg-blue-600 h-2 rounded-full transition-all duration-300" style="width: 0%"></div>
                 </div>
                 <div id="restoreProgressText" class="text-slate-300 text-sm">Initializing restore...</div>
                 <div class="flex justify-end">
@@ -105,12 +105,12 @@
     <div class="grid md:grid-cols-3 gap-6 mt-6">
         <div class="rounded-lg border border-slate-700 p-6">
             <div class="flex items-center">
-                <div class="p-3 bg-green-600 rounded-full">
+                <div class="p-3 bg-blue-600 rounded-full">
                     <i class="fas fa-check text-lg text-white"></i>
                 </div>
                 <div class="ml-4">
                     <p class="text-gray-900 font-bold text-sm">Successful Restores</p>
-                    <p id="restoreSuccessCount" class="text-2xl font-semibold text-blue-600">0</p>
+                    <p id="restoreSuccessCount" class="text-2xl font-semibold text-green-600">0</p>
                 </div>
             </div>
         </div>
@@ -121,7 +121,7 @@
                 </div>
                 <div class="ml-4">
                     <p class="text-gray-900 font-bold text-sm">Failed Restores</p>
-                    <p id="restoreFailedCount" class="text-2xl font-semibold text-blue-600">0</p>
+                    <p id="restoreFailedCount" class="text-2xl font-semibold text-green-600">0</p>
                 </div>
             </div>
         </div>
@@ -132,7 +132,7 @@
                 </div>
                 <div class="ml-4">
                     <p class="text-gray-900 font-bold text-sm">Last Restore</p>
-                    <p id="lastRestore" class="text-xl font-semibold text-blue-600">Never</p>
+                    <p id="lastRestore" class="text-xl font-semibold text-green-600">Never</p>
                 </div>
             </div>
         </div>
@@ -155,10 +155,10 @@
   <div id="successModal" class="fixed inset-0 bg-black bg-opacity-50 backdrop-blur-sm hidden flex items-center justify-center z-50">
       <div class="bg-white rounded-lg p-8 max-w-sm w-full mx-4 text-center">
           <div id="loadingSpinner" class="flex justify-center mb-4">
-              <div class="w-10 h-10 border-4 border-gray-200 border-t-blue-600 rounded-full animate-spin"></div>
+              <div class="w-10 h-10 border-4 border-gray-200 border-t-green-600 rounded-full animate-spin"></div>
           </div>
           <div id="successTick" class="hidden flex justify-center mb-4">
-              <div class="w-10 h-10 bg-green-500 rounded-full flex items-center justify-center">
+              <div class="w-10 h-10 bg-blue-500 rounded-full flex items-center justify-center">
                   <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
                   </svg>
@@ -247,9 +247,9 @@ class databaseRestore {
             const data = await res.json();
 
             if (data.status === "connected") {
-                indicator.className = "w-3 h-3 rounded-full bg-green-500 mr-3";
+                indicator.className = "w-3 h-3 rounded-full bg-blue-500 mr-3";
                 text.textContent = `Connected (${data.engine})`;
-                text.className = "text-green-600 font-bold";
+                text.className = "text-blue-600 font-bold";
             } else {
                 indicator.className = "w-3 h-3 rounded-full bg-red-500 mr-3";
                 text.textContent = "Disconnected";
@@ -342,7 +342,7 @@ class databaseRestore {
                     <div class="flex items-center gap-2 justify-between p-3 bg-gray-50 rounded-lg border">
                         <div class="flex items-center">
                             <div class="p-2 rounded-full mr-3">
-                                <i class="fas fa-database text-green-600"></i>
+                                <i class="fas fa-database text-blue-600"></i>
                             </div>
                             <div>
                                 <p class="font-medium text-sm text-gray-900">${entry.filename}</p>
@@ -501,9 +501,9 @@ class databaseRestore {
 
     showNotification(message, type = 'info') {
         const colors = {
-            success: 'bg-green-500',
+            success: 'bg-blue-500',
             error: 'bg-red-500',
-            info: 'bg-blue-500'
+            info: 'bg-green-500'
         };
         
         const notification = document.createElement('div');

@@ -6,7 +6,7 @@
       <input 
         type="text" 
         id="tableSearchInput"
-        class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500 pl-10"
+        class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-green-500 pl-10"
         placeholder="Search by Service No, Type, or Pay Indicator..."
         autocomplete="off">
       <span class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
@@ -20,7 +20,7 @@
         </svg>
       </button>
     </div>
-    <button id="addBatch" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">+ New Upload</button>
+    <button id="addBatch" class="bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700">+ New Upload</button>
     <button id="generateReportBtn" class="bg-yellow-600 text-white px-4 py-2 rounded hover:bg-yellow-700">
       <i class="fas fa-file-alt mr-2"></i>Generate Report
     </button>
@@ -30,7 +30,7 @@
     <div id="batchUploadDiv" class="hidden w-full max-w-md rounded-2xl">
     <!-- Notes -->
     <div class="mb-6">
-      <h4 class="font-semibold text-blue-700 mb-2">Please Note:</h4>
+      <h4 class="font-semibold text-green-700 mb-2">Please Note:</h4>
       <ul class="list-disc list-inside text-gray-700 text-sm space-y-1">
         <li>Ensure your file is properly formatted before uploading.</li>
         <li>If you encounter any issues, please contact support.</li>
@@ -43,17 +43,17 @@
       <div>
         <label for="batchFile" class="block text-sm font-medium text-gray-700 mb-2">Upload File</label>
         <input type="file" id="batchFile" accept=".xlsx,.xls,.csv"
-          class="mt-1 block w-full border border-blue-300 bg-white rounded-lg px-3 py-2 text-sm shadow-sm focus:outline-none focus:ring-2 focus:ring-yellow-400 focus:border-yellow-400" />
+          class="mt-1 block w-full border border-green-300 bg-white rounded-lg px-3 py-2 text-sm shadow-sm focus:outline-none focus:ring-2 focus:ring-yellow-400 focus:border-yellow-400" />
         <p class="text-xs text-gray-500 mt-2">
           Only <span class="font-semibold">.xlsx</span>, <span class="font-semibold">.xls</span> or <span class="font-semibold">.csv</span> files are allowed.
-          <button type="button" id="downloadTemplateBtn" class="text-blue-600 font-medium hover:underline ml-2">Download Template</button>
+          <button type="button" id="downloadTemplateBtn" class="text-green-600 font-medium hover:underline ml-2">Download Template</button>
         </p>
       </div>
       <div class="flex justify-end gap-3">
         <button type="button" id="cancelBatchBtn"
           class="px-5 py-2 bg-gray-300 hover:bg-gray-400 rounded-lg text-gray-800 font-medium shadow-sm">Cancel</button>
         <button type="button" id="uploadBatchBtn"
-          class="px-5 py-2 bg-blue-600 hover:bg-blue-700 rounded-lg text-white font-medium shadow-md">Upload</button>
+          class="px-5 py-2 bg-green-600 hover:bg-green-700 rounded-lg text-white font-medium shadow-md">Upload</button>
       </div>
     </form>
    </div>
@@ -63,20 +63,20 @@
   <div id="successModal" class="hidden fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
     <div class="bg-white rounded-xl shadow-lg p-6 max-w-md w-full text-center">
       <div id="successIcon" class="mb-3 flex items-center justify-center">
-        <svg class="h-8 w-8 text-green-600" fill="none" stroke="currentColor" stroke-width="2"
+        <svg class="h-8 w-8 text-blue-600" fill="none" stroke="currentColor" stroke-width="2"
           viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round"
           d="M5 13l4 4L19 7" /></svg>
       </div>
-      <h2 id="successTitle" class="text-xl font-bold text-green-600 mb-2">Success</h2>
+      <h2 id="successTitle" class="text-xl font-bold text-blue-600 mb-2">Success</h2>
       <p id="successMessage" class="text-gray-600 mb-4">Action completed successfully.</p>
       <div id="uploadSummary" class="hidden text-left bg-gray-50 rounded-lg p-4 mb-4 text-sm">
         <p class="font-semibold mb-2">Upload Summary:</p>
         <p>Total Records: <span id="total-Records" class="font-medium">0</span></p>
-        <p>Successfully Inserted: <span id="successRecords" class="font-medium text-green-600">0</span></p>
+        <p>Successfully Inserted: <span id="successRecords" class="font-medium text-blue-600">0</span></p>
         <p>Duplicates/Failed: <span id="failedRecords" class="font-medium text-red-600">0</span></p>
       </div>
       <button id="closeModalBtn"
-        class="px-5 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-medium">OK</button>
+        class="px-5 py-2 bg-green-600 hover:bg-green-700 text-white rounded-lg font-medium">OK</button>
     </div>
   </div>
 
@@ -101,7 +101,7 @@
         <button id="confirmCancel"
           class="px-4 py-2 bg-gray-300 hover:bg-gray-400 rounded-lg text-gray-800 font-medium">Cancel</button>
         <button id="confirmYes"
-          class="px-4 py-2 bg-green-600 hover:bg-green-700 text-white rounded-lg font-medium">Yes</button>
+          class="px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-medium">Yes</button>
       </div>
     </div>
   </div>
@@ -110,7 +110,7 @@
   <div id="viewModal" class="hidden fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
     <div class="bg-white rounded-xl shadow-lg p-6 max-w-3xl w-full max-h-[90vh] overflow-y-auto">
       <div class="flex items-center justify-between mb-4 border-b pb-3">
-        <h2 class="text-xl font-bold text-blue-600">Payment/Deduction Details</h2>
+        <h2 class="text-xl font-bold text-green-600">Payment/Deduction Details</h2>
         <button id="closeViewBtn" class="text-gray-400 hover:text-gray-600">
           <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
@@ -122,7 +122,7 @@
       </div>
       <div class="flex justify-end mt-6 pt-4 border-t">
         <button id="closeViewBtnBottom"
-          class="px-5 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-medium">Close</button>
+          class="px-5 py-2 bg-green-600 hover:bg-green-700 text-white rounded-lg font-medium">Close</button>
       </div>
     </div>
   </div>
@@ -131,7 +131,7 @@
 <!-- Table Section -->
 <div class="m-6 overflow-x-auto border rounded-lg shadow-sm">
   <table class="min-w-full border-collapse">
-      <thead class="bg-blue-100 text-gray-700 text-sm">
+      <thead class="bg-green-100 text-gray-700 text-sm">
       <tr>
           <th class="border px-4 py-2 text-center">Service Number</th>
           <th class="border px-4 py-2 text-center">Type</th>
@@ -491,7 +491,7 @@
 
   // Show Loading
   function showLoading() {
-    successIcon.innerHTML = `<div class="h-8 w-8 border-4 border-blue-300 border-t-blue-600 rounded-full animate-spin"></div>`;
+    successIcon.innerHTML = `<div class="h-8 w-8 border-4 border-green-300 border-t-green-600 rounded-full animate-spin"></div>`;
     successTitle.textContent = "Uploading...";
     successMessage.textContent = "Please wait while we process your file.";
     uploadSummary.classList.add("hidden");
@@ -502,7 +502,7 @@
   function showUploadSuccess(result) {
     const summary = result.summary;
     
-    successIcon.innerHTML = `<svg class="h-8 w-8 text-green-600" fill="none" stroke="currentColor" stroke-width="2"
+    successIcon.innerHTML = `<svg class="h-8 w-8 text-blue-600" fill="none" stroke="currentColor" stroke-width="2"
       viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>`;
     
     successTitle.textContent = "Upload Complete";
@@ -594,7 +594,7 @@
 
   // Success modal function
   function showSuccess(title, message) {
-    successIcon.innerHTML = `<svg class="h-8 w-8 text-green-600" fill="none" stroke="currentColor" stroke-width="2"
+    successIcon.innerHTML = `<svg class="h-8 w-8 text-blue-600" fill="none" stroke="currentColor" stroke-width="2"
       viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>`;
     successTitle.textContent = title;
     successMessage.textContent = message;
@@ -625,7 +625,7 @@
         <td class="py-2 px-4 border">₦${Number(item.amount_to_date || 0).toLocaleString()}</td>
         <td class="py-2 px-4 border">${resolveName(item.indicator, 'payindicator')}</td>
         <td class="py-2 px-4 border">
-          <button class="view-btn text-blue-600 hover:underline" 
+          <button class="view-btn text-green-600 hover:underline" 
           data-item='${JSON.stringify(item)}'>
             View
           </button>

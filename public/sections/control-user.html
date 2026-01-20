@@ -4,7 +4,7 @@
     <div class="flex flex-wrap items-center gap-2">
       <input id="personnel-search" placeholder="Search..." class="px-3 py-2 border rounded w-56" />
       <button onclick="window.navigation?.navigateToSection?.('create-user','Create User')"
-              class="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700">
+              class="px-4 py-2 bg-green-600 text-white rounded-md hover:bg-green-700">
         Add New User
       </button>
     </div>
@@ -41,31 +41,31 @@
 
           <div>
             <label class="block text-sm font-medium text-gray-700 mb-2">Full Name *</label>
-            <input type="text" name="full_name" required  class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+            <input type="text" name="full_name" required  class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent">
           </div>
 
           <div>
             <label class="block text-sm font-medium text-gray-700 mb-2">Email *</label>
-            <input type="email" name="email" required  class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+            <input type="email" name="email" required  class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent">
           </div>
 
           <div>
             <label class="block text-sm font-medium text-gray-700 mb-2">Payroll Class *</label>
-            <select id="payroll-class" name="payroll_class" required class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+            <select id="payroll-class" name="payroll_class" required class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent">
               <option value="">Select Payroll Class</option>
             </select>
           </div>
 
           <div>
             <label class="block text-sm font-medium text-gray-700 mb-2">User Role *</label>
-            <select name="user_role" id="role" required  class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+            <select name="user_role" id="role" required  class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent">
               <option value="">Select Role...</option>
             </select>
           </div>
 
           <div>
             <label class="block text-sm font-medium text-gray-700 mb-2">Status *</label>
-            <select name="status" required class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+            <select name="status" required class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent">
               <option value="">Select Status...</option>
               <option value="active">Active</option>
               <option value="inactive">Inactive</option>
@@ -75,19 +75,19 @@
 
           <div>
             <label class="block text-sm font-medium text-gray-700 mb-2">Phone Number</label>
-            <input type="tel" name="phone_number"  class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+            <input type="tel" name="phone_number"  class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent">
           </div>
 
           <div>
             <label class="block text-sm font-medium text-gray-700 mb-2">Expiry Date</label>
-            <input type="date" name="expiry_date"  class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+            <input type="date" name="expiry_date"  class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent">
             <small class="text-gray-500 text-xs">Leave blank to remove expiry</small>
           </div>
         </div>
 
         <div class="flex justify-end gap-3 pt-4">
           <button type="button" id="cancel-edit-btn" class="px-4 py-2 bg-gray-300 rounded hover:bg-gray-400">Cancel</button>
-          <button type="submit" id="submit-edit-btn" class="px-4 py-2 bg-green-600 text-white rounded hover:bg-green-700">Save Changes</button>
+          <button type="submit" id="submit-edit-btn" class="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700">Save Changes</button>
         </div>
       </form>
     </div>
@@ -98,14 +98,14 @@
     <div id="viewEmployeeBackdrop" class="absolute inset-0 bg-black bg-opacity-50"></div>
     <div class="relative bg-white rounded-lg shadow-lg w-11/12 max-w-lg p-6 z-10 max-h-[90vh] overflow-y-auto">
       <div class="flex justify-between items-start">
-        <h3 class="text-lg font-semibold text-blue-600">User Details</h3>
+        <h3 class="text-lg font-semibold text-green-600">User Details</h3>
         <button id="close-view-modal" class="text-gray-500 hover:text-gray-800 text-2xl">&times;</button>
       </div>
 
       <div id="viewEmployeeContent" class="mt-4 space-y-2 text-gray-700"></div>
 
       <div class="flex justify-end mt-6">
-        <button id="view-modal-close-btn" class="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700">Close</button>
+        <button id="view-modal-close-btn" class="px-4 py-2 bg-green-600 text-white rounded hover:bg-green-700">Close</button>
       </div>
     </div>
   </div>
@@ -123,7 +123,7 @@
       </div>
       <div class="flex justify-end gap-3 mt-6">
         <button id="alert-cancel-btn" class="hidden px-4 py-2 bg-gray-300 text-gray-700 rounded hover:bg-gray-400">Cancel</button>
-        <button id="alert-ok-btn" class="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700">OK</button>
+        <button id="alert-ok-btn" class="px-4 py-2 bg-green-600 text-white rounded hover:bg-green-700">OK</button>
       </div>
     </div>
   </div>
@@ -131,7 +131,7 @@
   <!-- Success Popup -->
   <div id="successPopup" class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-40 hidden z-50">
     <div class="bg-white p-6 rounded shadow flex items-center space-x-3">
-      <div id="successSpinner" class="animate-spin rounded-full h-6 w-6 border-b-2 border-green-600"></div>
+      <div id="successSpinner" class="animate-spin rounded-full h-6 w-6 border-b-2 border-blue-600"></div>
       <span id="successMessage" class="text-gray-700">Processing...</span>
     </div>
   </div>
@@ -208,10 +208,10 @@ const AlertModal = {
 
   getIcon(type) {
     const icons = {
-      info: '<svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>',
+      info: '<svg class="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>',
       error: '<svg class="w-6 h-6 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>',
       warning: '<svg class="w-6 h-6 text-yellow-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path></svg>',
-      success: '<svg class="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>',
+      success: '<svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>',
       confirm: '<svg class="w-6 h-6 text-orange-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>'
     };
     return icons[type] || icons.info;
@@ -447,8 +447,8 @@ class PersonnelManager {
           </span>
         </td>
         <td class="border border-gray-300 px-4 py-3 text-left text-center">
-          <button onclick="window.personnelManager.viewUser('${u.user_id}')" class="px-2 py-1 bg-blue-600 text-white text-xs rounded mr-1 hover:bg-blue-700">View</button>
-          <button onclick="window.personnelManager.startEdit('${u.user_id}')" class="px-2 py-1 bg-green-600 text-white text-xs rounded mr-1 hover:bg-green-700">Edit</button>
+          <button onclick="window.personnelManager.viewUser('${u.user_id}')" class="px-2 py-1 bg-green-600 text-white text-xs rounded mr-1 hover:bg-green-700">View</button>
+          <button onclick="window.personnelManager.startEdit('${u.user_id}')" class="px-2 py-1 bg-blue-600 text-white text-xs rounded mr-1 hover:bg-blue-700">Edit</button>
           <button onclick="window.personnelManager.deleteUser('${u.user_id}')" class="px-2 py-1 bg-red-600 text-white text-xs rounded hover:bg-red-700">Delete</button>
         </td>
       </tr>
@@ -457,7 +457,7 @@ class PersonnelManager {
 
   statusClass(status) {
     switch (status) {
-      case 'active': return 'bg-green-100 text-green-800';
+      case 'active': return 'bg-blue-100 text-blue-800';
       case 'inactive': return 'bg-red-100 text-red-800';
       case 'suspended': return 'bg-yellow-100 text-yellow-800';
       default: return 'bg-gray-100 text-gray-800';
@@ -738,7 +738,7 @@ class PersonnelManager {
     this.successPopup.classList.remove('hidden');
     setTimeout(() => {
       this.successSpinner?.classList.add('hidden');
-      this.successMessage.innerHTML = `<span class="text-green-600 font-semibold">✔ ${message}</span>`;
+      this.successMessage.innerHTML = `<span class="text-blue-600 font-semibold">✔ ${message}</span>`;
     }, 1000);
     setTimeout(() => {
       this.successPopup.classList.add('hidden');

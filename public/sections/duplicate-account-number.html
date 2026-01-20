@@ -26,11 +26,11 @@
   <div id="dupForm" class="space-y-2">
 
     <!-- Bank Select (Hidden by default) -->
-    <div id="bankSelectWrapper" class="hidden border-b border-blue-500 p-4 rounded-lg">
+    <div id="bankSelectWrapper" class="hidden border-b border-green-500 p-4 rounded-lg">
       <label class="block text-sm font-medium text-gray-900 mb-2">
-        <i class="fas fa-university text-blue-600 mr-2"></i>Select Bank
+        <i class="fas fa-university text-green-600 mr-2"></i>Select Bank
       </label>
-      <select id="bankSelect" class="w-full border rounded-lg px-3 py-2 focus:ring focus:ring-blue-300">
+      <select id="bankSelect" class="w-full border rounded-lg px-3 py-2 focus:ring focus:ring-green-300">
         <!--<option value="">-- Choose Bank --</option>-->
       </select>
     </div>
@@ -38,7 +38,7 @@
     <!-- Include Inactive Toggle -->
     <div class="bg-gray-50 p-4 rounded-lg">
       <label class="flex items-center cursor-pointer">
-        <input type="checkbox" id="includeInactive" class="w-4 h-4 text-blue-600 rounded focus:ring-2 focus:ring-blue-500">
+        <input type="checkbox" id="includeInactive" class="w-4 h-4 text-green-600 rounded focus:ring-2 focus:ring-green-500">
         <span class="ml-2 text-sm font-medium text-gray-900">
           <i class="fas fa-user-slash text-gray-600 mr-2"></i>Include Inactive/Separated Employees
         </span>
@@ -53,15 +53,15 @@
       </label>
       <div class="flex gap-4">
         <label class="flex items-center cursor-pointer">
-          <input type="radio" name="exportFormat" value="pdf" class="text-blue-600 w-4 h-4" checked>
+          <input type="radio" name="exportFormat" value="pdf" class="text-green-600 w-4 h-4" checked>
           <span class="ml-2">PDF</span>
         </label>
         <label class="flex items-center cursor-pointer">
-          <input type="radio" name="exportFormat" value="excel" class="text-blue-600 w-4 h-4">
+          <input type="radio" name="exportFormat" value="excel" class="text-green-600 w-4 h-4">
           <span class="ml-2">Excel (.xlsx)</span>
         </label>
         <label class="hidden flex items-center cursor-pointer">
-          <input type="radio" name="exportFormat" value="json" class="text-blue-600 w-4 h-4">
+          <input type="radio" name="exportFormat" value="json" class="text-green-600 w-4 h-4">
           <span class="ml-2">JSON</span>
         </label>
       </div>
@@ -102,7 +102,7 @@
       </div>
     </div>
     <div class="flex justify-end">
-      <button id="dupModalCloseBtn" class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg">OK</button>
+      <button id="dupModalCloseBtn" class="bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-lg">OK</button>
     </div>
   </div>
 </div>
@@ -161,7 +161,7 @@
     dupModalMessage.textContent = message;
     dupModalIcon.innerHTML = isError 
       ? '<i class="fas fa-exclamation-circle text-red-500"></i>'
-      : '<i class="fas fa-check-circle text-green-500"></i>';
+      : '<i class="fas fa-check-circle text-blue-500"></i>';
     dupModal.classList.remove("hidden");
   }
 

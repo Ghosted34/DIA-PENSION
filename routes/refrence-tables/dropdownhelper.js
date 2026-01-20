@@ -65,3 +65,4 @@ router.get("/:table", verifyToken, async (req, res) => {
 });
 
 module.exports = router;
+

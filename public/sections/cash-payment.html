@@ -3,7 +3,7 @@
   <div class="flex justify-end mb-4">
     <button
       id="addNewBtn"
-      class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700"
+      class="bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700"
     >
       + Add New
     </button>
@@ -14,7 +14,7 @@
   <div
     id="salaryForm"
     class="hidden items mb-4 border rounded-lg p-4 max-w-lg mx-auto">
-    <h4 class="text-lg font-bold text-blue-600 mb-3">Add/Edit Overpayment Percentage</h4>
+    <h4 class="text-lg font-bold text-green-600 mb-3">Add/Edit Overpayment Percentage</h4>
     <form class="space-y-4">
       <div>
         <label class="block text-sm font-medium mb-1">Basic Salary</label>
@@ -38,7 +38,7 @@
         <button
           type="button"
           id="saveBtn"
-          class="bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600">
+          class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">
           Save
         </button>
         <button
@@ -54,7 +54,7 @@
   <!-- Table -->
   <div class="overflow-x-auto">
     <table class="min-w-full border text-sm">
-      <thead class="bg-blue-100">
+      <thead class="bg-green-100">
         <tr>
           <th class="border px-3 py-2 text-left">Basic Salary Record</th>
           <th class="border px-3 py-2 text-left">Overpayment Percentage (%)</th>
@@ -71,7 +71,7 @@
 <!-- Modal -->
 <div id="successModal" class="fixed inset-0 bg-black bg-opacity-50 hidden flex items-center justify-center">
   <div class="bg-white p-6 rounded-xl shadow-xl text-center">
-    <p class="text-lg font-semibold text-green-600">✅ Saved Successfully!</p>
+    <p class="text-lg font-semibold text-blue-600">✅ Saved Successfully!</p>
   </div>
 </div>
 
@@ -82,7 +82,7 @@
     <h3 id="alertTitle" class="text-lg font-semibold text-gray-800 mb-2">Alert!</h3>
     <p id="alertMessage" class="text-gray-600 mb-4"></p>
     <button id="alertOkBtn" 
-      class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">
+      class="bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700">
       OK
     </button>
   </div>
@@ -219,7 +219,7 @@
         <td class="border px-3 py-2">${resolveName(bt04.basicpay, "elementtype")} (${bt04.basicpay})</td>
         <td class="border px-3 py-2">${bt04.ord || 0}%</td>
         <td class="border px-3 py-2 text-center">
-          <button class="text-blue-500 editBtn mr-2">Edit</button>
+          <button class="text-green-500 editBtn mr-2">Edit</button>
           <button class="text-red-500 deleteBtn">Delete</button>
         </td>
       `;
@@ -321,3 +321,4 @@
 })();
 })();
 </script>
+

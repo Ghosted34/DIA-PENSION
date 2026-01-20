@@ -8,7 +8,7 @@
         <input 
           type="text" 
           id="searchInput"
-          class="w-full border border-blue-500 focus:border-yellow-500 bg-transparent rounded-md px-3 py-2"
+          class="w-full border border-green-500 focus:border-yellow-500 bg-transparent rounded-md px-3 py-2"
           placeholder="Search by Name or Number..."
           autocomplete="off">
         <input type="hidden" id="hiddenInput">
@@ -29,14 +29,14 @@
       <div>
         <label for="new-reg" class="block text-sm lg:text-lg font-medium text-gray-700 mb-2">New Registration Number</label>
         <input id="new-reg" type="text" placeholder="Enter New Registration Number"
-          class="w-full px-4 py-2 bg-gray-50 border border-gray-300 rounded-lg text-gray-900 placeholder-gray-400 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors" />
+          class="w-full px-4 py-2 bg-gray-50 border border-gray-300 rounded-lg text-gray-900 placeholder-gray-400 focus:ring-2 focus:ring-green-500 focus:border-green-500 transition-colors" />
       </div>
 
       <div class="flex flex-wrap gap-2 justify-end space-x-4 pt-4">
         <button id="cancelBtn" class="px-6 py-2 bg-gray-200 text-gray-700 font-medium rounded-lg hover:bg-gray-300 transition-colors">
           Cancel
         </button>
-        <button id="saveBtn" class="px-6 py-2 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors">
+        <button id="saveBtn" class="px-6 py-2 bg-green-600 text-white font-semibold rounded-lg hover:bg-green-700 transition-colors">
           Save Changes
         </button>
       </div>
@@ -153,10 +153,10 @@ function renderDropdown(employees) {
     const rank = emp.Title || emp.rank || '';
     
     return `
-      <div class="dropdown-item px-3 py-2 hover:bg-blue-50 cursor-pointer border-b border-gray-100" 
+      <div class="dropdown-item px-3 py-2 hover:bg-green-50 cursor-pointer border-b border-gray-100" 
            data-value="${id}" 
            data-name="${name}">
-        <span class="font-semibold text-blue-600">${id}</span> - ${name}
+        <span class="font-semibold text-green-600">${id}</span> - ${name}
       </div>
     `;
   }).join('');
@@ -232,7 +232,7 @@ const modalHTML = `
       </div>
       <p id="validationMessage" class="text-gray-600 mb-6"></p>
       <div class="flex justify-end">
-        <button onclick="closeValidationModal()" class="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700">
+        <button onclick="closeValidationModal()" class="px-4 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700">
           OK
         </button>
       </div>
@@ -243,8 +243,8 @@ const modalHTML = `
   <div id="confirmModal" class="hidden fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
     <div class="bg-white rounded-lg shadow-xl p-6 max-w-md w-full mx-4">
       <div class="flex items-center mb-4">
-        <div class="w-12 h-12 rounded-full bg-blue-100 flex items-center justify-center mr-4">
-          <i class="fas fa-question-circle text-blue-600 text-xl"></i>
+        <div class="w-12 h-12 rounded-full bg-green-100 flex items-center justify-center mr-4">
+          <i class="fas fa-question-circle text-green-600 text-xl"></i>
         </div>
         <h3 class="text-lg font-semibold text-gray-900">Confirm Update</h3>
       </div>
@@ -253,7 +253,7 @@ const modalHTML = `
         <button onclick="closeConfirmModal()" class="px-4 py-2 bg-gray-300 text-gray-700 rounded-lg hover:bg-gray-400">
           Cancel
         </button>
-        <button id="confirmBtn" class="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700">
+        <button id="confirmBtn" class="px-4 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700">
           Confirm
         </button>
       </div>
@@ -264,14 +264,14 @@ const modalHTML = `
   <div id="successModal" class="hidden fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
     <div class="bg-white rounded-lg shadow-xl p-6 max-w-md w-full mx-4">
       <div class="flex items-center mb-4">
-        <div class="w-12 h-12 rounded-full bg-green-100 flex items-center justify-center mr-4">
-          <i class="fas fa-check-circle text-green-600 text-xl"></i>
+        <div class="w-12 h-12 rounded-full bg-blue-100 flex items-center justify-center mr-4">
+          <i class="fas fa-check-circle text-blue-600 text-xl"></i>
         </div>
         <h3 class="text-lg font-semibold text-gray-900">Success</h3>
       </div>
       <p id="successMessage" class="text-gray-600 mb-6"></p>
       <div class="flex justify-end">
-        <button onclick="closeSuccessModal()" class="px-4 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700">
+        <button onclick="closeSuccessModal()" class="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700">
           OK
         </button>
       </div>
@@ -300,7 +300,7 @@ const modalHTML = `
   <div id="loadingModal" class="hidden fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
     <div class="bg-white rounded-lg shadow-xl p-6 max-w-sm w-full mx-4">
       <div class="flex flex-col items-center">
-        <div class="w-16 h-16 border-4 border-blue-500 border-t-transparent rounded-full animate-spin mb-4"></div>
+        <div class="w-16 h-16 border-4 border-green-500 border-t-transparent rounded-full animate-spin mb-4"></div>
         <p class="text-gray-700 font-medium">Updating...</p>
       </div>
     </div>

@@ -21,7 +21,7 @@
         <div class="text-navy">
           <i class="fas fa-file-alt text-2xl"></i>
         </div>
-        <h2 class="text-2xl font-bold text-blue-800">Calculation Reports Generated For <span id="reportMonth"></span> <span id="reportYear"></span></h2>
+        <h2 class="text-2xl font-bold text-green-800">Calculation Reports Generated For <span id="reportMonth"></span> <span id="reportYear"></span></h2>
       </div>
     </div>
 
@@ -44,7 +44,7 @@
       <div class="bg-slate-50 rounded-lg border-2 border-gray-200 p-3 hover:border-purple-500 hover:shadow-lg transition">
         <div class="flex items-start justify-between mb-4">
           <i class="fas fa-clipboard-list text-purple-600 text-2xl"></i>
-          <span class="text-xs bg-blue-100 text-blue-800 px-2 py-1 rounded font-semibold">EXCEL</span>
+          <span class="text-xs bg-green-100 text-green-800 px-2 py-1 rounded font-semibold">EXCEL</span>
         </div>
         <h3 class="text-lg font-bold text-gray-800 mb-2">Control Sheet</h3>
         <p class="text-sm text-gray-600 mb-4">Debit/Credit analysis</p>
@@ -59,15 +59,15 @@
       </div>
       
       <!-- Payroll Summary Report -->
-      <div class="bg-slate-50 rounded-lg border-2 border-gray-200 p-3 hover:border-blue-500 hover:shadow-lg transition">
+      <div class="bg-slate-50 rounded-lg border-2 border-gray-200 p-3 hover:border-green-500 hover:shadow-lg transition">
         <div class="flex items-start justify-between mb-4">
-          <i class="fas fa-chart-pie text-blue-600 text-2xl"></i>
-          <span class="text-xs bg-green-100 text-green-800 px-2 py-1 rounded font-semibold">EXCEL</span>
+          <i class="fas fa-chart-pie text-green-600 text-2xl"></i>
+          <span class="text-xs bg-blue-100 text-blue-800 px-2 py-1 rounded font-semibold">EXCEL</span>
         </div>
         <h3 class="text-lg font-bold text-gray-800 mb-2">Summary Report</h3>
         <p class="text-sm text-gray-600 mb-4">Overall summary with totals and averages</p>
         <div class="flex gap-2">
-          <button onclick="viewReport('summary')" class="flex-1 px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition text-sm">
+          <button onclick="viewReport('summary')" class="flex-1 px-4 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700 transition text-sm">
             <i class="fas fa-eye mr-2"></i>View
           </button>
           <button onclick="downloadReport('summary', 'excel')" class="px-4 py-2 bg-gray-600 text-white rounded-lg hover:bg-gray-700 transition text-sm">
@@ -77,15 +77,15 @@
       </div>
 
       <!-- Bank Payment Report -->
-      <div class="bg-slate-50 rounded-lg border-2 border-gray-200 p-3 hover:border-green-500 hover:shadow-lg transition">
+      <div class="bg-slate-50 rounded-lg border-2 border-gray-200 p-3 hover:border-blue-500 hover:shadow-lg transition">
         <div class="flex items-start justify-between mb-4">
-          <i class="fas fa-university text-green-600 text-2xl"></i>
-          <span class="text-xs bg-blue-100 text-blue-800 px-2 py-1 rounded font-semibold">EXCEL</span>
+          <i class="fas fa-university text-blue-600 text-2xl"></i>
+          <span class="text-xs bg-green-100 text-green-800 px-2 py-1 rounded font-semibold">EXCEL</span>
         </div>
         <h3 class="text-lg font-bold text-gray-800 mb-2">Bank Payment Report</h3>
         <p class="text-sm text-gray-600 mb-4">Payment breakdown by bank for salary transfers</p>
         <div class="flex gap-2">
-          <button onclick="viewReport('bank')" class="flex-1 px-4 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700 transition text-sm">
+          <button onclick="viewReport('bank')" class="flex-1 px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition text-sm">
             <i class="fas fa-eye mr-2"></i>View
           </button>
           <button onclick="downloadReport('bank', 'excel')" class="px-4 py-2 bg-gray-600 text-white rounded-lg hover:bg-gray-700 transition text-sm">
@@ -98,7 +98,7 @@
       <div class="bg-slate-50 rounded-lg border-2 border-gray-200 p-3 hover:border-red-500 hover:shadow-lg transition">
         <div class="flex items-start justify-between mb-4">
           <i class="fas fa-minus-circle text-red-600 text-2xl"></i>
-          <span class="text-xs bg-blue-100 text-blue-800 px-2 py-1 rounded font-semibold">EXCEL</span>
+          <span class="text-xs bg-green-100 text-green-800 px-2 py-1 rounded font-semibold">EXCEL</span>
         </div>
         <h3 class="text-lg font-bold text-gray-800 mb-2">Deductions Summary</h3>
         <p class="text-sm text-gray-600 mb-4">Summary of all deductions by type</p>
@@ -116,7 +116,7 @@
       <div class="bg-slate-50 rounded-lg border-2 border-gray-200 p-3 hover:border-cyan-500 hover:shadow-lg transition">
         <div class="flex items-start justify-between mb-4">
           <i class="fas fa-hand-holding-usd text-cyan-600 text-2xl"></i>
-          <span class="text-xs bg-green-100 text-green-800 px-2 py-1 rounded font-semibold">EXCEL</span>
+          <span class="text-xs bg-blue-100 text-blue-800 px-2 py-1 rounded font-semibold">EXCEL</span>
         </div>
         <h3 class="text-lg font-bold text-gray-800 mb-2">Allowances Summary</h3>
         <p class="text-sm text-gray-600 mb-4">Detailed breakdown of all allowances paid</p>
@@ -134,7 +134,7 @@
       <div class="bg-slate-50 rounded-lg border-2 border-gray-200 p-3 hover:border-yellow-500 hover:shadow-lg transition">
         <div class="flex items-start justify-between mb-4">
           <i class="fas fa-receipt text-yellow-600 text-2xl"></i>
-          <span class="text-xs bg-blue-100 text-blue-800 px-2 py-1 rounded font-semibold">EXCEL</span>
+          <span class="text-xs bg-green-100 text-green-800 px-2 py-1 rounded font-semibold">EXCEL</span>
         </div>
         <h3 class="text-lg font-bold text-gray-800 mb-2">Tax Report </h3>
         <p class="text-sm text-gray-600 mb-4">Detailed tax deductions and cumulative tax</p>
@@ -152,7 +152,7 @@
       <div class="bg-slate-50 rounded-lg border-2 border-gray-200 p-3 hover:border-indigo-500 hover:shadow-lg transition">
         <div class="flex items-start justify-between mb-4">
           <i class="fas fa-building text-indigo-600 text-2xl"></i>
-          <span class="text-xs bg-green-100 text-green-800 px-2 py-1 rounded font-semibold">EXCEL</span>
+          <span class="text-xs bg-blue-100 text-blue-800 px-2 py-1 rounded font-semibold">EXCEL</span>
         </div>
         <h3 class="text-lg font-bold text-gray-800 mb-2">Department Summary</h3>
         <p class="text-sm text-gray-600 mb-4">Payroll summary grouped by department</p>
@@ -170,7 +170,7 @@
       <div class="bg-slate-50 rounded-lg border-2 border-gray-200 p-3 hover:border-teal-500 hover:shadow-lg transition">
         <div class="flex items-start justify-between mb-4">
           <i class="fas fa-layer-group text-teal-600 text-xl"></i>
-          <span class="text-xs bg-green-100 text-green-800 px-2 py-1 rounded font-semibold">EXCEL</span>
+          <span class="text-xs bg-blue-100 text-blue-800 px-2 py-1 rounded font-semibold">EXCEL</span>
         </div>
         <h3 class="text-lg font-bold text-gray-800 mb-2">Grade Summary</h3>
         <p class="text-sm text-gray-600 mb-4">Payroll summary grouped by grade level</p>
@@ -188,7 +188,7 @@
       <div class="bg-slate-50 rounded-lg border-2 border-gray-200 p-3 hover:border-orange-500 hover:shadow-lg transition">
         <div class="flex items-start justify-between mb-4">
           <i class="fas fa-exclamation-triangle text-orange-600 text-2xl"></i>
-          <span class="text-xs bg-blue-100 text-blue-800 px-2 py-1 rounded font-semibold">EXCEL</span>
+          <span class="text-xs bg-green-100 text-green-800 px-2 py-1 rounded font-semibold">EXCEL</span>
         </div>
         <h3 class="text-lg font-bold text-gray-800 mb-2">Exception Report</h3>
         <p class="text-sm text-gray-600 mb-4">Anomalies: zero pays, negative amounts, etc.</p>
@@ -208,7 +208,7 @@
 <!-- Report View Modal -->
 <div id="reportViewModal" class="hidden fixed inset-0 bg-black bg-opacity-60 flex items-center justify-center z-50">
   <div class="bg-slate-50 rounded-xl shadow-2xl max-w-6xl w-full mx-4 max-h-[90vh] overflow-hidden">
-    <div class="flex justify-between items-center p-6 border-b bg-blue-600 text-white">
+    <div class="flex justify-between items-center p-6 border-b bg-green-600 text-white">
       <h3 id="reportModalTitle" class="text-2xl font-bold"></h3>
       <button id="closeReportModal" class="text-white hover:text-gray-200 transition">
         <i class="fas fa-times text-2xl"></i>
@@ -221,7 +221,7 @@
       <button id="printReportBtn" class="px-6 py-2 bg-gray-600 text-white rounded-lg hover:bg-gray-700 transition">
         <i class="fas fa-print mr-2"></i>Print
       </button>
-      <button id="downloadReportBtn" class="px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition">
+      <button id="downloadReportBtn" class="px-6 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700 transition">
         <i class="fas fa-download mr-2"></i>Download
       </button>
     </div>
@@ -233,7 +233,7 @@
   <div class="bg-white rounded-xl shadow-2xl max-w-md w-full mx-4 p-6">
     <div class="text-center">
       <div class="flex justify-center mb-4">
-        <div class="w-16 h-16 border-4 border-blue-400 border-t-transparent rounded-full animate-spin"></div>
+        <div class="w-16 h-16 border-4 border-green-400 border-t-transparent rounded-full animate-spin"></div>
       </div>
       <h3 class="text-xl font-semibold text-gray-900 mb-2">Generating Report...</h3>
       <p id="reportLoadingMessage" class="text-gray-600">Please wait while we prepare your report...</p>
@@ -328,10 +328,10 @@ function showAlert(message, type = 'error') {
     case 'success':
       titleText = 'Success!';
       iconClass = 'fas fa-check-circle';
-      messageColorClass = 'text-green-600';
-      colorClasses.bg = 'bg-green-500';
-      colorClasses.titleText = 'text-green-700';
-      colorClasses.button = 'bg-green-600 hover:bg-green-700';
+      messageColorClass = 'text-blue-600';
+      colorClasses.bg = 'bg-blue-500';
+      colorClasses.titleText = 'text-blue-700';
+      colorClasses.button = 'bg-blue-600 hover:bg-blue-700';
       break;
     case 'warning':
       titleText = 'Warning';
@@ -344,10 +344,10 @@ function showAlert(message, type = 'error') {
     case 'info':
       titleText = 'Information';
       iconClass = 'fas fa-info-circle';
-      messageColorClass = 'text-blue-600';
-      colorClasses.bg = 'bg-blue-500';
-      colorClasses.titleText = 'text-blue-700';
-      colorClasses.button = 'bg-blue-600 hover:bg-blue-700';
+      messageColorClass = 'text-green-600';
+      colorClasses.bg = 'bg-green-500';
+      colorClasses.titleText = 'text-green-700';
+      colorClasses.button = 'bg-green-600 hover:bg-green-700';
       break;
     case 'error':
     default:
@@ -536,19 +536,19 @@ function showAlert(message, type = 'error') {
         <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
           <div class="bg-white p-4 border rounded-lg">
             <div class="text-gray-600 text-sm">Total Employees</div>
-            <div class="text-3xl font-bold text-blue-900">${summary.total_employees}</div>
+            <div class="text-3xl font-bold text-green-900">${summary.total_employees}</div>
           </div>
           <div class="bg-white p-4 border rounded-lg">
             <div class="text-gray-600 text-sm">Average Net Pay</div>
-            <div class="text-3xl font-bold text-blue-900">${formatCurrency(summary.average_net_pay)}</div>
-          </div>
-          <div class="bg-green-50 p-4 border border-green-200 rounded-lg">
-            <div class="text-green-700 text-sm font-semibold">Total Gross Pay</div>
-            <div class="text-2xl font-bold text-green-900">${formatCurrency(summary.total_gross)}</div>
+            <div class="text-3xl font-bold text-green-900">${formatCurrency(summary.average_net_pay)}</div>
           </div>
           <div class="bg-blue-50 p-4 border border-blue-200 rounded-lg">
-            <div class="text-blue-700 text-sm font-semibold">Total Allowances</div>
-            <div class="text-2xl font-bold text-blue-900">${formatCurrency(summary.total_allowances)}</div>
+            <div class="text-blue-700 text-sm font-semibold">Total Gross Pay</div>
+            <div class="text-2xl font-bold text-blue-900">${formatCurrency(summary.total_gross)}</div>
+          </div>
+          <div class="bg-green-50 p-4 border border-green-200 rounded-lg">
+            <div class="text-green-700 text-sm font-semibold">Total Allowances</div>
+            <div class="text-2xl font-bold text-green-900">${formatCurrency(summary.total_allowances)}</div>
           </div>
           <div class="bg-red-50 p-4 border border-red-200 rounded-lg">
             <div class="text-red-700 text-sm font-semibold">Total Tax</div>
@@ -560,9 +560,9 @@ function showAlert(message, type = 'error') {
           </div>
         </div>
 
-        <div class="bg-blue-50 p-6 border-2 border-blue-300 rounded-lg">
-          <div class="text-blue-700 text-sm font-semibold mb-1">TOTAL NET PAY</div>
-          <div class="text-4xl font-bold text-blue-900">${formatCurrency(summary.total_net)}</div>
+        <div class="bg-green-50 p-6 border-2 border-green-300 rounded-lg">
+          <div class="text-green-700 text-sm font-semibold mb-1">TOTAL NET PAY</div>
+          <div class="text-4xl font-bold text-green-900">${formatCurrency(summary.total_net)}</div>
         </div>
       </div>
     `;
@@ -574,24 +574,24 @@ function showAlert(message, type = 'error') {
     
     let html = `
       <div class="space-y-6">
-        <div class="bg-green-50 p-4 rounded-lg border border-green-200">
+        <div class="bg-blue-50 p-4 rounded-lg border border-blue-200">
           <div class="flex items-center justify-between gap-6">
 
             <!-- Period -->
-            <h4 class="font-bold text-green-900 whitespace-nowrap">
+            <h4 class="font-bold text-blue-900 whitespace-nowrap">
               Period: ${monthNames[period.month - 1]} ${period.year}
             </h4>
 
             <!-- Total Employees -->
             <div class="flex items-center gap-2">
-              <span class="text-green-700 text-sm whitespace-nowrap">Total Employees:</span>
-              <span class="text-xl font-bold text-green-900">${totalEmployees}</span>
+              <span class="text-blue-700 text-sm whitespace-nowrap">Total Employees:</span>
+              <span class="text-xl font-bold text-blue-900">${totalEmployees}</span>
             </div>
 
             <!-- Grand Total -->
             <div class="flex items-center gap-2">
-              <span class="text-green-700 text-sm whitespace-nowrap">Grand Total:</span>
-              <span class="text-xl font-bold text-green-900">${formatCurrency(grandTotal)}</span>
+              <span class="text-blue-700 text-sm whitespace-nowrap">Grand Total:</span>
+              <span class="text-xl font-bold text-blue-900">${formatCurrency(grandTotal)}</span>
             </div>
           </div>
         </div>
@@ -606,7 +606,7 @@ function showAlert(message, type = 'error') {
               <h5 class="font-bold text-gray-800">Bank: ${bank}</h5>
               <div class="text-right">
                 <div class="text-sm text-gray-600">Total: ${bankData.count}</div>
-                <div class="font-bold text-green-700">${formatCurrency(bankData.total)}</div>
+                <div class="font-bold text-blue-700">${formatCurrency(bankData.total)}</div>
               </div>
             </div>
           </div>
@@ -999,14 +999,14 @@ function showAlert(message, type = 'error') {
                     <td class="px-4 py-2 border">${item.payment_description}</td>
                     <td class="px-4 py-2 border text-center">${item.ledger_code || '-'}</td>
                     <td class="px-4 py-2 border text-center">
-                      <span class="px-2 py-1 rounded text-xs font-semibold ${item.dr_cr_indicator === 'DR' ? 'bg-blue-100 text-blue-800' : 'bg-green-100 text-green-800'}">
+                      <span class="px-2 py-1 rounded text-xs font-semibold ${item.dr_cr_indicator === 'DR' ? 'bg-green-100 text-green-800' : 'bg-blue-100 text-blue-800'}">
                         ${item.dr_cr_indicator}
                       </span>
                     </td>
-                    <td class="px-4 py-2 border text-right ${parseFloat(item.dr_amount) > 0 ? 'font-bold text-blue-700' : 'text-gray-400'}">
+                    <td class="px-4 py-2 border text-right ${parseFloat(item.dr_amount) > 0 ? 'font-bold text-green-700' : 'text-gray-400'}">
                       ${parseFloat(item.dr_amount) > 0 ? formatCurrency(item.dr_amount) : '-'}
                     </td>
-                    <td class="px-4 py-2 border text-right ${parseFloat(item.cr_amount) > 0 ? 'font-bold text-green-700' : 'text-gray-400'}">
+                    <td class="px-4 py-2 border text-right ${parseFloat(item.cr_amount) > 0 ? 'font-bold text-blue-700' : 'text-gray-400'}">
                       ${parseFloat(item.cr_amount) > 0 ? formatCurrency(item.cr_amount) : '-'}
                     </td>
                   </tr>
@@ -1028,7 +1028,7 @@ function showAlert(message, type = 'error') {
             </h4>
             <div class="flex items-center gap-2">
               <span class="text-purple-700 text-sm">Reconciliation Status:</span>
-              <span class="px-3 py-1 rounded-full text-sm font-bold ${summary.isBalanced ? 'bg-green-100 text-green-800' : 'bg-red-100 text-red-800'}">
+              <span class="px-3 py-1 rounded-full text-sm font-bold ${summary.isBalanced ? 'bg-blue-100 text-blue-800' : 'bg-red-100 text-red-800'}">
                 ${summary.isBalanced ? '✓ BALANCED' : '✗ VARIANCE DETECTED'}
               </span>
             </div>
@@ -1036,16 +1036,16 @@ function showAlert(message, type = 'error') {
 
           <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mt-4">
             <div class="bg-white p-3 rounded-lg border">
-              <div class="text-blue-700 text-sm font-semibold mb-1">Total Debits</div>
-              <div class="text-2xl font-bold text-blue-900">${formatCurrency(summary.totalDR)}</div>
+              <div class="text-green-700 text-sm font-semibold mb-1">Total Debits</div>
+              <div class="text-2xl font-bold text-green-900">${formatCurrency(summary.totalDR)}</div>
             </div>
             <div class="bg-white p-3 rounded-lg border">
-              <div class="text-green-700 text-sm font-semibold mb-1">Total Credits</div>
-              <div class="text-2xl font-bold text-green-900">${formatCurrency(summary.totalCR)}</div>
+              <div class="text-blue-700 text-sm font-semibold mb-1">Total Credits</div>
+              <div class="text-2xl font-bold text-blue-900">${formatCurrency(summary.totalCR)}</div>
             </div>
             <div class="bg-white p-3 rounded-lg border">
-              <div class="${summary.isBalanced ? 'text-green-700' : 'text-red-700'} text-sm font-semibold mb-1">Variance</div>
-              <div class="text-2xl font-bold ${summary.isBalanced ? 'text-green-900' : 'text-red-900'}">
+              <div class="${summary.isBalanced ? 'text-blue-700' : 'text-red-700'} text-sm font-semibold mb-1">Variance</div>
+              <div class="text-2xl font-bold ${summary.isBalanced ? 'text-blue-900' : 'text-red-900'}">
                 ${summary.isBalanced ? '₦0.00' : formatCurrency(summary.variance)}
               </div>
             </div>
@@ -1056,12 +1056,12 @@ function showAlert(message, type = 'error') {
         <div class="space-y-4">
           <h4 class="text-lg font-bold text-gray-800 border-b-2 pb-2">Breakdown by Category</h4>
           
-          ${renderCategory('Basic Salary & Pay', byCategory.basic_salary, 'bg-blue-50', 'border-blue-200')}
+          ${renderCategory('Basic Salary & Pay', byCategory.basic_salary, 'bg-green-50', 'border-green-200')}
           ${renderCategory('Allowances', byCategory.allowances, 'bg-cyan-50', 'border-cyan-200')}
           ${renderCategory('Fringe Benefits', byCategory.fringe_benefits, 'bg-teal-50', 'border-teal-200')}
           ${renderCategory('Deductions', byCategory.deductions, 'bg-red-50', 'border-red-200')}
           ${renderCategory('Loans', byCategory.loans, 'bg-orange-50', 'border-orange-200')}
-          ${renderCategory('Payments (Net/Tax/Roundup)', byCategory.payments, 'bg-green-50', 'border-green-200')}
+          ${renderCategory('Payments (Net/Tax/Roundup)', byCategory.payments, 'bg-blue-50', 'border-blue-200')}
         </div>
 
         <!-- Final Totals -->
@@ -1070,12 +1070,12 @@ function showAlert(message, type = 'error') {
             <span class="text-lg font-bold text-gray-800">GRAND TOTALS:</span>
             <div class="flex gap-8">
               <div class="text-right">
-                <div class="text-sm text-blue-700">Total Debits</div>
-                <div class="text-xl font-bold text-blue-900">${formatCurrency(summary.totalDR)}</div>
+                <div class="text-sm text-green-700">Total Debits</div>
+                <div class="text-xl font-bold text-green-900">${formatCurrency(summary.totalDR)}</div>
               </div>
               <div class="text-right">
-                <div class="text-sm text-green-700">Total Credits</div>
-                <div class="text-xl font-bold text-green-900">${formatCurrency(summary.totalCR)}</div>
+                <div class="text-sm text-blue-700">Total Credits</div>
+                <div class="text-xl font-bold text-blue-900">${formatCurrency(summary.totalCR)}</div>
               </div>
             </div>
           </div>

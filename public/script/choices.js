@@ -170,7 +170,7 @@ class CustomDropdown {
       <div class="relative w-full">
         <input 
           type="text" 
-          class="custom-dropdown-search w-full border border-blue-500 focus:border-yellow-500 bg-transparent rounded-md px-3 py-2 focus:outline-none pr-10"
+          class="custom-dropdown-search w-full border border-green-500 focus:border-yellow-500 bg-transparent rounded-md px-3 py-2 focus:outline-none pr-10"
           placeholder="${this.config.placeholder}"
           autocomplete="off"
           ${this.config.searchEnabled ? '' : 'readonly style="cursor: pointer;"'}>
@@ -771,8 +771,8 @@ class CustomDropdown {
         return escapeMap[char];
       });
       
-      const isSelected = this.selectedValue == value ? ' bg-blue-100' : '';
-      html += `<div class="custom-dropdown-item px-3 py-2 hover:bg-blue-50 cursor-pointer border-b border-gray-100 transition-colors${isSelected}" data-value="${value}">${escapedLabel}</div>`;
+      const isSelected = this.selectedValue == value ? ' bg-green-100' : '';
+      html += `<div class="custom-dropdown-item px-3 py-2 hover:bg-green-50 cursor-pointer border-b border-gray-100 transition-colors${isSelected}" data-value="${value}">${escapedLabel}</div>`;
     });
     
     this.dropdownItems.innerHTML = html;

@@ -1,6 +1,6 @@
 <!-- Tax Payments By State -->
 <section class="items border rounded-lg m-6 max-w-lg mr-auto p-6 mx-auto">
-  <h2 class="text-xl text-center border-b font-bold text-blue-600 mb-4">Print Tax Payments By State Reports</h2>
+  <h2 class="text-xl text-center border-b font-bold text-green-600 mb-4">Print Tax Payments By State Reports</h2>
 
   <form id="taxStateForm" class="space-y-4">
     <!-- State Selection -->
@@ -17,7 +17,7 @@
         </label>
       </div>
       <select id="stateDropdown"
-        class="mt-2 w-full bg-transparent border border-blue-500 rounded px-3 py-2 focus:ring-2 focus:ring-blue-500 focus:border-transparent" disabled>
+        class="mt-2 w-full bg-transparent border border-green-500 rounded px-3 py-2 focus:ring-2 focus:ring-green-500 focus:border-transparent" disabled>
         <option value="">Select State</option>
         <!-- Options will be loaded from API -->
       </select>
@@ -27,7 +27,7 @@
     <div>
       <label for="taxMonth" class="block text-sm font-medium mb-1">Processing Month</label>
       <select id="taxMonth"
-        class="w-full bg-transparent border border-blue-500 rounded px-3 py-2 focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+        class="w-full bg-transparent border border-green-500 rounded px-3 py-2 focus:ring-2 focus:ring-green-500 focus:border-transparent">
         <option value="">Select Month</option>
         <option>January</option>
         <option>February</option>
@@ -73,14 +73,14 @@
             Clear
         </button>
         <button type="button" id="taxPrintBtn"
-            class="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700">
+            class="px-4 py-2 bg-green-600 text-white rounded hover:bg-green-700">
             Generate
         </button>
         </div>
     </div>
 
     <!-- Loading Indicator -->
-    <div id="taxLoadingIndicator" class="hidden text-center text-blue-600 text-sm">
+    <div id="taxLoadingIndicator" class="hidden text-center text-green-600 text-sm">
       <span>Generating report...</span>
     </div>
   </form>
@@ -93,7 +93,7 @@
     <p class="mb-6 text-gray-700">Do you want to continue with report generation?</p>
     <div class="flex justify-end gap-2">
       <button id="taxCancelBtn" class="px-4 py-2 bg-gray-400 text-white rounded hover:bg-gray-500">Cancel</button>
-      <button id="taxContinueBtn" class="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700">Continue</button>
+      <button id="taxContinueBtn" class="px-4 py-2 bg-green-600 text-white rounded hover:bg-green-700">Continue</button>
     </div>
   </div>
 </div>
@@ -101,7 +101,7 @@
 <!-- Processing -->
 <div id="taxProcessingModal" class="hidden fixed inset-0 bg-black/50 flex items-center justify-center z-50">
   <div class="bg-white rounded-lg shadow-lg w-80 p-6 text-center">
-    <div class="animate-spin h-10 w-10 border-4 border-blue-600 border-t-transparent rounded-full mx-auto mb-4"></div>
+    <div class="animate-spin h-10 w-10 border-4 border-green-600 border-t-transparent rounded-full mx-auto mb-4"></div>
     <p class="text-gray-700">Generating report...</p>
   </div>
 </div>
@@ -109,10 +109,10 @@
 <!-- Success -->
 <div id="taxSuccessModal" class="hidden fixed inset-0 bg-black/50 flex items-center justify-center z-50">
   <div class="bg-white rounded-lg shadow-lg w-96 p-6 text-center">
-    <h3 class="text-lg font-semibold text-green-600 mb-4">Success</h3>
+    <h3 class="text-lg font-semibold text-blue-600 mb-4">Success</h3>
     <p class="mb-6 text-gray-700" id="taxSuccessMessage">Report generated successfully!</p>
     <div class="flex justify-center gap-2">
-      <button id="taxPrintNowBtn" class="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700">OK</button>
+      <button id="taxPrintNowBtn" class="px-4 py-2 bg-green-600 text-white rounded hover:bg-green-700">OK</button>
     </div>
   </div>
 </div>

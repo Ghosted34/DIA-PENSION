@@ -1,6 +1,6 @@
 <div class="p-6">
   <div class="flex justify-end mb-4 gap-2">
-    <button id="showFormBtn" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">+ Add New</button>
+    <button id="showFormBtn" class="bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700">+ Add New</button>
     <button id="generateReportBtn" class="bg-yellow-600 text-white px-4 py-2 rounded hover:bg-yellow-700">
       <i class="fas fa-file-alt mr-2"></i>Generate Report</button>
   </div>
@@ -13,7 +13,7 @@
         <input 
           type="text" 
           id="descriptionSearch"
-          class="w-full border border-blue-500 focus:border-yellow-500 bg-transparent rounded-md px-3 py-2"
+          class="w-full border border-green-500 focus:border-yellow-500 bg-transparent rounded-md px-3 py-2"
           placeholder="Search Payment Type..."
           autocomplete="off">
         <input type="hidden" id="description">
@@ -33,35 +33,35 @@
 
     <div>
       <label class="block text-sm font-medium text-gray-700">Code</label>
-      <input type="text" id="codeInput" class="w-full border border-blue-500 rounded-md px-3 py-2 bg-gray-100" readonly>
+      <input type="text" id="codeInput" class="w-full border border-green-500 rounded-md px-3 py-2 bg-gray-100" readonly>
     </div>
 
     <div>
       <label class="block text-sm font-medium text-gray-700">Function Type</label>
-      <select id="function" class="w-full border border-blue-500 rounded-md px-3 py-2 bg-transparent">
+      <select id="function" class="w-full border border-green-500 rounded-md px-3 py-2 bg-transparent">
         <option value="">Select Function Type</option>
       </select>
     </div>
 
     <div>
       <label class="block text-sm font-medium text-gray-700">% or Standard Amount</label>
-      <input type="number" id="standardAmount" class="w-full border border-blue-500 rounded-md px-3 py-2 bg-transparent" placeholder="Enter amount or %">
+      <input type="number" id="standardAmount" class="w-full border border-green-500 rounded-md px-3 py-2 bg-transparent" placeholder="Enter amount or %">
     </div>
 
     <div>
       <label class="block text-sm font-medium text-gray-700">Dependence</label>
-      <select id="dependence" class="w-full border border-blue-500 rounded-md px-3 py-2 bg-transparent">
+      <select id="dependence" class="w-full border border-green-500 rounded-md px-3 py-2 bg-transparent">
       </select>
     </div>
 
     <div>
       <label class="block text-sm font-medium text-gray-700">Maximum Value</label>
-      <input id="maximumValue" type="number" class="w-full border border-blue-500 rounded-md px-3 py-2 bg-transparent" placeholder="Enter maximum value">
+      <input id="maximumValue" type="number" class="w-full border border-green-500 rounded-md px-3 py-2 bg-transparent" placeholder="Enter maximum value">
     </div>
 
     <div>
       <label class="block text-sm font-medium text-gray-700">Required For All</label>
-      <select id="requiredForAll" class="w-full border border-blue-500 rounded-md px-3 py-2 bg-transparent">
+      <select id="requiredForAll" class="w-full border border-green-500 rounded-md px-3 py-2 bg-transparent">
         <option value="">Select Option</option>
         <option value="Yes">YES</option>4
         <option value="No">NO</option>
@@ -70,14 +70,14 @@
 
     <div class="md:col-span-2 flex justify-end space-x-3 mt-4">
       <button type="button" id="cancelBtn" class="bg-gray-300 text-gray-700 px-4 py-2 rounded hover:bg-gray-400">Cancel</button>
-      <button type="submit" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Save</button>
+      <button type="submit" class="bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700">Save</button>
     </div>
   </form>
 
   <!-- Table -->
   <div class="overflow-x-auto rounded-lg">
     <table class="min-w-full border border-gray-200 rounded-lg text-sm">
-      <thead class="bg-blue-100 text-blue-900">
+      <thead class="bg-green-100 text-green-900">
         <tr>
           <th class="border px-2 py-3 text-left">One-Off Type</th>
           <th class="border px-2 py-3 text-left">Function Type</th>
@@ -95,9 +95,9 @@
 <!-- Success Modal -->
 <div id="successModal" class="hidden fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50">
   <div class="bg-white p-6 rounded-lg shadow-xl max-w-md w-full mx-4">
-    <h3 class="text-lg font-semibold mb-2 text-green-600">Success!</h3>
+    <h3 class="text-lg font-semibold mb-2 text-blue-600">Success!</h3>
     <p id="successMessage" class="mb-4 text-gray-700">Your changes have been saved successfully!</p>
-    <button id="closeSuccessModal" class="bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700">OK</button>
+    <button id="closeSuccessModal" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">OK</button>
   </div>
 </div>
 
@@ -114,7 +114,7 @@
 <div id="viewModal" class="hidden fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50">
   <div class="bg-white p-6 rounded-lg shadow-xl w-full max-w-2xl mx-4 max-h-screen overflow-y-auto">
     <div class="flex justify-between items-center mb-4">
-      <h3 class="text-lg font-semibold text-blue-600">One-Off Payment Details</h3>
+      <h3 class="text-lg font-semibold text-green-600">One-Off Payment Details</h3>
       <button id="closeViewModal" class="text-gray-400 hover:text-gray-600">
         <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
@@ -286,10 +286,10 @@
       const desc = item.elmDesc || '';
       
       return `
-        <div class="dropdown-item px-3 py-2 hover:bg-blue-50 cursor-pointer border-b border-gray-100" 
+        <div class="dropdown-item px-3 py-2 hover:bg-green-50 cursor-pointer border-b border-gray-100" 
             data-value="${type}"
             data-desc="${desc}">
-          <span class="font-semibold text-blue-600">${desc}</span>
+          <span class="font-semibold text-green-600">${desc}</span>
           ${type ? `<span class="text-gray-500 text-sm ml-1">(${type})</span>` : ''}
         </div>
       `;
@@ -465,8 +465,8 @@
         <td class="border px-2 py-2 text-left">${resolveName(item.one_perc, "functiontype")} (${item.one_perc})</td>
         <td class="border px-2 py-2 text-left">${resolveName(item.one_depend, "elementtype")} (${item.one_depend || 'N/A'})</td>
         <td class="border px-2 py-2 text-center">
-          <button onclick="viewRow('${item.one_type}')" class="text-blue-600 hover:text-blue-800 mr-2 px-2 py-1 rounded hover:bg-blue-50">View</button>
-          <button onclick="editRow('${item.one_type}')" class="text-green-600 hover:text-green-800 mr-2 px-2 py-1 rounded hover:bg-green-50">Edit</button>
+          <button onclick="viewRow('${item.one_type}')" class="text-green-600 hover:text-green-800 mr-2 px-2 py-1 rounded hover:bg-green-50">View</button>
+          <button onclick="editRow('${item.one_type}')" class="text-blue-600 hover:text-blue-800 mr-2 px-2 py-1 rounded hover:bg-blue-50">Edit</button>
           <button onclick="deleteRow('${item.one_type}')" class="text-red-600 hover:text-red-800 px-2 py-1 rounded hover:bg-red-50">Delete</button>
         </td>
       </tr>

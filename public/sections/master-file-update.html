@@ -2,11 +2,11 @@
 <div class="p-6">
   <!-- Top Action Bar (Hidden after first update, shown only when stage < 888) -->
   <div id="topActionBarUpdate" class="hidden mb-6 w-full flex justify-between items-center border-b-2 pb-4 no-print">
-    <h2 class="text-blue-600 font-semibold lg:text-lg">
+    <h2 class="text-green-600 font-semibold lg:text-lg">
       <i class="fas fa-info-circle mr-2"></i>First ensure you have printed Input Variable Reports
     </h2>
     <button onclick="window.navigation && window.navigation.navigateToSection && window.navigation.navigateToSection('input-variable-report', 'Input Variable Report')" 
-            class="px-6 py-2 bg-green-600 text-white rounded-lg shadow hover:bg-green-700 transition">
+            class="px-6 py-2 bg-blue-600 text-white rounded-lg shadow hover:bg-blue-700 transition">
       <i class="fas fa-file-alt mr-2"></i>Input Variable Report
     </button>
   </div>
@@ -18,7 +18,7 @@
         <div class="bg-yellow-500 text-white p-3 rounded-full shadow">
           <i class="fas fa-folder text-2xl"></i>
         </div>
-        <h2 class="text-2xl font-bold text-blue-800">Update Master File</h2>
+        <h2 class="text-2xl font-bold text-green-800">Update Master File</h2>
       </div>
     </div>
 
@@ -28,7 +28,7 @@
 
     <!-- Action Button (Hidden after successful update) -->
     <div id="updateActionContainer" class="flex justify-center">
-      <button id="openUpdateModalBtn" class="px-8 py-3 bg-blue-600 text-white rounded-lg shadow hover:bg-blue-700 transition">
+      <button id="openUpdateModalBtn" class="px-8 py-3 bg-green-600 text-white rounded-lg shadow hover:bg-green-700 transition">
         <i class="fas fa-sync-alt mr-2"></i>Update Master File
       </button>
     </div>
@@ -37,22 +37,22 @@
   <!-- Success Confirmation (Hidden initially, shown after successful update) -->
   <div id="saveConfirm" class="my-6 hidden text-center">
     <div class="flex justify-center mb-3">
-      <div class="bg-green-500 text-white p-3 rounded-full shadow">
+      <div class="bg-blue-500 text-white p-3 rounded-full shadow">
         <i class="fas fa-check-circle text-3xl"></i>
       </div>
     </div>
-    <h3 class="text-green-700 font-bold text-xl mb-2">Master File Updated Successfully!</h3>
-    <p class="text-green-600 font-semibold mb-4">All payroll master files have been updated. You can now proceed to Payroll Calculations.</p>
+    <h3 class="text-blue-700 font-bold text-xl mb-2">Master File Updated Successfully!</h3>
+    <p class="text-blue-600 font-semibold mb-4">All payroll master files have been updated. You can now proceed to Payroll Calculations.</p>
     
     <!-- Summary Stats -->
     <!--<div id="updateSummary" class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6 max-w-3xl mx-auto">
-      <div class="p-4 bg-blue-50 rounded-lg border border-blue-200">
-        <div class="text-blue-600 text-sm font-medium">Employees Processed</div>
-        <div id="summaryEmployees" class="text-3xl font-bold text-blue-900">0</div>
-      </div>
       <div class="p-4 bg-green-50 rounded-lg border border-green-200">
-        <div class="text-green-600 text-sm font-medium">Total Records</div>
-        <div id="summaryRecords" class="text-3xl font-bold text-green-900">0</div>
+        <div class="text-green-600 text-sm font-medium">Employees Processed</div>
+        <div id="summaryEmployees" class="text-3xl font-bold text-green-900">0</div>
+      </div>
+      <div class="p-4 bg-blue-50 rounded-lg border border-blue-200">
+        <div class="text-blue-600 text-sm font-medium">Total Records</div>
+        <div id="summaryRecords" class="text-3xl font-bold text-blue-900">0</div>
       </div>
       <div class="p-4 bg-purple-50 rounded-lg border border-purple-200">
         <div class="text-purple-600 text-sm font-medium">Total Amount</div>
@@ -61,7 +61,7 @@
     </div>-->
         
     <button onclick="window.navigation && window.navigation.navigateToSection && window.navigation.navigateToSection('payroll-calculations', 'Payroll Calculations')" 
-            class="px-6 py-3 bg-green-600 text-white rounded-lg shadow hover:bg-green-700 transition">
+            class="px-6 py-3 bg-blue-600 text-white rounded-lg shadow hover:bg-blue-700 transition">
       <i class="fas fa-calculator mr-2"></i>Proceed to Payroll calculations
     </button>
   </div>
@@ -69,7 +69,7 @@
   <!-- Performance Log (Hidden until update is run) -->
   <!--<div id="performanceLog" class="hidden mt-6 p-4 bg-gray-50 rounded-lg border border-gray-200">
     <h4 class="font-bold text-gray-800 mb-3 flex items-center">
-      <i class="fas fa-chart-line mr-2 text-blue-600"></i>Performance Details
+      <i class="fas fa-chart-line mr-2 text-green-600"></i>Performance Details
     </h4>
     <div id="performanceLogContent" class="space-y-2 text-sm text-gray-700"></div>
   </div>-->
@@ -79,7 +79,7 @@
 <div id="updateModal" class="fixed inset-0 bg-black bg-opacity-40 hidden flex items-center justify-center z-50">
   <div class="bg-white w-11/12 md:w-2/5 rounded-xl shadow-lg overflow-hidden">
     <!-- Header -->
-    <div class="flex justify-between items-center bg-blue-600 text-white px-4 py-3">
+    <div class="flex justify-between items-center bg-green-600 text-white px-4 py-3">
       <h3 class="text-lg font-semibold">
         <i class="fas fa-database mr-2"></i>Confirm Master File Update
       </h3>
@@ -95,16 +95,16 @@
       </div>
       
       <p class="text-gray-700 font-semibold mb-4">
-        Are you sure you want to update the <span class="font-bold text-blue-600">Master File</span> with the latest payroll changes?
+        Are you sure you want to update the <span class="font-bold text-green-600">Master File</span> with the latest payroll changes?
       </p>
       
       <ul class="text-sm text-gray-600 space-y-2 mb-4 ml-4">
         <li class="flex items-start">
-          <i class="fas fa-check-circle text-green-500 mr-2 mt-1"></i>
+          <i class="fas fa-check-circle text-blue-500 mr-2 mt-1"></i>
           <span>All employee master records will be updated</span>
         </li>
         <li class="flex items-start">
-          <i class="fas fa-check-circle text-green-500 mr-2 mt-1"></i>
+          <i class="fas fa-check-circle text-blue-500 mr-2 mt-1"></i>
           <span>Cumulative data will be transferred</span>
         </li>
       </ul>
@@ -117,7 +117,7 @@
       <button id="cancelUpdateBtn" class="px-6 py-2 bg-gray-300 hover:bg-gray-400 rounded-lg transition">
         Cancel
       </button>
-      <button id="confirmUpdateBtn" class="px-6 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg transition">
+      <button id="confirmUpdateBtn" class="px-6 py-2 bg-green-600 hover:bg-green-700 text-white rounded-lg transition">
         Yes, Update Master File
       </button>
     </div>
@@ -129,7 +129,7 @@
   <div class="bg-white rounded-xl shadow-2xl max-w-md w-full mx-4 p-6">
     <div class="text-center">
       <div class="flex justify-center mb-4">
-        <div class="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center">
+        <div class="w-16 h-16 bg-green-600 rounded-full flex items-center justify-center">
           <i class="fas fa-database text-white text-3xl"></i>
         </div>
       </div>
@@ -138,7 +138,7 @@
       
       <!-- Progress Bar -->
       <div class="w-full bg-gray-200 rounded-full h-3 mb-4 overflow-hidden">
-        <div id="progressBar" class="bg-blue-600 h-3 rounded-full transition-all duration-500 ease-out" style="width: 0%"></div>
+        <div id="progressBar" class="bg-green-600 h-3 rounded-full transition-all duration-500 ease-out" style="width: 0%"></div>
       </div>
       <div id="progressPercent" class="text-sm text-gray-500 mb-4">0%</div>
     </div>
@@ -154,7 +154,7 @@
       </div>
       <h3 id="updateAlertTitle" class="text-xl font-semibold text-gray-900 mb-2">Error</h3>
       <p id="updateAlertMessage" class="text-gray-600 mb-6">An error occurred</p>
-      <button id="updateAlertCloseBtn" class="px-6 py-3 bg-blue-600 text-white font-medium rounded-lg hover:bg-blue-700 transition">
+      <button id="updateAlertCloseBtn" class="px-6 py-3 bg-green-600 text-white font-medium rounded-lg hover:bg-green-700 transition">
         <i class="fas fa-times mr-2"></i>Close
       </button>
     </div>
@@ -215,7 +215,7 @@
   // Helper Functions
   function addLog(message, type = 'info') {
     const log = document.createElement('div');
-    log.className = `py-1 ${type === 'success' ? 'text-green-600' : type === 'error' ? 'text-red-600' : 'text-gray-600'}`;
+    log.className = `py-1 ${type === 'success' ? 'text-blue-600' : type === 'error' ? 'text-red-600' : 'text-gray-600'}`;
     log.innerHTML = `<i class="fas fa-${type === 'success' ? 'check' : type === 'error' ? 'times' : 'circle'} mr-2"></i>${message}`;
     logContainer.appendChild(log);
     logContainer.scrollTop = logContainer.scrollHeight;
@@ -229,10 +229,10 @@
     const text = step.querySelector('span');
 
     if (status === 'processing') {
-      step.className = 'flex items-center text-blue-600 font-semibold';
+      step.className = 'flex items-center text-green-600 font-semibold';
       icon.className = 'fas fa-circle-notch fa-spin mr-2';
     } else if (status === 'completed') {
-      step.className = 'flex items-center text-green-600';
+      step.className = 'flex items-center text-blue-600';
       icon.className = 'fas fa-check-circle mr-2';
     } else if (status === 'error') {
       step.className = 'flex items-center text-red-600';
@@ -244,7 +244,7 @@
     alertTitle.textContent = title;
     alertMessage.textContent = message;
     const iconClass = type === 'success' 
-      ? 'fa-check-circle text-green-500' 
+      ? 'fa-check-circle text-blue-500' 
       : type === 'warning' 
       ? 'fa-exclamation-triangle text-yellow-500' 
       : 'fa-exclamation-circle text-red-500';
@@ -404,12 +404,12 @@
       
       // Change progress bar to red
       if (progressBar) {
-        progressBar.classList.remove('bg-blue-600');
+        progressBar.classList.remove('bg-green-600');
         progressBar.classList.add('bg-red-600');
       }
       
       // Hide icon, show error icon
-      const iconDiv = progressModal.querySelector('.bg-blue-600.rounded-full');
+      const iconDiv = progressModal.querySelector('.bg-green-600.rounded-full');
       if (iconDiv) {
         iconDiv.className = 'w-16 h-16 bg-red-600 rounded-full flex items-center justify-center';
         iconDiv.innerHTML = '<i class="fas fa-exclamation-circle text-white text-3xl"></i>';
@@ -432,11 +432,11 @@
           if (progressBar) {
             progressBar.style.width = '0%';
             progressBar.classList.remove('bg-red-600');
-            progressBar.classList.add('bg-blue-600');
+            progressBar.classList.add('bg-green-600');
           }
           if (progressPercent) progressPercent.textContent = '0%';
           if (iconDiv) {
-            iconDiv.className = 'w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center';
+            iconDiv.className = 'w-16 h-16 bg-green-600 rounded-full flex items-center justify-center';
             iconDiv.innerHTML = '<i class="fas fa-database text-white text-3xl"></i>';
           }
           cancelBtnError.remove();

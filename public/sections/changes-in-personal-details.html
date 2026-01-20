@@ -2,21 +2,21 @@
 
   <!-- Report Title -->
   <div class="hidden mb-6 text-center">
-    <h2 class="text-2xl font-bold text-blue-700">Employee Change History</h2>
+    <h2 class="text-2xl font-bold text-green-700">Employee Change History</h2>
     <p class="text-sm text-gray-600 mt-1">Track employee data changes over time</p>
   </div>
 
   <!-- Radio Selection -->
   <div class="mb-2 pb-2 border-b">
-    <span class="text-blue-600 font-semibold text-lg block mb-3">Select Report Scope:</span>
+    <span class="text-green-600 font-semibold text-lg block mb-3">Select Report Scope:</span>
     <div class="flex gap-6">
       <label class="flex items-center cursor-pointer">
-        <input type="radio" name="changeScope" value="all" class="text-blue-600 w-4 h-4" checked>
+        <input type="radio" name="changeScope" value="all" class="text-green-600 w-4 h-4" checked>
         <span class="ml-2 font-medium">All Personnel</span>
       </label>
 
       <label class="flex items-center cursor-pointer">
-        <input type="radio" name="changeScope" value="personnel" class="text-blue-600 w-4 h-4">
+        <input type="radio" name="changeScope" value="personnel" class="text-green-600 w-4 h-4">
         <span class="ml-2 font-medium">Specific Personnel</span>
       </label>
     </div>
@@ -35,13 +35,13 @@
         <div class="grid grid-cols-2 gap-3">
           <div>
             <label class="block text-xs text-gray-600 mb-1">Year</label>
-            <select id="fromYear" class="w-full border border-slate-600 rounded-lg px-3 py-2 focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+            <select id="fromYear" class="w-full border border-slate-600 rounded-lg px-3 py-2 focus:ring-2 focus:ring-green-500 focus:border-green-500">
               <option value="">-- Year --</option>
             </select>
           </div>
           <div>
             <label class="block text-xs text-gray-600 mb-1">Month</label>
-            <select id="fromMonth" class="w-full border border-slate-600 rounded-lg px-3 py-2 focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+            <select id="fromMonth" class="w-full border border-slate-600 rounded-lg px-3 py-2 focus:ring-2 focus:ring-green-500 focus:border-green-500">
               <option value="">-- Month --</option>
             </select>
           </div>
@@ -54,13 +54,13 @@
         <div class="grid grid-cols-2 gap-3">
           <div>
             <label class="block text-xs text-gray-600 mb-1">Year</label>
-            <select id="toYear" class="w-full border border-slate-600 rounded-lg px-3 py-2 focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+            <select id="toYear" class="w-full border border-slate-600 rounded-lg px-3 py-2 focus:ring-2 focus:ring-green-500 focus:border-green-500">
               <option value="">-- Year --</option>
             </select>
           </div>
           <div>
             <label class="block text-xs text-gray-600 mb-1">Month</label>
-            <select id="toMonth" class="w-full border border-slate-600 rounded-lg px-3 py-2 focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+            <select id="toMonth" class="w-full border border-slate-600 rounded-lg px-3 py-2 focus:ring-2 focus:ring-green-500 focus:border-green-500">
               <option value="">-- Month --</option>
             </select>
           </div>
@@ -69,11 +69,11 @@
     </div>
 
     <!-- Personnel Select (Hidden by default) -->
-    <div id="personnelSelectWrapper" class="hidden bg-green-50 p-2 rounded-lg">
+    <div id="personnelSelectWrapper" class="hidden bg-blue-50 p-2 rounded-lg">
       <label class="block text-sm font-medium text-gray-900 mb-2">
-        <i class="fas fa-user text-green-600 mr-2"></i>Select Personnel
+        <i class="fas fa-user text-blue-600 mr-2"></i>Select Personnel
       </label>
-      <select id="personnelSelect" class="w-full border border-slate-600 rounded-lg px-3 py-2 focus:ring-2 focus:ring-green-500 focus:border-green-500">
+      <select id="personnelSelect" class="w-full border border-slate-600 rounded-lg px-3 py-2 focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
         <option value="">-- Choose Personnel --</option>
       </select>
       <div id="personnelLoading" class="hidden mt-2 text-sm text-gray-600">
@@ -88,15 +88,15 @@
       </label>
       <div class="flex gap-4">
         <label class="flex items-center cursor-pointer">
-          <input type="radio" name="exportFormat" value="pdf" class="text-blue-600 w-4 h-4" checked>
+          <input type="radio" name="exportFormat" value="pdf" class="text-green-600 w-4 h-4" checked>
           <span class="ml-2">PDF</span>
         </label>
         <label class="flex items-center cursor-pointer">
-          <input type="radio" name="exportFormat" value="excel" class="text-blue-600 w-4 h-4">
+          <input type="radio" name="exportFormat" value="excel" class="text-green-600 w-4 h-4">
           <span class="ml-2">Excel (.xlsx)</span>
         </label>
         <label class="hidden flex items-center cursor-pointer">
-          <input type="radio" name="exportFormat" value="json" class="text-blue-600 w-4 h-4">
+          <input type="radio" name="exportFormat" value="json" class="text-green-600 w-4 h-4">
           <span class="ml-2">JSON</span>
         </label>
       </div>
@@ -108,7 +108,7 @@
         <i class="fas fa-times mr-2"></i>Clear
       </button>
 
-      <button id="generateChange" class="bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-6 rounded-lg transition-colors shadow-lg hover:shadow-xl">
+      <button id="generateChange" class="bg-green-600 hover:bg-green-700 text-white font-medium py-2 px-6 rounded-lg transition-colors shadow-lg hover:shadow-xl">
         <i class="fas fa-file-alt mr-2"></i>Generate Report
       </button>
     </div>
@@ -119,7 +119,7 @@
 <div id="loadingModal" class="hidden fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
   <div class="bg-white rounded-lg shadow-lg p-8 text-center">
     <div class="mb-4">
-      <i class="fas fa-spinner fa-spin text-4xl text-blue-600"></i>
+      <i class="fas fa-spinner fa-spin text-4xl text-green-600"></i>
     </div>
     <h3 class="text-lg font-semibold mb-2">Generating Report...</h3>
     <p class="text-gray-600">Please wait while we analyze employee changes.</p>
@@ -137,7 +137,7 @@
       </div>
     </div>
     <div class="flex justify-end">
-      <button id="changeModalCloseBtn" class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg">OK</button>
+      <button id="changeModalCloseBtn" class="bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-lg">OK</button>
     </div>
   </div>
 </div>
@@ -232,7 +232,7 @@
     changeModalMessage.textContent = message;
     changeModalIcon.innerHTML = isError 
       ? '<i class="fas fa-exclamation-circle text-red-500"></i>'
-      : '<i class="fas fa-check-circle text-green-500"></i>';
+      : '<i class="fas fa-check-circle text-blue-500"></i>';
     changeModal.classList.remove("hidden");
   }
 

@@ -1,18 +1,18 @@
 <div class="p-6">
   <!-- Top Action Bar -->
   <div id="topActionBar" class="hidden mb-6 w-full flex justify-between items-center border-b-2 pb-4 no-print">
-    <h2 class="text-blue-600 font-semibold lg:text-lg">
+    <h2 class="text-green-600 font-semibold lg:text-lg">
       <i class="fas fa-info-circle mr-2"></i>First ensure you have printed changes in personnel data
     </h2>
     <button onclick="window.navigation && window.navigation.navigateToSection && window.navigation.navigateToSection('changes-personnel-data', 'Changes in Personnel Data')" 
-            class="px-6 py-2 bg-green-600 text-white rounded-lg shadow hover:bg-green-700 transition">
+            class="px-6 py-2 bg-blue-600 text-white rounded-lg shadow hover:bg-blue-700 transition">
       <i class="fas fa-undo mr-2"></i>Personnel Changes
     </button>
   </div>
 
   <!-- Filter Tabs -->
   <div id="filterTabs" class="hidden bg-yellow-50/25 border-2 border-amber-100 flex flex-wrap gap-2 p-2 mb-4 rounded-lg no-print">
-    <button id="allToggle" class="flex-1 px-2 py-2 text-sm lg:text-lg font-medium rounded-lg bg-blue-50 text-gray-900 shadow transition-colors duration-200">
+    <button id="allToggle" class="flex-1 px-2 py-2 text-sm lg:text-lg font-medium rounded-lg bg-green-50 text-gray-900 shadow transition-colors duration-200">
       <i class="fas fa-list mr-2"></i>All Variables
     </button>
     <button id="personnelToggle" class="flex-1 px-2 py-2 text-sm lg:text-lg font-medium rounded-lg text-gray-500 hover:text-gray-900 transition-colors duration-200">
@@ -40,7 +40,7 @@
                 <input 
                   type="text" 
                   id="searchInputFilter"
-                  class="w-full border border-blue-500 focus:border-yellow-500 bg-transparent rounded-md px-3 py-2 pr-10"
+                  class="w-full border border-green-500 focus:border-yellow-500 bg-transparent rounded-md px-3 py-2 pr-10"
                   placeholder="Search Name or Number..."
                   autocomplete="off">
                 <i class="fas fa-chevron-down absolute right-3 top-4 text-gray-400"></i>
@@ -53,7 +53,7 @@
             <button 
               type="button" 
               id="applyFilterBtn" 
-              class="px-3 py-2 bg-blue-600 text-white font-medium rounded-lg hover:bg-blue-700 transition-all shadow-lg whitespace-nowrap w-full md:w-auto">
+              class="px-3 py-2 bg-green-600 text-white font-medium rounded-lg hover:bg-green-700 transition-all shadow-lg whitespace-nowrap w-full md:w-auto">
               Apply Filter
             </button>
           </div>
@@ -66,7 +66,7 @@
             <i class="fas fa-filter mr-2"></i>Select Category
           </label>
           <div class="md:flex md:items-start md:space-x-4">
-            <select id="categorySelect" class="flex-1 border border-blue-500 focus:border-yellow-500 bg-transparent rounded-md px-3 py-2 mb-3 md:mb-0">
+            <select id="categorySelect" class="flex-1 border border-green-500 focus:border-yellow-500 bg-transparent rounded-md px-3 py-2 mb-3 md:mb-0">
               <option value="">-- Select Category --</option>
               <option value="REQUIRED_FOR_ALL">Required for All</option>
               <option value="NOT_REQUIRED_FOR_ALL">Not Required for All</option>
@@ -77,7 +77,7 @@
             <button 
               type="button" 
               id="applyCategoryFilterBtn" 
-              class="px-3 py-2 bg-blue-600 text-white font-medium rounded-lg hover:bg-blue-700 transition-all shadow-lg whitespace-nowrap w-full md:w-auto">
+              class="px-3 py-2 bg-green-600 text-white font-medium rounded-lg hover:bg-green-700 transition-all shadow-lg whitespace-nowrap w-full md:w-auto">
               Apply Filter
             </button>
           </div>
@@ -132,7 +132,7 @@
         </div>
         <h3 id="alertTitle" class="text-xl font-semibold text-gray-900 mb-2">Error</h3>
         <p id="alertMessage" class="text-gray-600 mb-6">An error occurred</p>
-        <button id="alertCloseBtn" class="px-6 py-3 bg-blue-600 text-white font-medium rounded-lg hover:bg-blue-700 transition-all shadow-lg">
+        <button id="alertCloseBtn" class="px-6 py-3 bg-green-600 text-white font-medium rounded-lg hover:bg-green-700 transition-all shadow-lg">
           OK
         </button>
       </div>
@@ -144,7 +144,7 @@
     <div class="pb-4 flex justify-between items-center no-print">
       <h3 class="text-xl text-yellow-700 font-bold">Input Variables Report Results</h3>
       <div class="flex gap-2">
-        <button id="exportExcelBtn" class="px-4 py-2 bg-green-600 text-white text-sm rounded-lg hover:bg-green-700 transition shadow">
+        <button id="exportExcelBtn" class="px-4 py-2 bg-blue-600 text-white text-sm rounded-lg hover:bg-blue-700 transition shadow">
           <i class="fas fa-file-excel mr-2"></i>Excel
         </button>
         <button id="exportPdfBtn" class="px-4 py-2 bg-red-600 text-white text-sm rounded-lg hover:bg-red-700 transition shadow">
@@ -218,9 +218,9 @@
       <div class="flex items-center justify-between">
         <div>
           <div class="text-gray-600 text-sm font-medium">Allowances</div>
-          <div id="allowancesCount" class="text-3xl font-bold text-green-600">0</div>
+          <div id="allowancesCount" class="text-3xl font-bold text-blue-600">0</div>
         </div>
-        <i class="fas fa-plus-circle text-green-500 text-3xl"></i>
+        <i class="fas fa-plus-circle text-blue-500 text-3xl"></i>
       </div>
     </div>
     <div class="p-4 rounded-lg border-2 transform hover:scale-105 transition">
@@ -258,12 +258,12 @@
   <!-- Success Banner -->
   <div id="nextStepBanner" class="hidden mt-6 p-6 no-print">
     <div class="flex items-start">
-      <i class="fas fa-check-circle text-green-500 text-3xl mr-4"></i>
+      <i class="fas fa-check-circle text-blue-500 text-3xl mr-4"></i>
       <div class="flex-1">
-        <h4 class="text-green-800 font-bold text-lg mb-2">Input Variables Loaded Successfully!</h4>
-        <p class="text-green-700 mb-4">Review the input variables above, filter as needed, and export reports. Ready to proceed?</p>
+        <h4 class="text-blue-800 font-bold text-lg mb-2">Input Variables Loaded Successfully!</h4>
+        <p class="text-blue-700 mb-4">Review the input variables above, filter as needed, and export reports. Ready to proceed?</p>
         <button onclick="window.navigation && window.navigation.navigateToSection && window.navigation.navigateToSection('master-file-update', 'Master File Update')" 
-                class="px-6 py-3 bg-green-600 text-white rounded-lg shadow-lg hover:bg-green-700 transition font-medium">
+                class="px-6 py-3 bg-blue-600 text-white rounded-lg shadow-lg hover:bg-blue-700 transition font-medium">
           <i class="fas fa-arrow-right mr-2"></i>Master File Update
         </button>
       </div>
@@ -346,7 +346,7 @@
   // Helper functions
   function addLog(message, type = 'info') {
     const log = document.createElement('div');
-    log.className = `py-1 text-xs ${type === 'success' ? 'text-green-600' : type === 'error' ? 'text-red-600' : 'text-gray-600'}`;
+    log.className = `py-1 text-xs ${type === 'success' ? 'text-blue-600' : type === 'error' ? 'text-red-600' : 'text-gray-600'}`;
     log.innerHTML = `<i class="fas fa-${type === 'success' ? 'check' : type === 'error' ? 'times' : 'circle'} mr-2"></i>${message}`;
     logContainer.appendChild(log);
     logContainer.scrollTop = logContainer.scrollHeight;
@@ -355,7 +355,7 @@
   function showAlert(title, message, type = 'error') {
     alertTitle.textContent = title;
     alertMessage.textContent = message;
-    const iconClass = type === 'success' ? 'fa-check-circle text-green-500' : type === 'warning' ? 'fa-exclamation-triangle text-yellow-500' : 'fa-exclamation-circle text-red-500';
+    const iconClass = type === 'success' ? 'fa-check-circle text-blue-500' : type === 'warning' ? 'fa-exclamation-triangle text-yellow-500' : 'fa-exclamation-circle text-red-500';
     alertIcon.innerHTML = `<i class="fas ${iconClass} text-6xl"></i>`;
     alertModal.classList.remove('hidden');
   }
@@ -412,7 +412,7 @@
       loadBtn.innerHTML = '<i class="fas fa-sync-alt mr-2"></i>Process & Load Input Variables';
       loadBtn.classList.remove('bg-yellow-600','hover:bg-yellow-700', 'cursor-not-allowed', 'opacity-50');
       loadBtn.disabled = false;
-      loadBtn.classList.add('bg-green-600','hover:bg-green-700');
+      loadBtn.classList.add('bg-blue-600','hover:bg-blue-700');
       filterTabs.classList.add('hidden');
       filterFormContainer.classList.add('hidden');
       cancelFilterContainer.classList.add('hidden');
@@ -439,13 +439,13 @@
     filterApplied = false;
     
     [allToggle, personnelToggle, categoryToggle, loanToggle].forEach(btn => {
-      btn.classList.remove('bg-blue-50','text-gray-900','shadow');
+      btn.classList.remove('bg-green-50','text-gray-900','shadow');
       btn.classList.add('text-gray-500');
     });
     
     const activeBtn = mode === 'all' ? allToggle : mode === 'personnel' ? personnelToggle : mode === 'category' ? categoryToggle : loanToggle;
     if (activeBtn) {
-      activeBtn.classList.add('bg-blue-50','text-gray-900','shadow');
+      activeBtn.classList.add('bg-green-50','text-gray-900','shadow');
       activeBtn.classList.remove('text-gray-500');
     }
 
@@ -493,8 +493,8 @@
     allEmployees = Array.from(unique.values());
     
     employeeDropdownItemsFilter.innerHTML = allEmployees.map(emp => `
-      <div class="px-3 py-2 hover:bg-blue-50 cursor-pointer transition border-b border-gray-100" data-id="${emp.id}">
-        <span class="font-semibold text-blue-600">${emp.name}</span>
+      <div class="px-3 py-2 hover:bg-green-50 cursor-pointer transition border-b border-gray-100" data-id="${emp.id}">
+        <span class="font-semibold text-green-600">${emp.name}</span>
         (<span class="text-xs font-semibold text-gray-500">${emp.id}</span>)
       </div>`).join('');
     dropdownListFilter.classList.remove('hidden');
@@ -518,8 +518,8 @@
     }
     const filtered = allEmployees.filter(emp => (emp.name||'').toLowerCase().includes(q) || (emp.id||'').toLowerCase().includes(q));
     employeeDropdownItemsFilter.innerHTML = filtered.map(emp => `
-      <div class="px-3 py-2 hover:bg-blue-50 cursor-pointer transition border-b border-gray-100" data-id="${emp.id}">
-        <span class="font-semibold text-blue-600">${emp.name}</span>
+      <div class="px-3 py-2 hover:bg-green-50 cursor-pointer transition border-b border-gray-100" data-id="${emp.id}">
+        <span class="font-semibold text-green-600">${emp.name}</span>
         (<span class="text-xs font-semibold text-gray-500">${emp.id}</span>)
       </div>`).join('');
     dropdownListFilter.classList.remove('hidden');
@@ -650,7 +650,7 @@
             ${variable.element_category || 'N/A'}
           </span>
         </td>
-        <td class="border px-2 py-3 text-right font-semibold ${variable.amtad === 'Deduct' ? 'text-red-600' : 'text-green-600'}">
+        <td class="border px-2 py-3 text-right font-semibold ${variable.amtad === 'Deduct' ? 'text-red-600' : 'text-blue-600'}">
           ${formatCurrency(variable.amt || 0)}
           ${variable.amtad === 'Deduct' ? '<i class="fas fa-arrow-down ml-1"></i>' : variable.amtad === 'Add' ? '<i class="fas fa-arrow-up ml-1"></i>' : ''}
         </td>-->
@@ -756,16 +756,16 @@
       if (key === 'element_category') {
         value = `
           <span class="px-3 py-1 rounded-full text-xs font-bold ${
-            value === 'REQUIRED_FOR_ALL' ? 'bg-blue-100 text-blue-800' :
-            value === 'ALLOWANCE' ? 'bg-green-100 text-green-800' :
+            value === 'REQUIRED_FOR_ALL' ? 'bg-green-100 text-green-800' :
+            value === 'ALLOWANCE' ? 'bg-blue-100 text-blue-800' :
             value === 'DEDUCTION' ? 'bg-red-100 text-red-800' : 'bg-gray-100 text-gray-800'
           }">${value || 'N/A'}</span>`;
       } 
       // Special styling for Amount (AMT) and Action (AMTAD)
       else if (key === 'amt') {
-          value = `<span class="font-bold text-lg ${variable.amtad === 'Deduct' ? 'text-red-600' : 'text-green-600'}">${value}</span>`;
+          value = `<span class="font-bold text-lg ${variable.amtad === 'Deduct' ? 'text-red-600' : 'text-blue-600'}">${value}</span>`;
       } else if (key === 'amtad') {
-          value = `<span class="font-bold ${value === 'Deduct' ? 'text-red-600' : 'text-green-600'}">${value || 'N/A'}</span>`;
+          value = `<span class="font-bold ${value === 'Deduct' ? 'text-red-600' : 'text-blue-600'}">${value || 'N/A'}</span>`;
       } else {
           value = value || 'N/A'; // Default value if key exists but data is null/undefined
       }

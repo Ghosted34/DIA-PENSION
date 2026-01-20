@@ -5,7 +5,7 @@
     <div class="flex gap-3 ju">
       <!--<button 
         onclick="window.syncNotifications()" 
-        class="bg-blue-500 hover:bg-blue-600 text-white font-medium px-4 py-2 rounded-lg transition-colors flex items-center gap-2">
+        class="bg-green-500 hover:bg-green-600 text-white font-medium px-4 py-2 rounded-lg transition-colors flex items-center gap-2">
         <i class="fas fa-sync-alt"></i>
         Sync
       </button>-->
@@ -29,7 +29,7 @@
   </div>
 
   <div id="loadingState" class="hidden text-center py-12">
-    <i class="fas fa-spinner fa-spin text-4xl text-blue-500 mb-4"></i>
+    <i class="fas fa-spinner fa-spin text-4xl text-green-500 mb-4"></i>
     <p class="text-gray-600">Loading notifications...</p>
   </div>
 </div>
@@ -59,7 +59,7 @@ window.loadAllNotifications = function() {
     const icon = window.getNotificationIcon(notif.type);
     const timeAgo = window.getTimeAgo(notif.timestamp);
     const bgColor = window.getNotificationBg(notif.type);
-    const countBadge = notif.count > 1 ? `<span class="inline-block ml-2 px-2 py-1 text-xs font-bold rounded-full bg-blue-500 text-white">${notif.count}x</span>` : '';
+    const countBadge = notif.count > 1 ? `<span class="inline-block ml-2 px-2 py-1 text-xs font-bold rounded-full bg-green-500 text-white">${notif.count}x</span>` : '';
 
     return `
       <div class="bg-white rounded-lg shadow-sm border border-gray-200 p-4 hover:shadow-md transition-shadow ${bgColor}"
@@ -74,7 +74,7 @@ window.loadAllNotifications = function() {
               ${countBadge}
             </p>
             <p class="text-xs text-gray-500 mt-1">${timeAgo}</p>
-            <!--${notif.method ? `<span class="inline-block mt-2 px-2 py-1 text-xs font-semibold rounded ${notif.method === 'POST' ? 'bg-green-100 text-green-800' : notif.method === 'PUT' ? 'bg-blue-100 text-blue-800' : 'bg-red-100 text-red-800'}">${notif.method}</span>` : ''}-->
+            <!--${notif.method ? `<span class="inline-block mt-2 px-2 py-1 text-xs font-semibold rounded ${notif.method === 'POST' ? 'bg-blue-100 text-blue-800' : notif.method === 'PUT' ? 'bg-green-100 text-green-800' : 'bg-red-100 text-red-800'}">${notif.method}</span>` : ''}-->
           </div>
           <button 
             onclick="window.removeNotification('${notif.id}')"
@@ -92,20 +92,20 @@ window.loadAllNotifications = function() {
 
 window.getNotificationIcon = function(type) {
   const icons = {
-    success: '<i class="fas fa-check-circle text-green-500 text-2xl"></i>',
+    success: '<i class="fas fa-check-circle text-blue-500 text-2xl"></i>',
     warning: '<i class="fas fa-exclamation-triangle text-yellow-500 text-2xl"></i>',
     error: '<i class="fas fa-times-circle text-red-500 text-2xl"></i>',
-    info: '<i class="fas fa-info-circle text-blue-500 text-2xl"></i>'
+    info: '<i class="fas fa-info-circle text-green-500 text-2xl"></i>'
   };
   return icons[type] || icons.info;
 }
 
 window.getNotificationBg = function(type) {
   const backgrounds = {
-    success: 'bg-green-50',
+    success: 'bg-blue-50',
     warning: 'bg-yellow-50',
     error: 'bg-red-50',
-    info: 'bg-blue-50'
+    info: 'bg-green-50'
   };
   return backgrounds[type] || '';
 }

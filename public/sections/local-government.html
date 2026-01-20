@@ -4,7 +4,7 @@
     <h3 class="text-xl font-semibold text-gray-800">Local Government Management</h3>
     <div class="flex flex-wrap gap-2">
       <input type="text" id="searchLga" placeholder="Search by name or state" class="border rounded px-3 py-2">
-      <button id="addNewLgaBtn" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">+ Add New LGA</button>
+      <button id="addNewLgaBtn" class="bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700">+ Add New LGA</button>
        <button id="generateReportBtn" class="bg-yellow-600 text-white px-4 py-2 rounded hover:bg-yellow-700">
         <i class="fas fa-file-alt mr-2"></i>Generate Report</button>
     </div>
@@ -14,22 +14,22 @@
   <form id="lgaForm" class="hidden grid grid-cols-1 md:grid-cols-3 gap-4 p-4 bg-gray-50 rounded">
     <div>
       <label class="block text-sm font-medium text-gray-700">Local Government Name *</label>
-      <input type="text" id="lgaName" class="w-full border border-blue-500 rounded-md px-3 py-2 bg-white">
+      <input type="text" id="lgaName" class="w-full border border-green-500 rounded-md px-3 py-2 bg-white">
     </div>
     <div>
       <label class="block text-sm font-medium text-gray-700">Local Government Code *</label>
-      <input type="text" maxlength="3" id="lgaCode" class="w-full border border-blue-500 rounded-md px-3 py-2 bg-white">
+      <input type="text" maxlength="3" id="lgaCode" class="w-full border border-green-500 rounded-md px-3 py-2 bg-white">
     </div>
     <div>
       <label class="block text-sm font-medium text-gray-700">Local Government Headquaters*</label>
-      <input type="text" id="lghqs" class="w-full border border-blue-500 rounded-md px-3 py-2 bg-white">
+      <input type="text" id="lghqs" class="w-full border border-green-500 rounded-md px-3 py-2 bg-white">
     </div>
     <div>
       <label class="block text-sm font-medium text-gray-700">Select State *</label>
-      <select id="lgaState" class="w-full border border-blue-500 rounded-md px-3 py-2 bg-white"></select>
+      <select id="lgaState" class="w-full border border-green-500 rounded-md px-3 py-2 bg-white"></select>
     </div>
     <div class="col-span-1 md:col-span-3 flex justify-end gap-2">
-      <button type="button" id="saveLgaBtn" class="bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700">Save</button>
+      <button type="button" id="saveLgaBtn" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Save</button>
       <button type="button" id="cancelLgaBtn" class="bg-gray-400 text-white px-4 py-2 rounded hover:bg-gray-500">Cancel</button>
     </div>
   </form>
@@ -37,7 +37,7 @@
   <!-- Local Government Table -->
   <div class="overflow-x-auto mt-4">
     <table class="min-w-full border border-gray-200 rounded-lg text-sm">
-      <thead class="bg-blue-100 text-blue-900">
+      <thead class="bg-green-100 text-green-900">
         <tr>
           <th class="border px-2 py-3 text-left">LGA Name</th>
           <th class="border px-6 py-3 text-left">LGA Code</th>
@@ -79,17 +79,17 @@
   <div class="bg-white p-6 rounded-lg shadow-xl max-w-md w-full mx-4">
     <div class="flex items-center mb-4">
       <div class="flex-shrink-0">
-        <svg class="h-8 w-8 text-green-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <svg class="h-8 w-8 text-blue-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
         </svg>
       </div>
       <div class="ml-3">
-        <h3 class="text-lg font-semibold text-green-600">Success!</h3>
+        <h3 class="text-lg font-semibold text-blue-600">Success!</h3>
       </div>
     </div>
     <p id="successMessage" class="mb-4 text-gray-700">Record saved successfully!</p>
     <div class="flex justify-end">
-      <button id="closeSuccessModal" class="bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700">OK</button>
+      <button id="closeSuccessModal" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">OK</button>
     </div>
   </div>
 </div>
@@ -139,7 +139,7 @@
 <div id="viewModal" class="hidden fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50">
   <div class="bg-white p-6 rounded-lg shadow-xl w-full max-w-2xl mx-4 max-h-screen overflow-y-auto">
     <div class="flex justify-between items-center mb-4">
-      <h3 class="text-lg font-semibold text-blue-600">LGA Details</h3>
+      <h3 class="text-lg font-semibold text-green-600">LGA Details</h3>
       <button id="closeViewModal" class="text-gray-400 hover:text-gray-600">
         <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
@@ -363,8 +363,8 @@ function renderLgaTable() {
         <td class="border px-2 py-3">${item.Lgcode}</td>
         <td class="border px-2 py-3">${stateMap[item.Statecode] || item.Statecode}</td>
         <td class="border px-2 py-3">
-          <button onclick="viewLga(${realIndex})" class="text-blue-600 mr-2">View</button>
-          <button onclick="editLga(${realIndex})" class="text-green-600 mr-2">Edit</button>
+          <button onclick="viewLga(${realIndex})" class="text-green-600 mr-2">View</button>
+          <button onclick="editLga(${realIndex})" class="text-blue-600 mr-2">Edit</button>
           <button onclick="deleteLga(${realIndex})" class="text-red-600">Delete</button>
         </td>
       </tr>

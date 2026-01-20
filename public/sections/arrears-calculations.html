@@ -6,7 +6,7 @@
         <input 
           type="text" 
           id="searchInput"
-          class="w-full border border-blue-500 focus:border-yellow-500 bg-transparent rounded-md px-3 py-2"
+          class="w-full border border-green-500 focus:border-yellow-500 bg-transparent rounded-md px-3 py-2"
           placeholder="Name or Number..."
           autocomplete="off">
         <span class="absolute inset-y-0 right-0 flex items-center pr-3 pointer-events-none">
@@ -18,21 +18,21 @@
       
       <div id="dropdownList" class="absolute z-10 w-full mt-1 bg-yellow-50 border border-gray-300 rounded-md shadow-lg max-h-60 overflow-y-auto hidden">
         <div class="py-1">
-          <div class="dropdown-item px-3 py-2 hover:bg-blue-50 cursor-pointer border-b border-gray-100" data-value="NN001">
-            <span class="font-semibold text-blue-600">NN001</span> - Lt. James 
+          <div class="dropdown-item px-3 py-2 hover:bg-green-50 cursor-pointer border-b border-gray-100" data-value="NN001">
+            <span class="font-semibold text-green-600">NN001</span> - Lt. James 
           </div>
-          <div class="dropdown-item px-3 py-2 hover:bg-blue-50 cursor-pointer border-b border-gray-100" data-value="NN002">
-            <span class="font-semibold text-blue-600">NN002</span> - Mr. Johnson
+          <div class="dropdown-item px-3 py-2 hover:bg-green-50 cursor-pointer border-b border-gray-100" data-value="NN002">
+            <span class="font-semibold text-green-600">NN002</span> - Mr. Johnson
           </div>
-          <div class="dropdown-item px-3 py-2 hover:bg-blue-50 cursor-pointer border-b border-gray-100" data-value="NN003">
-            <span class="font-semibold text-blue-600">NN003</span> - CPO Hicad
+          <div class="dropdown-item px-3 py-2 hover:bg-green-50 cursor-pointer border-b border-gray-100" data-value="NN003">
+            <span class="font-semibold text-green-600">NN003</span> - CPO Hicad
           </div>
         </div>
       </div>
     </div>
     <div class="flex items-center flex-wrap gap-2">
-      <span class="font-bold text-blue-600 text-lg">TOTAL ARREARS:</span>
-      <div class="bg-pink-50 px-4 py-2 border-2 border-blue-500 rounded-md w-40 text-right text-blue-700 font-bold">
+      <span class="font-bold text-green-600 text-lg">TOTAL ARREARS:</span>
+      <div class="bg-pink-50 px-4 py-2 border-2 border-green-500 rounded-md w-40 text-right text-green-700 font-bold">
         0.00
       </div>
     </div>
@@ -40,7 +40,7 @@
 
   <!-- Regular Section -->
   <div class="mb-6">
-    <h3 class="text-lg mb-4 text-blue-600 font-bold border-b pb-2">REGULAR</h3>
+    <h3 class="text-lg mb-4 text-green-600 font-bold border-b pb-2">REGULAR</h3>
     <div class="grid grid-cols-6 gap-x-4 gap-y-2" id="regularSection">
       <!-- Headers -->
       <div class="col-span-1 font-medium text-sm text-center">Payroll Item</div>
@@ -54,7 +54,7 @@
 
   <!-- Others Section -->
   <div class="mb-6">
-    <h3 class="text-lg mb-4 text-blue-600 font-bold border-b pb-2">OTHERS</h3>
+    <h3 class="text-lg mb-4 text-green-600 font-bold border-b pb-2">OTHERS</h3>
     <div class="grid grid-cols-5 gap-x-4 gap-y-2" id="othersSection">
       <!-- Headers -->
       <div class="col-span-1 font-medium text-sm">Payroll Item</div>
@@ -70,7 +70,7 @@
     <button type="button" class="bg-gray-300 text-gray-700 px-6 py-2 rounded hover:bg-gray-300">
       Cancel
     </button>
-    <button type="button" class="bg-blue-600 text-white px-6 py-2 rounded hover:bg-blue-700">
+    <button type="button" class="bg-green-600 text-white px-6 py-2 rounded hover:bg-green-700">
       Calculate
     </button>
     <button type="button" class="bg-yellow-500 text-white px-6 py-2 rounded hover:bg-yellow-700">
@@ -150,38 +150,38 @@
   const regularRows = 5;
   for (let i = 0; i < regularRows; i++) {
     // Payroll Item
-    const sel1 = createEl("select", "col-span-1 border border-blue-500 focus:border-yellow-500 bg-transparent rounded-md px-2 py-1 text-sm min-h-[2rem]");
+    const sel1 = createEl("select", "col-span-1 border border-green-500 focus:border-yellow-500 bg-transparent rounded-md px-2 py-1 text-sm min-h-[2rem]");
     sel1.innerHTML = `<option value="">Select Item</option>`;
     regularSection.appendChild(sel1);
 
     // Start Date
-    const sd = createEl("input", "col-span-1 border border-blue-500 focus:border-yellow-500 bg-transparent rounded-md px-2 py-1 text-sm min-h-[2rem]", {
+    const sd = createEl("input", "col-span-1 border border-green-500 focus:border-yellow-500 bg-transparent rounded-md px-2 py-1 text-sm min-h-[2rem]", {
       type: "date",
       placeholder: "DD/MM/YYYY",
     });
     regularSection.appendChild(sd);
 
     // Last Date
-    const ld = createEl("input", "col-span-1 border border-blue-500 focus:border-yellow-500 bg-transparent rounded-md px-2 py-1 text-sm min-h-[2rem]", {
+    const ld = createEl("input", "col-span-1 border border-green-500 focus:border-yellow-500 bg-transparent rounded-md px-2 py-1 text-sm min-h-[2rem]", {
       type: "date",
       placeholder: "DD/MM/YYYY",
     });
     regularSection.appendChild(ld);
 
     // OLD Scale
-    const sel2 = createEl("select", "col-span-1 border border-blue-500 focus:border-yellow-500 bg-transparent rounded-md px-2 py-1 text-sm min-h-[2rem]");
+    const sel2 = createEl("select", "col-span-1 border border-green-500 focus:border-yellow-500 bg-transparent rounded-md px-2 py-1 text-sm min-h-[2rem]");
     sel2.innerHTML = `<option value="">Select Scale</option>`;
     regularSection.appendChild(sel2);
 
     // OLD GL
-    const oldGl = createEl("input", "col-span-1 border border-blue-500 focus:border-yellow-500 bg-transparent rounded-md px-2 py-1 text-sm text-right min-h-[2rem]", {
+    const oldGl = createEl("input", "col-span-1 border border-green-500 focus:border-yellow-500 bg-transparent rounded-md px-2 py-1 text-sm text-right min-h-[2rem]", {
       type: "text",
       placeholder: "GGL",
     });
     regularSection.appendChild(oldGl);
 
     // NEW GL
-    const newGl = createEl("input", "col-span-1 border border-blue-500 focus:border-yellow-500 bg-transparent rounded-md px-2 py-1 text-sm text-right min-h-[2rem]", {
+    const newGl = createEl("input", "col-span-1 border border-green-500 focus:border-yellow-500 bg-transparent rounded-md px-2 py-1 text-sm text-right min-h-[2rem]", {
       type: "text",
       placeholder: "GGL",
     });
@@ -193,34 +193,35 @@
   const otherRows = 3;
   for (let i = 0; i < otherRows; i++) {
     // Payroll Item
-    const sel = createEl("select", "col-span-1 border border-blue-500 focus:border-yellow-500 bg-green-50 rounded-md px-2 py-1 text-sm min-h-[2rem]");
+    const sel = createEl("select", "col-span-1 border border-green-500 focus:border-yellow-500 bg-blue-50 rounded-md px-2 py-1 text-sm min-h-[2rem]");
     sel.innerHTML = `<option value="">Select Item</option>`;
     othersSection.appendChild(sel);
 
     // Start Date
-    const sd = createEl("input", "col-span-1 border border-blue-500 focus:border-yellow-500 bg-green-50 rounded-md px-2 py-1 text-sm min-h-[2rem]", {
+    const sd = createEl("input", "col-span-1 border border-green-500 focus:border-yellow-500 bg-blue-50 rounded-md px-2 py-1 text-sm min-h-[2rem]", {
       type: "date",
       placeholder: "DD/MM/YYYY",
     });
     othersSection.appendChild(sd);
 
     // End Date
-    const ed = createEl("input", "col-span-1 border border-blue-500 focus:border-yellow-500 bg-green-50 rounded-md px-2 py-1 text-sm min-h-[2rem]", {
+    const ed = createEl("input", "col-span-1 border border-green-500 focus:border-yellow-500 bg-blue-50 rounded-md px-2 py-1 text-sm min-h-[2rem]", {
       type: "date",
       placeholder: "DD/MM/YYYY",
     });
     othersSection.appendChild(ed);
 
     // OLD Amount
-    const oldAmt = createEl("input", "col-span-1 border border-blue-500 focus:border-yellow-500 bg-green-50 rounded-md px-2 py-1 text-sm text-right min-h-[2rem]", {
+    const oldAmt = createEl("input", "col-span-1 border border-green-500 focus:border-yellow-500 bg-blue-50 rounded-md px-2 py-1 text-sm text-right min-h-[2rem]", {
       type: "number",
     });
     othersSection.appendChild(oldAmt);
 
     // NEW Amount
-    const newAmt = createEl("input", "col-span-1 border border-blue-500 focus:border-yellow-500 bg-green-50 rounded-md px-2 py-1 text-sm text-right min-h-[2rem]", {
+    const newAmt = createEl("input", "col-span-1 border border-green-500 focus:border-yellow-500 bg-blue-50 rounded-md px-2 py-1 text-sm text-right min-h-[2rem]", {
       type: "number",
     });
     othersSection.appendChild(newAmt);
   }
 </script>
+

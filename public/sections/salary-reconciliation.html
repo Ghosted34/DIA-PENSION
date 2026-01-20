@@ -164,7 +164,7 @@
     <form id="salarySummaryForm" class="space-y-4">
       <div>
         <label for="yearFilter" class="block font-semibold mb-2 text-gray-700 text-sm">Processing Year</label>
-          <input type="number" disabled id="yearFilter"  class="w-full border rounded px-3 py-2 focus:ring focus:ring-blue-300">
+          <input type="number" disabled id="yearFilter"  class="w-full border rounded px-3 py-2 focus:ring focus:ring-green-300">
       </div>
 
       <div>
@@ -206,7 +206,7 @@
   <div id="resultsSection" class="hidden">
     
     <!-- Show Form Button -->
-    <div class="flex justify-between items-center mb-6 bg-blue-50 text-blue-900 p-4 rounded-lg mb-6 flex flex-wrap justify-between items-center gap-4">
+    <div class="flex justify-between items-center mb-6 bg-green-50 text-green-900 p-4 rounded-lg mb-6 flex flex-wrap justify-between items-center gap-4">
       <button onclick="window.toggleForm()" class="px-4 py-2 bg-gray-600 text-white rounded-lg hover:bg-gray-700 transition">
         Show Filters
       </button>
@@ -215,14 +215,14 @@
       <div id="reportMeta">
         <div>
           <div class="text-sm">
-            <strong class="text-blue-900">Produced On:</strong> <span id="reportDate"></span>
+            <strong class="text-green-900">Produced On:</strong> <span id="reportDate"></span>
           </div>
           <div class="text-sm">
-            <strong class="text-blue-900">Period:</strong> <span id="reportPeriod"></span>
+            <strong class="text-green-900">Period:</strong> <span id="reportPeriod"></span>
           </div>
         </div>
       </div>
-      <button onclick="window.exportReport()" class="px-4 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700 transition">
+      <button onclick="window.exportReport()" class="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition">
         Export PDF
       </button>
     </div>
@@ -245,7 +245,7 @@
       </div>
       <div class="overflow-x-auto rounded-lg">
         <table id="employeeTable" class="min-w-full border border-gray-200 rounded-lg">
-          <thead class="bg-blue-50 text-blue-900">
+          <thead class="bg-green-50 text-green-900">
             <tr>
               <th class="border px-2 py-3 text-left border">Svc No</th>
               <th style="width: 25%;" class="border px-2 py-3 text-left border">Name</th>
@@ -294,7 +294,7 @@
       <h3>Processing</h3>
     </div>
     <div class="modal-body text-center py-8">
-      <div class="inline-block w-16 h-16 border-4 border-gray-200 border-t-blue-600 rounded-full animate-spin mb-4"></div>
+      <div class="inline-block w-16 h-16 border-4 border-gray-200 border-t-green-600 rounded-full animate-spin mb-4"></div>
       <p id="loadingMessage" class="text-gray-600 text-lg">Loading data...</p>
     </div>
   </div>
@@ -308,11 +308,11 @@
       <button class="modal-close" onclick="window.closeModal('successModal')">&times;</button>
     </div>
     <div class="modal-body text-center py-8">
-      <svg class="w-16 h-16 mx-auto text-green-500 mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <svg class="w-16 h-16 mx-auto text-blue-500 mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
       </svg>
       <p id="successMessage" class="text-gray-700 text-lg mb-6">Operation completed successfully!</p>
-      <button onclick="window.closeModal('successModal')" class="px-6 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700 transition">
+      <button onclick="window.closeModal('successModal')" class="px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition">
         OK
       </button>
     </div>
@@ -365,11 +365,11 @@
       <button class="modal-close" onclick="window.closeModal('infoModal')">&times;</button>
     </div>
     <div class="modal-body text-center py-8">
-      <svg class="w-16 h-16 mx-auto text-blue-500 mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <svg class="w-16 h-16 mx-auto text-green-500 mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
       </svg>
       <p id="infoMessage" class="text-gray-700 text-lg mb-6">Information message</p>
-      <button onclick="window.closeModal('infoModal')" class="px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition">
+      <button onclick="window.closeModal('infoModal')" class="px-6 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700 transition">
         Got it
       </button>
     </div>
@@ -605,7 +605,7 @@ function displayOverallStatus(summary) {
   const container = document.getElementById('overallStatus');
 
   const variance = parseFloat(summary.calculated_variance) || 0;
-  const statusClass = Math.abs(variance) < 0.01 ? 'bg-green-100 text-green-800' : 'bg-yellow-100 text-yellow-800';
+  const statusClass = Math.abs(variance) < 0.01 ? 'bg-blue-100 text-blue-800' : 'bg-yellow-100 text-yellow-800';
 
   container.innerHTML = `
     <div class="flex justify-between items-center mb-4 pb-3 border-b-4 border-indigo-600">
@@ -614,7 +614,7 @@ function displayOverallStatus(summary) {
     </div>
     <div class="overflow-x-auto rounded-lg">
       <table class="min-w-full border border-gray-200 rounded-lg">
-        <thead class="bg-blue-50 text-blue-900">
+        <thead class="bg-green-50 text-green-900">
           <tr>
             <th class="border px-2 py-3 text-left border">Total Gross</th>
             <th class="border px-2 py-3 text-left border">Total Tax</th>
@@ -668,7 +668,7 @@ function displayEmployeeTable(details) {
     // Determine status badge
     let statusBadge = '';
     if (Math.abs(variance) < 0.01) {
-      statusBadge = '<span class="px-3 py-1 bg-green-100 text-green-800 rounded-full text-xs font-bold uppercase">Balanced</span>';
+      statusBadge = '<span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-xs font-bold uppercase">Balanced</span>';
     } else if (variance > 0) {
       statusBadge = '<span class="px-3 py-1 bg-red-100 text-red-800 rounded-full text-xs font-bold uppercase">Underpayment</span>';
     } else {
@@ -689,7 +689,7 @@ function displayEmployeeTable(details) {
         </td>
         <td class="px-4 py-3 text-center text-sm">${statusBadge}</td>
         <td class="px-4 py-3 text-center no-print">
-          <button onclick="window.showBreakdown(${index})" class="view-btn text-sm text-green-600 hover:underline">
+          <button onclick="window.showBreakdown(${index})" class="view-btn text-sm text-blue-600 hover:underline">
             View
           </button>
         </td>
@@ -773,12 +773,12 @@ window.showBreakdown = function(index) {
         <div class="flex justify-between"><span>Net from Cumulative:</span><span class="font-semibold">₦${formatNumber(emp.net_from_cum)}</span></div>
         <div class="flex justify-between border-t-2 pt-2 mt-2">
           <span class="font-bold">Variance:</span>
-          <span class="font-bold ${emp.status === 'ERROR' ? 'text-red-600' : 'text-green-600'}">
+          <span class="font-bold ${emp.status === 'ERROR' ? 'text-red-600' : 'text-blue-600'}">
             ₦${formatNumber(Math.abs(emp.error_amount))}
           </span>
         </div>
         <div class="text-center mt-2">
-          ${emp.error_amount > 0 ? '<span class="text-red-600 font-semibold">UNDERPAYMENT</span>' : emp.error_amount < 0 ? '<span class="text-orange-600 font-semibold">OVERPAYMENT</span>' : '<span class="text-green-600 font-semibold">BALANCED</span>'}
+          ${emp.error_amount > 0 ? '<span class="text-red-600 font-semibold">UNDERPAYMENT</span>' : emp.error_amount < 0 ? '<span class="text-orange-600 font-semibold">OVERPAYMENT</span>' : '<span class="text-blue-600 font-semibold">BALANCED</span>'}
         </div>
       </div>
     </div>

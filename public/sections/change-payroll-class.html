@@ -1,5 +1,5 @@
 <div class="p-6 max-w-4xl mx-auto">
-  <h2 class="text-2xl font-semibold text-blue-800">
+  <h2 class="text-2xl font-semibold text-green-800">
     Select migration type and assign personnel to a new payroll class.
   </h2>
 
@@ -10,19 +10,19 @@
 
       <label class="flex items-center space-x-2 cursor-pointer">
         <input type="radio" name="migrationType" value="individual" checked
-          class="w-4 h-4 text-blue-600 focus:ring-blue-500">
+          class="w-4 h-4 text-green-600 focus:ring-green-500">
         <span class="text-gray-700">Individual Personnel</span>
       </label>
 
       <label class="flex items-center space-x-2 cursor-pointer">
         <input type="radio" name="migrationType" value="all"
-          class="w-4 h-4 text-blue-600 focus:ring-blue-500">
+          class="w-4 h-4 text-green-600 focus:ring-green-500">
         <span class="text-gray-700">All Personnel (Bulk Migration)</span>
       </label>
 
       <label class="flex items-center space-x-2 cursor-pointer">
         <input type="radio" name="migrationType" value="range"
-          class="w-4 h-4 text-blue-600 focus:ring-blue-500">
+          class="w-4 h-4 text-green-600 focus:ring-green-500">
         <span class="text-gray-700">Range of Personnel</span>
       </label>
     </div>
@@ -35,7 +35,7 @@
           <input 
             type="text" 
             id="searchInput"
-            class="w-full border border-blue-500 focus:border-yellow-500 bg-transparent rounded-md px-3 py-2"
+            class="w-full border border-green-500 focus:border-yellow-500 bg-transparent rounded-md px-3 py-2"
             placeholder="Search by Name or Number..."
             autocomplete="off">
           <input type="hidden" id="hiddenInput">
@@ -53,7 +53,7 @@
         </div>
 
         <select name="newClass" id="newClass"
-            class="border border-gray-300 rounded-lg px-4 py-2 focus:ring-2 focus:ring-blue-500">
+            class="border border-gray-300 rounded-lg px-4 py-2 focus:ring-2 focus:ring-green-500">
             <option value="">Select Payroll Class</option>
         </select>
 
@@ -63,7 +63,7 @@
       <!-- Bulk Migration Form -->
       <div id="bulkForm" class="hidden grid grid-cols-1 md:grid-cols-2 gap-4">
         <select name="bulkNewClass" id="bulkNewClass"
-            class="border border-gray-300 rounded-lg px-4 py-2 focus:ring-2 focus:ring-blue-500">
+            class="border border-gray-300 rounded-lg px-4 py-2 focus:ring-2 focus:ring-green-500">
             <option value="">Select Target Payroll Class</option>
         </select>
       </div>
@@ -74,7 +74,7 @@
           <input 
             type="text" 
             id="rangeSearchInputStart"
-            class="w-full border border-blue-500 focus:border-yellow-500 bg-transparent rounded-md px-3 py-2"
+            class="w-full border border-green-500 focus:border-yellow-500 bg-transparent rounded-md px-3 py-2"
             placeholder="From: Search personnel..."
             autocomplete="off">
           <input type="hidden" id="rangeHiddenInputStart">
@@ -89,7 +89,7 @@
           <input 
             type="text" 
             id="rangeSearchInputEnd"
-            class="w-full border border-blue-500 focus:border-yellow-500 bg-transparent rounded-md px-3 py-2"
+            class="w-full border border-green-500 focus:border-yellow-500 bg-transparent rounded-md px-3 py-2"
             placeholder="To: Search personnel..."
             autocomplete="off">
           <input type="hidden" id="rangeHiddenInputEnd">
@@ -101,7 +101,7 @@
         </div>
 
         <select name="rangeNewClass" id="rangeNewClass"
-            class="border border-gray-300 rounded-lg px-4 py-2 focus:ring-2 focus:ring-blue-500">
+            class="border border-gray-300 rounded-lg px-4 py-2 focus:ring-2 focus:ring-green-500">
             <option value="">Select Payroll Class</option>
         </select>
       </div>
@@ -116,7 +116,7 @@
         <!-- Action Buttons -->
         <div class="flex gap-2 justify-end">
           <button type="button" id="changeButton"
-            class="px-6 py-2 bg-blue-600 text-white rounded-lg shadow hover:bg-blue-700 transition disabled:opacity-50 disabled:cursor-not-allowed">
+            class="px-6 py-2 bg-green-600 text-white rounded-lg shadow hover:bg-green-700 transition disabled:opacity-50 disabled:cursor-not-allowed">
             Migrate Personnel
           </button>
 
@@ -140,7 +140,7 @@
     <h2 class="text-xl font-bold text-gray-800 mb-4">Payroll Class Statistics</h2>
     <div id="classCards" class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
       <div class="col-span-full text-center py-8">
-        <div class="inline-block w-8 h-8 border-4 border-blue-500 border-t-transparent rounded-full animate-spin"></div>
+        <div class="inline-block w-8 h-8 border-4 border-green-500 border-t-transparent rounded-full animate-spin"></div>
         <p class="text-gray-500 mt-2">Loading statistics...</p>
       </div>
     </div>
@@ -159,7 +159,7 @@
     </div>
     <div class="flex justify-end gap-3">
       <button id="cancelConfirm" class="px-4 py-2 bg-gray-400 text-white rounded hover:bg-gray-500">Cancel</button>
-      <button id="okConfirm" class="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700">Proceed</button>
+      <button id="okConfirm" class="px-4 py-2 bg-green-600 text-white rounded hover:bg-green-700">Proceed</button>
     </div>
   </div>
 </div>
@@ -170,7 +170,7 @@
     <!-- Header -->
     <div class="bg-navy text-white px-6 py-4">
       <h2 class="text-xl font-bold">Payroll Class Migration Progress</h2>
-      <p class="text-sm text-blue-100 mt-1" id="migrationSubtitle">Migrating personnel between payroll classes...</p>
+      <p class="text-sm text-green-100 mt-1" id="migrationSubtitle">Migrating personnel between payroll classes...</p>
     </div>
 
     <!-- Progress Container -->
@@ -182,7 +182,7 @@
           <span id="overallProgress">0%</span>
         </div>
         <div class="w-full bg-gray-200 rounded-full h-3">
-          <div id="overallProgressBar" class="bg-blue-600 h-3 rounded-full transition-all duration-300" style="width: 0%"></div>
+          <div id="overallProgressBar" class="bg-green-600 h-3 rounded-full transition-all duration-300" style="width: 0%"></div>
         </div>
       </div>
 
@@ -225,7 +225,7 @@
 
     <!-- Footer -->
     <div class="flex flex-wrap justify-center items-center border-t border-gray-200 px-6 py-4 bg-gray-50">
-      <button id="closeMigration" class="hidden w-fit px-4 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700 transition">
+      <button id="closeMigration" class="hidden w-fit px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition">
         Close
       </button>
     </div>
@@ -378,15 +378,15 @@ function addMigrationStep(title, status = 'pending') {
   
   const icons = {
     pending: '<div class="w-6 h-6 border-2 border-gray-300 rounded-full"></div>',
-    processing: '<div class="w-6 h-6 border-2 border-blue-600 border-t-transparent rounded-full animate-spin"></div>',
-    success: '<div class="w-6 h-6 bg-green-100 rounded-full flex items-center justify-center"><svg class="w-4 h-4 text-green-600" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg></div>',
+    processing: '<div class="w-6 h-6 border-2 border-green-600 border-t-transparent rounded-full animate-spin"></div>',
+    success: '<div class="w-6 h-6 bg-blue-100 rounded-full flex items-center justify-center"><svg class="w-4 h-4 text-blue-600" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg></div>',
     error: '<div class="w-6 h-6 bg-red-100 rounded-full flex items-center justify-center"><svg class="w-4 h-4 text-red-600" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/></svg></div>'
   };
   
   const colors = {
     pending: 'border-gray-200 bg-white',
-    processing: 'border-blue-200 bg-blue-50',
-    success: 'border-green-200 bg-green-50',
+    processing: 'border-green-200 bg-green-50',
+    success: 'border-blue-200 bg-blue-50',
     error: 'border-red-200 bg-red-50'
   };
   
@@ -409,15 +409,15 @@ function updateMigrationStep(stepId, status, detail = '') {
   
   const icons = {
     pending: '<div class="w-6 h-6 border-2 border-gray-300 rounded-full"></div>',
-    processing: '<div class="w-6 h-6 border-2 border-blue-600 border-t-transparent rounded-full animate-spin"></div>',
-    success: '<div class="w-6 h-6 bg-green-100 rounded-full flex items-center justify-center"><svg class="w-4 h-4 text-green-600" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg></div>',
+    processing: '<div class="w-6 h-6 border-2 border-green-600 border-t-transparent rounded-full animate-spin"></div>',
+    success: '<div class="w-6 h-6 bg-blue-100 rounded-full flex items-center justify-center"><svg class="w-4 h-4 text-blue-600" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg></div>',
     error: '<div class="w-6 h-6 bg-red-100 rounded-full flex items-center justify-center"><svg class="w-4 h-4 text-red-600" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/></svg></div>'
   };
   
   const colors = {
     pending: 'border-gray-200 bg-white',
-    processing: 'border-blue-200 bg-blue-50',
-    success: 'border-green-200 bg-green-50',
+    processing: 'border-green-200 bg-green-50',
+    success: 'border-blue-200 bg-blue-50',
     error: 'border-red-200 bg-red-50'
   };
   
@@ -542,12 +542,12 @@ function renderDropdown(employees, container, type = 'individual') {
     const payrollClass = emp.payrollclass || emp.PayrollClass || emp.PAYROLLCLASS || '';
     
     return `
-      <div class="dropdown-item px-3 py-2 hover:bg-blue-50 cursor-pointer border-b border-gray-100" 
+      <div class="dropdown-item px-3 py-2 hover:bg-green-50 cursor-pointer border-b border-gray-100" 
            data-value="${id}" 
            data-name="${name}"
            data-class="${payrollClass}"
            data-type="${type}">
-        <span class="font-semibold text-blue-600">${id}</span> - ${name}
+        <span class="font-semibold text-green-600">${id}</span> - ${name}
       </div>
     `;
   }).join('');
@@ -749,7 +749,7 @@ function renderClassCards() {
 
   container.innerHTML = classesWithPersonnel.map(([code, data]) => `
     <div class="border border-gray-200 rounded-lg p-4 text-center shadow-sm hover:shadow-md transition">
-      <h3 class="font-semibold text-blue-600">${data.classname || code}</h3>
+      <h3 class="font-semibold text-green-600">${data.classname || code}</h3>
       <p class="text-sm text-gray-600 mt-1">${data.count} Personnel</p>
     </div>
   `).join('');
@@ -984,7 +984,7 @@ async function executeIndividualMigration() {
     showMigrationSummary(result.data);
     
     document.getElementById('migrationSubtitle').textContent = '✅ Migration completed successfully!';
-    document.getElementById('migrationSubtitle').classList.add('text-green-200');
+    document.getElementById('migrationSubtitle').classList.add('text-blue-200');
 
     await loadClassStatistics();
     allEmployees = [];
@@ -1032,7 +1032,7 @@ async function executeBulkMigration() {
     showMigrationSummary(result.data);
     
     document.getElementById('migrationSubtitle').textContent = '✅ Bulk migration completed!';
-    document.getElementById('migrationSubtitle').classList.add('text-green-200');
+    document.getElementById('migrationSubtitle').classList.add('text-blue-200');
 
     await loadClassStatistics();
     allEmployees = [];
@@ -1081,7 +1081,7 @@ async function executeRangeMigration() {
     showMigrationSummary(result.data);
     
     document.getElementById('migrationSubtitle').textContent = '✅ Range migration completed!';
-    document.getElementById('migrationSubtitle').classList.add('text-green-200');
+    document.getElementById('migrationSubtitle').classList.add('text-blue-200');
 
     await loadClassStatistics();
     allEmployees = [];
@@ -1125,7 +1125,7 @@ document.getElementById('clearButton').addEventListener('click', clearForm);
 
 document.getElementById('closeMigration').addEventListener('click', () => {
   document.getElementById('migrationModal').classList.add('hidden');
-  document.getElementById('migrationSubtitle').classList.remove('text-green-200', 'text-red-200');
+  document.getElementById('migrationSubtitle').classList.remove('text-blue-200', 'text-red-200');
 });
 
 // Initialize

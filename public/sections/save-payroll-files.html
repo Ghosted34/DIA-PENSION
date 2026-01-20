@@ -8,7 +8,7 @@
   <div class="flex justify-center mt-12 space-x-4">
     <button
       id="savePayrollBtn"
-      class="px-8 py-3 bg-blue-600 text-white rounded-lg shadow hover:bg-blue-700 transition transform hover:scale-105"
+      class="px-8 py-3 bg-green-600 text-white rounded-lg shadow hover:bg-green-700 transition transform hover:scale-105"
     >
     <i class="fa-solid fa-floppy-disk text-xl text-white mr-2"></i>  Save Now
     </button>
@@ -34,15 +34,15 @@
 
       <!-- Body -->
       <div class="p-6">
-        <div class="bg-amber border-l-4 border-blue-200 p-4 mb-4 rounded">
+        <div class="bg-amber border-l-4 border-green-200 p-4 mb-4 rounded">
           <p class="text-gray-700">
             Proceed to <span class="font-semibold text-yellow-700">Save Payroll Files</span>? 
             This action will save all file entries for <span id="monthyear" class="font-bold"></span>.
           </p>
         </div>
         
-        <div class="bg-amber border border-blue-200 p-3 rounded-lg">
-          <p class="text-sm text-blue-800">
+        <div class="bg-amber border border-green-200 p-3 rounded-lg">
+          <p class="text-sm text-green-800">
             <strong>Note:</strong> After Saving, you can not make changes to the payroll data.
           </p>
         </div>
@@ -58,7 +58,7 @@
         </button>
         <button 
           id="confirmSaveBtn" 
-          class="px-6 py-2 bg-navy hover:bg-blue-600 text-white rounded-lg transition transform hover:scale-105"
+          class="px-6 py-2 bg-navy hover:bg-green-600 text-white rounded-lg transition transform hover:scale-105"
         >
           Yes, Save
         </button>
@@ -69,14 +69,14 @@
   <!-- post completion -->
   <div id="saveConfirm" class="mt-6 hidden text-center">
     <div class="flex justify-center mb-3">
-      <div class="bg-green-500 text-white p-3 rounded-full shadow animate-bounce">✔</div>
+      <div class="bg-blue-500 text-white p-3 rounded-full shadow animate-bounce">✔</div>
     </div>
-    <p class="text-green-700 font-semibold mb-4">
+    <p class="text-blue-700 font-semibold mb-4">
       Payroll files saved successfully! Proceed to print changes in Personnel Data
     </p>
     <button
       onclick="navigateToNext()"
-      class="px-6 py-2 bg-green-600 text-white rounded-lg shadow hover:bg-green-700 transition"
+      class="px-6 py-2 bg-blue-600 text-white rounded-lg shadow hover:bg-blue-700 transition"
     >
       Go to Personnel Data
     </button>
@@ -99,7 +99,7 @@
       </p>
       <button
         id="closeAlertBtn"
-        class="px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition w-full"
+        class="px-6 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700 transition w-full"
       >
         Okay
       </button>
@@ -129,12 +129,12 @@
       
       <!-- Stats -->
       <div class="grid grid-cols-3 gap-4 mt-4">
-        <div class="text-center p-3 bg-blue-50 rounded-lg">
-          <div class="text-2xl font-bold text-blue-600" id="totalSteps">0</div>
+        <div class="text-center p-3 bg-green-50 rounded-lg">
+          <div class="text-2xl font-bold text-green-600" id="totalSteps">0</div>
           <div class="text-xs text-gray-600">Total Steps</div>
         </div>
-        <div class="text-center p-3 bg-green-50 rounded-lg">
-          <div class="text-2xl font-bold text-green-600" id="successCount">0</div>
+        <div class="text-center p-3 bg-blue-50 rounded-lg">
+          <div class="text-2xl font-bold text-blue-600" id="successCount">0</div>
           <div class="text-xs text-gray-600">Completed</div>
         </div>
         <div class="text-center p-3 bg-red-50 rounded-lg">
@@ -148,7 +148,7 @@
     <div class="p-6 bg-gray-50 rounded-b-2xl flex justify-end">
       <button
         id="closeModalBtn"
-        class="px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition hidden"
+        class="px-6 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700 transition hidden"
       >
         Close
       </button>
@@ -163,29 +163,29 @@
 >
   <div class="bg-white rounded-2xl w-96 max-w-[90%] p-6 shadow-2xl transform transition-transform scale-95" id="alreadySavedModalContent">
     <div class="flex flex-col items-center">
-      <div class="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center mb-4 animate-pulse">
+      <div class="w-20 h-20 bg-blue-100 rounded-full flex items-center justify-center mb-4 animate-pulse">
         <span class="text-4xl"><i class="fa-solid fa-thumbs-up"></i></span>
       </div>
-      <h3 class="text-2xl font-bold text-green-700 mb-3">Congrats!</h3>
+      <h3 class="text-2xl font-bold text-blue-700 mb-3">Congrats!</h3>
       <p class="text-gray-700 font-bold mb-2 text-center">
         You have already saved Payroll Files for this period.
       </p>
       <p class="text-gray-900 font-semibold mb-6 text-center text-sm">
         To make new changes, recall Payroll Files. 
       </p>
-      <p class="text-green-700 font-semibold mb-4">
+      <p class="text-blue-700 font-semibold mb-4">
         Proceed to print changes in Personnel Data
       </p>
       <div class="flex gap-2">
         <button
           id="closeCongratsBtn"
-          class="px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition w-fit"
+          class="px-6 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700 transition w-fit"
         >
           Close
         </button>
         <button
           onclick="navigateToNext()"
-          class="px-6 py-2 bg-green-600 text-white rounded-lg shadow hover:bg-green-700 transition"
+          class="px-6 py-2 bg-blue-600 text-white rounded-lg shadow hover:bg-blue-700 transition"
         >
           <i class="fas fa-arrow-right mr-2"></i>Go to Personnel Data
         </button>
@@ -268,9 +268,9 @@
       closeAlertBtn.className = "px-6 py-2 bg-yellow-600 text-white rounded-lg hover:bg-yellow-700 transition w-full";
     } else if (type === "info") {
       alertIcon.innerHTML = '<span class="text-3xl"><i class="fa-solid fa-circle-info text-sky-500"></i></span>';
-      alertIcon.className = "w-16 h-16 rounded-full flex items-center justify-center mb-4 bg-blue-100";
-      alertTitle.className = "text-xl font-bold text-blue-700 mb-2";
-      closeAlertBtn.className = "px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition w-full";
+      alertIcon.className = "w-16 h-16 rounded-full flex items-center justify-center mb-4 bg-green-100";
+      alertTitle.className = "text-xl font-bold text-green-700 mb-2";
+      closeAlertBtn.className = "px-6 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700 transition w-full";
     }
 
     alertTitle.textContent = title;
@@ -284,7 +284,7 @@
     totalSteps.textContent = logCount;
 
     const colors = {
-      success: "text-green-400",
+      success: "text-blue-400",
       error: "text-red-400",
       warning: "text-yellow-400",
       info: "text-gray-300"
@@ -294,7 +294,7 @@
       success: '<i class="fas fa-check-circle text-success"></i>',
       error: '<i class="fa-solid fa-xmark text-red-600"></i>',
       warning: '<i class="fa-solid fa-triangle-exclamation text-yellow-500"></i>',
-      info: '<i class="fa-solid fa-circle-info text-blue-500"></i>'
+      info: '<i class="fa-solid fa-circle-info text-green-500"></i>'
     };
 
     if (type === "success") successTotal++;

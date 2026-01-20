@@ -1,34 +1,34 @@
 <div class="p-6">
   <!-- Top Action Bar (Hidden after stage >= 775) -->
   <div id="topActionBar" class="hidden mb-6 w-full flex justify-between items-center border-b-2 pb-4 no-print">
-    <h2 class="text-blue-600 font-semibold lg:text-lg">
+    <h2 class="text-green-600 font-semibold lg:text-lg">
       <i class="fas fa-info-circle mr-2"></i>First ensure you have saved payroll files
     </h2>
     <button onclick="window.navigation && window.navigation.navigateToSection && window.navigation.navigateToSection('save-payroll-files', 'Save Payroll Files')" 
-            class="px-6 py-2 bg-green-600 text-white rounded-lg shadow hover:bg-green-700 transition">
+            class="px-6 py-2 bg-blue-600 text-white rounded-lg shadow hover:bg-blue-700 transition">
       <i class="fas fa-save mr-2"></i>Save Payroll Files
     </button>
   </div>
 
   <!-- Not Ready Message (Stage < 666) -->
   <div id="notReadyMessage" class="hidden mb-6">
-    <div class="border-2 border-blue-300 rounded-lg p-8 text-center">
-      <i class="fas fa-lock text-blue-600 text-6xl mb-4"></i>
-      <h2 class="text-2xl font-bold text-blue-900 mb-3">
+    <div class="border-2 border-green-300 rounded-lg p-8 text-center">
+      <i class="fas fa-lock text-green-600 text-6xl mb-4"></i>
+      <h2 class="text-2xl font-bold text-green-900 mb-3">
         Personnel Details Report Not Available Yet
       </h2>
-      <p class="text-blue-800 text-lg mb-4">
+      <p class="text-green-800 text-lg mb-4">
         This section will become available once the payroll files are saved.
       </p>
-      <p class="text-blue-700">
+      <p class="text-green-700">
         Please complete all prior steps before accessing this report.
       </p>
     </div>
   </div>
 
   <!-- Report Type Tabs (Shown after first generation) -->
-  <div id="reportTypeTabs" class="hidden bg-blue-50/25 border-2 border-blue-200 flex flex-wrap gap-2 p-3 mb-6 rounded-xl shadow-sm no-print">
-    <button id="previousReportTab" class="flex-1 px-4 py-3 text-sm lg:text-base font-semibold rounded-lg bg-yellow-50/25 text-blue-900 shadow-md border-2 border-blue-500 transition-all duration-200">
+  <div id="reportTypeTabs" class="hidden bg-green-50/25 border-2 border-green-200 flex flex-wrap gap-2 p-3 mb-6 rounded-xl shadow-sm no-print">
+    <button id="previousReportTab" class="flex-1 px-4 py-3 text-sm lg:text-base font-semibold rounded-lg bg-yellow-50/25 text-green-900 shadow-md border-2 border-green-500 transition-all duration-200">
       <i class="fas fa-history mr-2"></i>Previous Details
     </button>
     <button id="currentReportTab" class="flex-1 px-4 py-3 text-sm lg:text-base font-semibold rounded-lg text-gray-600 hover:text-gray-900 hover:bg-gray-50 transition-all duration-200">
@@ -40,15 +40,15 @@
     <button id="analysisReportTab" class="flex-1 px-4 py-3 text-sm lg:text-base font-semibold rounded-lg text-gray-600 hover:text-gray-900 hover:bg-gray-50 transition-all duration-200">
       <i class="fas fa-chart-line mr-2"></i>Analysis
     </button>
-    <button id="regenerateBtn" class="px-6 py-3 text-sm lg:text-base font-semibold rounded-lg text-gray-600 hover:text-gray-900 hover:bg-green-500 transition-all duration-200">
+    <button id="regenerateBtn" class="px-6 py-3 text-sm lg:text-base font-semibold rounded-lg text-gray-600 hover:text-gray-900 hover:bg-blue-500 transition-all duration-200">
       <i class="fas fa-plus-circle mr-2"></i> New Report
     </button>
   </div>
 
   <!-- Main Form (Hidden after first generation) -->
-  <form id="mainForm" class="space-y-6 p-6 rounded-lg border border-blue-200 no-print">
+  <form id="mainForm" class="space-y-6 p-6 rounded-lg border border-green-200 no-print">
     <div class="flex items-center space-x-3 mb-4">
-      <div class="bg-blue-600 text-white p-3 rounded-full shadow">
+      <div class="bg-green-600 text-white p-3 rounded-full shadow">
         <i class="fas fa-users text-2xl"></i>
       </div>
       <h2 class="text-2xl font-bold text-gray-900">Personnel Details Comparison</h2>
@@ -59,7 +59,7 @@
 
   <!-- Filter Options -->
     <!--<h4 class="text-lg font-semibold text-gray-800 mb-4 flex items-center">
-      <i class="fas fa-filter mr-2 text-blue-600"></i>Filter Options
+      <i class="fas fa-filter mr-2 text-green-600"></i>Filter Options
     </h4>-->
 
     <!-- Period Range -->
@@ -71,7 +71,7 @@
         <input 
           type="month" 
           id="startDate" 
-          class="w-full border-2 border-gray-300 rounded-lg shadow-sm px-4 py-3 focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+          class="w-full border-2 border-gray-300 rounded-lg shadow-sm px-4 py-3 focus:ring-2 focus:ring-green-500 focus:border-green-500"
         />
       </div>
       
@@ -82,7 +82,7 @@
         <input 
           type="month" 
           id="endDate" 
-          class="w-full border-2 border-gray-300 rounded-lg shadow-sm px-4 py-3 focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+          class="w-full border-2 border-gray-300 rounded-lg shadow-sm px-4 py-3 focus:ring-2 focus:ring-green-500 focus:border-green-500"
         />
       </div>
     </div>
@@ -90,7 +90,7 @@
     <!-- Personnel Filter Toggle -->
     <div class="mb-4">
       <div class="flex items-center space-x-2">
-        <input type="checkbox" id="filterByPersonnel" class="w-4 h-4 text-blue-600 border-gray-300 rounded focus:ring-blue-500">
+        <input type="checkbox" id="filterByPersonnel" class="w-4 h-4 text-green-600 border-gray-300 rounded focus:ring-green-500">
         <label for="filterByPersonnel" class="text-sm font-medium text-gray-700">
           Filter by specific personnel
         </label>
@@ -106,7 +106,7 @@
         <input 
           type="text" 
           id="searchInput"
-          class="w-full border-2 border-blue-400 focus:border-yellow-500 bg-transparent rounded-lg px-4 py-3 pr-10"
+          class="w-full border-2 border-green-400 focus:border-yellow-500 bg-transparent rounded-lg px-4 py-3 pr-10"
           placeholder="Search by Name or Service Number..."
           autocomplete="off">
         <i class="fas fa-chevron-down absolute right-4 top-4 text-gray-400"></i>
@@ -121,7 +121,7 @@
       <button type="button" id="clearBtn" class="px-6 py-3 bg-gray-200 text-gray-700 font-medium rounded-lg hover:bg-gray-300 transition-all shadow">
         <i class="fas fa-eraser mr-2"></i>Clear
       </button>
-      <button type="button" id="generateBtn" class="px-6 py-3 bg-blue-600 text-white font-medium rounded-lg hover:bg-blue-700 transition-all shadow-lg">
+      <button type="button" id="generateBtn" class="px-6 py-3 bg-green-600 text-white font-medium rounded-lg hover:bg-green-700 transition-all shadow-lg">
         <i class="fas fa-file-alt mr-2"></i>Generate Reports
       </button>
     </div>
@@ -133,7 +133,7 @@
     <div id="previousReportSection" class="hidden">
       <div class="rounded-lg mb-6">
         <div class="flex justify-between items-center mb-4">
-          <h3 class="text-xl font-bold text-blue-900">
+          <h3 class="text-xl font-bold text-green-900">
             <i class="fas fa-history mr-2"></i>Previous Period Personnel Data
             <span id="prevRecordCount" class="text-sm text-gray-600"></span>
           </h3>
@@ -150,7 +150,7 @@
             </button>
           </div>
           <div class="flex gap-2 no-print">
-            <button id="prevExportExcel" class="px-4 py-2 bg-green-600 text-white text-sm rounded-lg hover:bg-green-700 transition">
+            <button id="prevExportExcel" class="px-4 py-2 bg-blue-600 text-white text-sm rounded-lg hover:bg-blue-700 transition">
               <i class="fas fa-file-excel mr-2"></i>Excel
             </button>
             <button id="prevExportPdf" class="px-4 py-2 bg-red-600 text-white text-sm rounded-lg hover:bg-red-700 transition">
@@ -164,7 +164,7 @@
 
         <div class="overflow-x-auto">
           <table class="min-w-full border border-gray-200 text-sm">
-            <thead class="bg-blue-100 text-blue-900">
+            <thead class="bg-green-100 text-green-900">
               <tr>
                 <th class="border px-3 py-2 text-left">Period</th>
                 <th class="border px-3 py-2 text-left">Service No.</th>
@@ -191,7 +191,7 @@
             <button id="prevPrevPage" class="px-3 py-2 bg-gray-200 text-gray-700 rounded-lg hover:bg-gray-300 transition disabled:opacity-50">
               <i class="fas fa-angle-left"></i>
             </button>
-            <span id="prevPageInfo" class="px-4 py-2 bg-blue-50 text-blue-900 rounded-lg font-medium">Page 1 of 1</span>
+            <span id="prevPageInfo" class="px-4 py-2 bg-green-50 text-green-900 rounded-lg font-medium">Page 1 of 1</span>
             <button id="prevNextPage" class="px-3 py-2 bg-gray-200 text-gray-700 rounded-lg hover:bg-gray-300 transition disabled:opacity-50">
               <i class="fas fa-angle-right"></i>
             </button>
@@ -204,12 +204,12 @@
         <!-- Success Banner -->
         <div id="nextStepBanner" class="mt-6 no-print">
           <div class="flex items-start">
-            <i class="fas fa-check-circle text-green-500 text-3xl mr-4"></i>
+            <i class="fas fa-check-circle text-blue-500 text-3xl mr-4"></i>
             <div class="flex-1">
-              <h4 class="text-green-800 font-bold text-lg mb-2">Personnel Changes Loaded Successfully!</h4>
-              <p class="text-green-700 mb-4">Review the Results above, filter as needed, and export reports. Ready to proceed?</p>
+              <h4 class="text-blue-800 font-bold text-lg mb-2">Personnel Changes Loaded Successfully!</h4>
+              <p class="text-blue-700 mb-4">Review the Results above, filter as needed, and export reports. Ready to proceed?</p>
               <button onclick="window.navigation && window.navigation.navigateToSection && window.navigation.navigateToSection('input-variable-report', 'Input Variable Report')" 
-                      class="px-6 py-2 bg-green-600 text-white rounded-lg shadow hover:bg-green-700 transition">
+                      class="px-6 py-2 bg-blue-600 text-white rounded-lg shadow hover:bg-blue-700 transition">
                 <i class="fas fa-file-alt mr-2"></i>Input Variable Report
               </button>
             </div>
@@ -222,7 +222,7 @@
     <div id="currentReportSection" class="hidden">
       <div class="rounded-lg mb-6">
         <div class="flex justify-between items-center mb-4">
-          <h3 class="text-xl font-bold text-green-900">
+          <h3 class="text-xl font-bold text-blue-900">
             <i class="fas fa-calendar-day mr-2"></i>Current Period Personnel Data
             <span id="currRecordCount" class="text-sm text-gray-600"></span>
           </h3>
@@ -239,7 +239,7 @@
             </button>
           </div>         
           <div class="flex gap-2 no-print">
-            <button id="currExportExcel" class="px-4 py-2 bg-green-600 text-white text-sm rounded-lg hover:bg-green-700 transition">
+            <button id="currExportExcel" class="px-4 py-2 bg-blue-600 text-white text-sm rounded-lg hover:bg-blue-700 transition">
               <i class="fas fa-file-excel mr-2"></i>Excel
             </button>
             <button id="currExportPdf" class="px-4 py-2 bg-red-600 text-white text-sm rounded-lg hover:bg-red-700 transition">
@@ -253,7 +253,7 @@
 
         <div class="overflow-x-auto">
           <table class="min-w-full border border-gray-200 text-sm">
-            <thead class="bg-green-100 text-green-900">
+            <thead class="bg-blue-100 text-blue-900">
               <tr>
                 <th class="border px-3 py-2 text-left">Service No.</th>
                 <th class="border px-3 py-2 text-left">Full Name</th>
@@ -279,7 +279,7 @@
             <button id="currPrevPage" class="px-3 py-2 bg-gray-200 text-gray-700 rounded-lg hover:bg-gray-300 transition disabled:opacity-50">
               <i class="fas fa-angle-left"></i>
             </button>
-            <span id="currPageInfo" class="px-4 py-2 bg-green-50 text-green-900 rounded-lg font-medium">Page 1 of 1</span>
+            <span id="currPageInfo" class="px-4 py-2 bg-blue-50 text-blue-900 rounded-lg font-medium">Page 1 of 1</span>
             <button id="currNextPage" class="px-3 py-2 bg-gray-200 text-gray-700 rounded-lg hover:bg-gray-300 transition disabled:opacity-50">
               <i class="fas fa-angle-right"></i>
             </button>
@@ -340,7 +340,7 @@
             <option value="old">Old Employees (Left)</option>
           </select>
           
-          <button id="analysisExportExcel" class="px-4 py-2 bg-green-600 text-white text-sm rounded-lg hover:bg-green-700 transition">
+          <button id="analysisExportExcel" class="px-4 py-2 bg-blue-600 text-white text-sm rounded-lg hover:bg-blue-700 transition">
             <i class="fas fa-file-excel mr-2"></i>Excel
           </button>
           <!--<button id="analysisPrint" class="px-4 py-2 bg-gray-700 text-white text-sm rounded-lg hover:bg-gray-800 transition">
@@ -392,13 +392,13 @@
 
       <!-- Stats Cards -->
       <div class="grid grid-cols-1 md:grid-cols-4 gap-4 mt-4">
-        <div class="bg-blue-50 border-2 border-blue-200 rounded-lg p-4">
-          <div class="text-blue-600 text-sm font-semibold mb-1">Total Personnel</div>
-          <div id="statTotal" class="text-2xl font-bold text-blue-900">0</div>
-        </div>
         <div class="bg-green-50 border-2 border-green-200 rounded-lg p-4">
-          <div class="text-green-600 text-sm font-semibold mb-1">New Employees</div>
-          <div id="statNew" class="text-2xl font-bold text-green-900">0</div>
+          <div class="text-green-600 text-sm font-semibold mb-1">Total Personnel</div>
+          <div id="statTotal" class="text-2xl font-bold text-green-900">0</div>
+        </div>
+        <div class="bg-blue-50 border-2 border-blue-200 rounded-lg p-4">
+          <div class="text-blue-600 text-sm font-semibold mb-1">New Employees</div>
+          <div id="statNew" class="text-2xl font-bold text-blue-900">0</div>
         </div>
         <div class="bg-yellow-50 border-2 border-yellow-200 rounded-lg p-4">
           <div class="text-yellow-600 text-sm font-semibold mb-1">With Changes</div>
@@ -451,7 +451,7 @@
         </div>
         <h3 id="alertTitle" class="text-xl font-semibold text-gray-900 mb-2">Error</h3>
         <p id="alertMessage" class="text-gray-600 mb-6">An error occurred</p>
-        <button id="alertCloseBtn" class="px-6 py-3 bg-blue-600 text-white font-medium rounded-lg hover:bg-blue-700 transition-all shadow-lg">
+        <button id="alertCloseBtn" class="px-6 py-3 bg-green-600 text-white font-medium rounded-lg hover:bg-green-700 transition-all shadow-lg">
           OK
         </button>
       </div>
@@ -463,7 +463,7 @@
     <div class="bg-slate-100 rounded-xl shadow-2xl max-w-md w-full mx-4 p-6">
       <div class="text-center">
         <div class="flex justify-center mb-4">
-          <div class="w-16 h-16 border-4 border-blue-400 border-t-transparent rounded-full animate-spin"></div>
+          <div class="w-16 h-16 border-4 border-green-400 border-t-transparent rounded-full animate-spin"></div>
         </div>
         <h3 class="text-xl font-semibold text-gray-900 mb-2">Generating Reports...</h3>
         <p id="loadingMessage" class="text-gray-600">Please wait...</p>
@@ -598,9 +598,9 @@
     alertTitle.textContent = title;
     alertMessage.textContent = message;
     const iconClass = 
-      type === 'success' ? 'fa-check-circle text-green-500' : 
+      type === 'success' ? 'fa-check-circle text-blue-500' : 
       type === 'warning' ? 'fa-exclamation-triangle text-yellow-500' : 
-      type === 'info' ? 'fa-info-circle text-blue-500' :
+      type === 'info' ? 'fa-info-circle text-green-500' :
       'fa-exclamation-circle text-red-500';
     alertIcon.innerHTML = `<i class="fas ${iconClass} text-6xl"></i>`;
     alertModal.classList.remove('hidden');
@@ -701,10 +701,10 @@
     
     newItems.forEach(emp => {
       const div = document.createElement('div');
-      div.className = 'px-4 py-2 hover:bg-blue-50 cursor-pointer transition border-b border-gray-100';
+      div.className = 'px-4 py-2 hover:bg-green-50 cursor-pointer transition border-b border-gray-100';
       div.setAttribute('data-id', emp.Empl_ID);
       div.innerHTML = `
-        <span class="font-semibold text-blue-600">${emp.full_name}</span>
+        <span class="font-semibold text-green-600">${emp.full_name}</span>
         <span class="text-xs text-gray-500 ml-2">(${emp.Empl_ID})</span>
       `;
       
@@ -769,10 +769,10 @@
     } else {
       filtered.forEach(emp => {
         const div = document.createElement('div');
-        div.className = 'px-4 py-2 hover:bg-blue-50 cursor-pointer transition border-b border-gray-100';
+        div.className = 'px-4 py-2 hover:bg-green-50 cursor-pointer transition border-b border-gray-100';
         div.setAttribute('data-id', emp.Empl_ID);
         div.innerHTML = `
-          <span class="font-semibold text-blue-600">${emp.full_name}</span>
+          <span class="font-semibold text-green-600">${emp.full_name}</span>
           <span class="text-xs text-gray-500 ml-2">(${emp.Empl_ID})</span>
         `;
         
@@ -800,8 +800,8 @@
   // Populate employee dropdown
   function populateEmployeeDropdown() {
     employeeDropdown.innerHTML = allEmployees.map(emp => `
-      <div class="px-4 py-2 hover:bg-blue-50 cursor-pointer transition border-b border-gray-100" data-id="${emp.Empl_ID}">
-        <span class="font-semibold text-blue-600">${emp.full_name}</span>
+      <div class="px-4 py-2 hover:bg-green-50 cursor-pointer transition border-b border-gray-100" data-id="${emp.Empl_ID}">
+        <span class="font-semibold text-green-600">${emp.full_name}</span>
         <span class="text-xs text-gray-500 ml-2">(${emp.Empl_ID})</span>
       </div>
     `).join('');
@@ -862,8 +862,8 @@
     );
     
     employeeDropdown.innerHTML = filtered.map(emp => `
-      <div class="px-4 py-2 hover:bg-blue-50 cursor-pointer transition border-b border-gray-100" data-id="${emp.Empl_ID}">
-        <span class="font-semibold text-blue-600">${emp.full_name}</span>
+      <div class="px-4 py-2 hover:bg-green-50 cursor-pointer transition border-b border-gray-100" data-id="${emp.Empl_ID}">
+        <span class="font-semibold text-green-600">${emp.full_name}</span>
         <span class="text-xs text-gray-500 ml-2">(${emp.Empl_ID})</span>
       </div>
     `).join('');
@@ -1107,26 +1107,26 @@
     
     // Update tab buttons
     [previousReportTab, currentReportTab, analysisReportTab, comparisonReportTab].forEach(btn => {
-      btn.classList.remove('bg-yellow-50/25', 'text-blue-900', 'shadow-md', 'border-2', 'border-blue-500', 'border-green-500', 'border-purple-500', 'border-yellow-500');
+      btn.classList.remove('bg-yellow-50/25', 'text-green-900', 'shadow-md', 'border-2', 'border-green-500', 'border-blue-500', 'border-purple-500', 'border-yellow-500');
       btn.classList.add('text-gray-600', 'hover:text-gray-900', 'hover:bg-gray-50');
     });
     
     if (tab === 'previous') {
-      previousReportTab.classList.add('bg-yellow-50/25', 'text-blue-900', 'shadow-md', 'border-2', 'border-blue-500');
+      previousReportTab.classList.add('bg-yellow-50/25', 'text-green-900', 'shadow-md', 'border-2', 'border-green-500');
       previousReportTab.classList.remove('text-gray-600', 'hover:text-gray-900', 'hover:bg-gray-50');
       previousReportSection.classList.remove('hidden');
       currentReportSection.classList.add('hidden');
       comparisonReportSection.classList.add('hidden');
       analysisReportSection.classList.add('hidden');
     } else if (tab === 'current') {
-      currentReportTab.classList.add('bg-yellow-50/25', 'text-blue-900', 'shadow-md', 'border-2', 'border-green-500');
+      currentReportTab.classList.add('bg-yellow-50/25', 'text-green-900', 'shadow-md', 'border-2', 'border-blue-500');
       currentReportTab.classList.remove('text-gray-600', 'hover:text-gray-900', 'hover:bg-gray-50');
       previousReportSection.classList.add('hidden');
       currentReportSection.classList.remove('hidden');
       comparisonReportSection.classList.add('hidden');
       analysisReportSection.classList.add('hidden');
     } else if (tab === 'analysis') {
-      analysisReportTab.classList.add('bg-yellow-50/25', 'text-blue-900', 'shadow-md', 'border-2', 'border-purple-500');
+      analysisReportTab.classList.add('bg-yellow-50/25', 'text-green-900', 'shadow-md', 'border-2', 'border-purple-500');
       analysisReportTab.classList.remove('text-gray-600', 'hover:text-gray-900', 'hover:bg-gray-50');
       previousReportSection.classList.add('hidden');
       currentReportSection.classList.add('hidden');
@@ -1138,7 +1138,7 @@
         fetchAnalysisData();
       }
     } else {
-      comparisonReportTab.classList.add('bg-yellow-50/25', 'text-blue-900', 'shadow-md', 'border-2', 'border-yellow-500');
+      comparisonReportTab.classList.add('bg-yellow-50/25', 'text-green-900', 'shadow-md', 'border-2', 'border-yellow-500');
       comparisonReportTab.classList.remove('text-gray-600', 'hover:text-gray-900', 'hover:bg-gray-50');
       previousReportSection.classList.add('hidden');
       currentReportSection.classList.add('hidden');
@@ -1172,7 +1172,7 @@
       fullPrevData[record.Empl_ID] = record;
       
       const row = document.createElement('tr');
-      row.className = 'hover:bg-blue-50 transition';
+      row.className = 'hover:bg-green-50 transition';
       
       // Check if exists in full current data cache
       const existsInCurrent = fullCurrData[record.Empl_ID] !== undefined;
@@ -1186,7 +1186,7 @@
         <td class="border px-3 py-3 text-[11px] font-bold">${record.Location_desc || record.Location || 'N/A'}</td>       
         <td class="border px-3 py-3">${record.gradelevel || 'N/A'}</td>
         <td class="border px-3 py-3 no-print">
-          <button class="text-blue-600 hover:text-blue-800 font-semibold transition mr-2 view-details" data-type="previous" data-record='${JSON.stringify(record).replace(/'/g, "&apos;")}'>
+          <button class="text-green-600 hover:text-green-800 font-semibold transition mr-2 view-details" data-type="previous" data-record='${JSON.stringify(record).replace(/'/g, "&apos;")}'>
             <i class="fas fa-eye mr-1"></i>View
           </button>
           <!--<button class="text-${isCompared ? 'green' : 'yellow'}-600 hover:text-${isCompared ? 'green' : 'yellow'}-800 font-semibold transition add-compare" data-id="${record.Empl_ID}">
@@ -1241,7 +1241,7 @@
       fullCurrData[record.Empl_ID] = record;
       
       const row = document.createElement('tr');
-      row.className = 'hover:bg-green-50 transition';
+      row.className = 'hover:bg-blue-50 transition';
       row.setAttribute('data-empl-id', record.Empl_ID);
       
       const isCompared = comparisonSet.has(record.Empl_ID);
@@ -1254,7 +1254,7 @@
         <td class="border px-3 py-3">${record.grpdesc || record.gradelevel || 'N/A'}</td>
         <td class="border px-3 py-3 no-print">
           <div class="flex items-center gap-2">
-            <button class="text-green-600 hover:text-green-800 font-semibold transition view-details" data-type="current" data-record='${JSON.stringify(record).replace(/'/g, "&apos;")}'>
+            <button class="text-blue-600 hover:text-blue-800 font-semibold transition view-details" data-type="current" data-record='${JSON.stringify(record).replace(/'/g, "&apos;")}'>
               <i class="fas fa-eye mr-1"></i>View
             </button>
             <span class="action-placeholder-${record.Empl_ID} inline-flex items-center px-2 py-1 text-xs font-semibold rounded-full bg-gray-100 text-gray-600 min-w-[90px] justify-center">
@@ -1321,7 +1321,7 @@
         placeholder.replaceWith(compareBtn);
       } else {
         const newBadge = document.createElement('span');
-        newBadge.className = 'inline-flex items-center px-2 py-1 text-xs font-semibold rounded-full bg-blue-100 text-blue-800 min-w-[90px] justify-center';
+        newBadge.className = 'inline-flex items-center px-2 py-1 text-xs font-semibold rounded-full bg-green-100 text-green-800 min-w-[90px] justify-center';
         newBadge.innerHTML = '<i class="fas fa-plus-circle mr-1"></i>New';
         placeholder.replaceWith(newBadge);
       }
@@ -1435,11 +1435,11 @@
       let html = `
         <div class="flex justify-between items-center mb-4 pb-3 border-b-2">
           <h4 class="text-lg font-bold text-gray-800">
-            <i class="fas fa-user-circle mr-2 text-blue-600"></i>
+            <i class="fas fa-user-circle mr-2 text-green-600"></i>
             ${currRecord?.Surname || prevRecord?.Surname || ''} ${currRecord?.OtherName || prevRecord?.OtherName || ''} (${emplId})
           </h4>
           <div class="flex gap-2">
-            <button class="text-blue-600 hover:text-blue-800 border-r-2 pr-2 font-semibold transition view-comparison" data-id="${emplId}">
+            <button class="text-green-600 hover:text-green-800 border-r-2 pr-2 font-semibold transition view-comparison" data-id="${emplId}">
               <i class="fas fa-eye text-xl"></i> View Full
             </button>
             <button class="text-red-600 hover:text-red-800 transition remove-compare" data-id="${emplId}">
@@ -1452,7 +1452,7 @@
       if (changedFields.length === 0) {
         html += `
           <div class="text-center py-8 text-gray-500">
-            <i class="fas fa-check-circle text-4xl mb-2 text-green-500"></i>
+            <i class="fas fa-check-circle text-4xl mb-2 text-blue-500"></i>
             <p class="text-lg font-medium">No changes detected</p>
             <p class="text-sm">All fields are identical between previous and current records</p>
           </div>
@@ -1464,7 +1464,7 @@
               <i class="fas fa-exclamation-triangle mr-1"></i>
               ${changedFields.length} field${changedFields.length > 1 ? 's' : ''} changed
             </p>
-            <button class="text-blue-600 hover:text-blue-800 mr-10 font-semibold transition view-changes-table" data-id="${emplId}">
+            <button class="text-green-600 hover:text-green-800 mr-10 font-semibold transition view-changes-table" data-id="${emplId}">
               <i class="fas fa-eye mr-1"></i>View Changes
             </button>
           </div>
@@ -1559,8 +1559,8 @@
           <thead class="bg-gray-100">
             <tr>
               <th class="border px-3 py-2 text-left font-semibold text-yellow-800">Field</th>
-              <th class="border px-3 py-2 text-left font-semibold text-blue-800">Previous (${formatPeriod(prevRecord?.period || '')})</th>
-              <th class="border px-3 py-2 text-left font-semibold text-green-800">Current</th>
+              <th class="border px-3 py-2 text-left font-semibold text-green-800">Previous (${formatPeriod(prevRecord?.period || '')})</th>
+              <th class="border px-3 py-2 text-left font-semibold text-blue-800">Current</th>
             </tr>
           </thead>
           <tbody>
@@ -1594,8 +1594,8 @@
       html += `
         <tr class="text-yellow-700">
           <td class="border px-3 py-2 font-medium">${field.label}</td>
-          <td class="border px-3 py-2 text-blue-700 font-semibold">${prevVal}</td>
-          <td class="border px-3 py-2 text-green-700 font-semibold">${currVal}</td>
+          <td class="border px-3 py-2 text-green-700 font-semibold">${prevVal}</td>
+          <td class="border px-3 py-2 text-blue-700 font-semibold">${currVal}</td>
         </tr>
       `;
     });
@@ -1650,7 +1650,7 @@
     let html = `
       <div class="mb-6">
         <h3 class="text-2xl font-bold text-gray-800">
-          <i class="fas fa-user-circle mr-2 text-blue-600"></i>
+          <i class="fas fa-user-circle mr-2 text-green-600"></i>
           ${currRecord?.Surname || prevRecord?.Surname || ''} ${currRecord?.OtherName || prevRecord?.OtherName || ''} (${emplId})
         </h3>
       </div>
@@ -1659,8 +1659,8 @@
           <thead class="bg-gray-100">
             <tr>
               <th class="border px-3 py-2 text-left font-semibold text-yellow-800">Field</th>
-              <th class="border px-3 py-2 text-left font-semibold text-blue-800">Previous (${formatPeriod(prevRecord?.period || '')})</th>
-              <th class="border px-3 py-2 text-left font-semibold text-green-800">Current</th>
+              <th class="border px-3 py-2 text-left font-semibold text-green-800">Previous (${formatPeriod(prevRecord?.period || '')})</th>
+              <th class="border px-3 py-2 text-left font-semibold text-blue-800">Current</th>
               <th class="border px-3 py-2 text-center font-semibold">Changed?</th>
             </tr>
           </thead>
@@ -1707,8 +1707,8 @@
       html += `
         <tr class="${changed ? 'bg-yellow-50' : ''}">
           <td class="border px-3 py-2 font-medium">${field.label}</td>
-          <td class="border px-3 py-2 text-blue-700 font-semibold">${prevVal}</td>
-          <td class="border px-3 py-2 text-green-700 font-semibold ${changed ? 'font-semibold text-green-700' : ''}">${currVal}</td>
+          <td class="border px-3 py-2 text-green-700 font-semibold">${prevVal}</td>
+          <td class="border px-3 py-2 text-blue-700 font-semibold ${changed ? 'font-semibold text-blue-700' : ''}">${currVal}</td>
           <td class="border px-3 py-2 text-center">
             ${changed ? '<i class="fas fa-check-circle text-orange-600"></i>' : '<i class="fas fa-minus-circle text-gray-400"></i>'}
           </td>
@@ -2406,7 +2406,7 @@
       if (category === 'old') {
         categoryBadge = '<span class="inline-flex items-center px-2 py-1 text-xs font-semibold rounded-full bg-red-100 text-red-800"><i class="fas fa-user-times mr-1"></i>Left</span>';
       } else if (category === 'new') {
-        categoryBadge = '<span class="inline-flex items-center px-2 py-1 text-xs font-semibold rounded-full bg-green-100 text-green-800"><i class="fas fa-plus-circle mr-1"></i>New</span>';
+        categoryBadge = '<span class="inline-flex items-center px-2 py-1 text-xs font-semibold rounded-full bg-blue-100 text-blue-800"><i class="fas fa-plus-circle mr-1"></i>New</span>';
       } else if (category === 'changed' || record.changesCount > 0) {
         categoryBadge = '<span class="inline-flex items-center px-2 py-1 text-xs font-semibold rounded-full bg-yellow-100 text-yellow-800"><i class="fas fa-exclamation-triangle mr-1"></i>Changed</span>';
       } else {

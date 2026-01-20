@@ -130,11 +130,11 @@ class NavigationSystem {
           <div class="bg-transparent rounded-xl shadow-sm border border-gray-100"> 
             <div class="flex items-center justify-center p-6"> 
               <div class="relative w-10 h-10 mr-3">
-                <div class="absolute left-1 w-[6px] bg-blue-600 rounded animate-grow-up"></div>
+                <div class="absolute left-1 w-[6px] bg-green-600 rounded animate-grow-up"></div>
 
-                <div class="absolute right-1 w-[6px] bg-blue-600 rounded animate-grow-down [animation-delay:0.3s]"></div>
+                <div class="absolute right-1 w-[6px] bg-green-600 rounded animate-grow-down [animation-delay:0.3s]"></div>
 
-                <div class="absolute top-1/2 left-1 h-[6px] bg-blue-600 rounded animate-expand [animation-delay:0.6s] -translate-y-1/2"></div>
+                <div class="absolute top-1/2 left-1 h-[6px] bg-green-600 rounded animate-expand [animation-delay:0.6s] -translate-y-1/2"></div>
               </div>
               <span class="text-gray-600">Loading...</span>
             </div>
@@ -197,7 +197,7 @@ class NavigationSystem {
         if (batchButton) {
           batchButton.disabled = true;
           batchButton.classList.add('opacity-50', 'cursor-not-allowed');
-          batchButton.classList.remove('hover:bg-blue-600');
+          batchButton.classList.remove('hover:bg-green-600');
         }
       }
 
@@ -409,7 +409,7 @@ class NavigationSystem {
               <h3 class="text-lg font-medium text-gray-900 mb-2">Failed to Load Content</h3>
               <p class="text-gray-600 mb-4">${error.message}</p>
               <button onclick="window.navigation.navigateToSection('${this.currentSection}', '${sectionName}')" 
-              class="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700">
+              class="px-4 py-2 bg-green-600 text-white rounded-md hover:bg-green-700">
                 Retry
               </button>
             </div>

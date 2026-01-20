@@ -10,3 +10,4 @@ module.exports = function getDatabaseForIndicator(indicator) {
     default: throw new Error(`Unknown payroll indicator: ${indicator}`);
   }
 };
+
