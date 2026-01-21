@@ -6,7 +6,7 @@ const express = require('express');
 const app = express();
 const session = require('express-session');
 const serveIndex = require('serve-index');
-const pool = require('./config/db'); 
+const pool = require('./config/db');
 const path = require('path');
 const cors = require('cors');
 const helmet = require('helmet');
@@ -21,6 +21,7 @@ const PORT = process.env.PORT || 7700;
 
 // Load env variables
 dotenv.config({ path: path.resolve(__dirname, envFile) });
+console.log(__dirname, 'server.js')
 console.log('Running in', process.env.NODE_ENV);
 
 
@@ -34,9 +35,9 @@ app.use(
         "'self'",
         "https://cdn.tailwindcss.com",
         "https://cdn.jsdelivr.net/npm/choices.js/public/assets/scripts/choices.min.js",
-        "'unsafe-eval'",   
+        "'unsafe-eval'",
       ],
-      scriptSrcAttr: ["'unsafe-inline'"], 
+      scriptSrcAttr: ["'unsafe-inline'"],
     },
   })
 );
@@ -51,7 +52,7 @@ const corsOptions = {
     'http://127.0.0.1:7700',
     'https://hicad.ng',// production
   ].filter(Boolean),
-  methods: ['GET','POST','PUT','DELETE'],
+  methods: ['GET', 'POST', 'PUT', 'DELETE'],
   credentials: true
 };
 app.use(cors(corsOptions));
@@ -89,27 +90,27 @@ async function startServer() {
   // mount routes
   require('./routes')(app);
 
-  const options = {
-    key: fs.readFileSync(path.join(__dirname, 'key.pem')),
-    cert: fs.readFileSync(path.join(__dirname, 'cert.pem')),
-  };
+  // const options = {
+  //   key: fs.readFileSync(path.join(__dirname, 'key.pem')),
+  //   cert: fs.readFileSync(path.join(__dirname, 'cert.pem')),
+  // };
 
   switch (SERVER_MODE) {
     case 'network':
-      https.createServer(options, app).listen(PORT, '0.0.0.0', () => {
+      https.createServer(app).listen(PORT, '0.0.0.0', () => {
         console.log(`🔒 HTTPS server running on https://192.168.0.194:${PORT}`);
       });
       break;
 
     case 'localhost':
-      https.createServer(options, app).listen(PORT, 'localhost', () => {
-        console.log(`🔒 HTTPS server running on https://localhost:${PORT}`);
+      app.listen(PORT, () => {
+        console.log(`🚀 Server running on http://localhost:${PORT}`);
       });
       break;
 
     case 'auto':
     default:
-      const server = https.createServer(options, app);
+      const server = https.createServer(app);
 
       server.listen(PORT, '0.0.0.0', () => {
         console.log(`🔒 HTTPS server running on https://192.168.0.194:${PORT}`);
@@ -118,7 +119,7 @@ async function startServer() {
       server.on('error', (err) => {
         if (err.code === 'EADDRNOTAVAIL' || err.code === 'EADDRINUSE') {
           console.warn('⚠️  Network interface unavailable, falling back to localhost');
-          
+
           const fallbackServer = https.createServer(options, app);
           fallbackServer.listen(PORT, 'localhost', () => {
             console.log(`🔒 HTTPS server running on https://localhost:${PORT}`);
