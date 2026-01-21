@@ -440,7 +440,7 @@ class VarianceAnalysisController {
       const subtitle = `Period: ${varianceAnalysisService.formatPeriod(result.monthName)} | Threshold: ${result.threshold_percentage}% | Pay Element: ${result.pay_element}`;
 
       const workbook = await exporter.createWorkbook({
-        title: 'NIGERIAN NAVY - OVERPAYMENT ANALYSIS',
+        title: 'DIA - OVERPAYMENT ANALYSIS',
         subtitle: subtitle,
         className: className,
         columns: columns,
@@ -641,16 +641,16 @@ class VarianceAnalysisController {
   // ==========================================================================
   getDatabaseNameFromRequest(req) {
     const dbToClassMap = {
-      [process.env.DB_OFFICERS]: 'OFFICERS',
-      [process.env.DB_WOFFICERS]: 'W_OFFICERS', 
-      [process.env.DB_RATINGS]: 'RATE A',
-      [process.env.DB_RATINGS_A]: 'RATE B',
-      [process.env.DB_RATINGS_B]: 'RATE C',
-      [process.env.DB_JUNIOR_TRAINEE]: 'TRAINEE'
+      [process.env.DB_OFFICERS]: 'MILITARY STAFFS',
+      [process.env.DB_WOFFICERS]: 'CIVILIAN STAFFS', 
+      [process.env.DB_RATINGS]: 'PENSION STAFFS',
+      [process.env.DB_RATINGS_A]: 'NYSC ATTACHES',
+      [process.env.DB_RATINGS_B]: 'RUNNING COST',
+      // [process.env.DB_JUNIOR_TRAINEE]: 'TRAINEE'
     };
 
     const currentDb = req.current_class;
-    return dbToClassMap[currentDb] || currentDb || 'OFFICERS';
+    return dbToClassMap[currentDb] || currentDb || 'MILITARY STAFFS';
   }
 }
 

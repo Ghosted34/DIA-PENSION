@@ -229,7 +229,7 @@ class SalarySummaryController {
     // Title
     worksheet.mergeCells('A1:K1');
     const titleCell = worksheet.getCell('A1');
-    titleCell.value = 'NIGERIAN NAVY - SALARY SUMMARY REPORT';
+    titleCell.value = 'DIA - SALARY SUMMARY REPORT';
     titleCell.font = { bold: true, size: 16, color: { argb: 'FFFFFFFF' } };
     titleCell.alignment = { horizontal: 'center', vertical: 'middle' };
     titleCell.fill = {
@@ -345,21 +345,18 @@ class SalarySummaryController {
     }).format(amount || 0);
   }
 
-    getDatabaseNameFromRequest(req) {
+  getDatabaseNameFromRequest(req) {
     const dbToClassMap = {
-      [process.env.DB_OFFICERS]: 'OFFICERS',
-      [process.env.DB_WOFFICERS]: 'W_OFFICERS', 
-      [process.env.DB_RATINGS]: 'RATE A',
-      [process.env.DB_RATINGS_A]: 'RATE B',
-      [process.env.DB_RATINGS_B]: 'RATE C',
-      [process.env.DB_JUNIOR_TRAINEE]: 'TRAINEE'
+      [process.env.DB_OFFICERS]: 'MILITARY STAFFS',
+      [process.env.DB_WOFFICERS]: 'CIVILIAN STAFFS', 
+      [process.env.DB_RATINGS]: 'PENSION STAFFS',
+      [process.env.DB_RATINGS_A]: 'NYSC ATTACHES',
+      [process.env.DB_RATINGS_B]: 'RUNNING COST',
+      // [process.env.DB_JUNIOR_TRAINEE]: 'TRAINEE'
     };
 
-    // Get the current database from request
     const currentDb = req.current_class;
-    
-    // Return the mapped class name, or fallback to the current_class value, or default to 'OFFICERS'
-    return dbToClassMap[currentDb] || currentDb || 'OFFICERS';
+    return dbToClassMap[currentDb] || currentDb || 'MILITARY STAFFS';
   }
 }
 
